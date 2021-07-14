@@ -1,45 +1,50 @@
-import javax.security.sasl.SaslClient;
-import java.util.Scanner;
-
 public class Citizen {
     private String name;
-    private String DOB;
-    private String fatherName;
-    private String Gender;
+    private String address;//FORMAT: Door number, street number, constituency-sector, constituencyName, pincode
+    private String aadharNumber;
+    private String gender;
     private int age;
-    private int aadharNumber;
-    private String address;
-    private boolean voted=false;
-    private boolean isEligible;
-    private int voterID;
+    private String DOB;//in DD//MM//YYYY format
 
-    public Citizen(String name, String DOB, String fatherName, String gender, int age, int aadharNumber, String address, boolean voted, boolean isEligible) {
+    public boolean isEligible(){
+        return this.age>=18;
+    }
+
+    public Citizen(String name, String address, String aadharNumber, String gender, int age, String DOB) {
         this.name = name;
-        this.DOB = DOB;
-        this.fatherName = fatherName;
-        Gender = gender;
-        this.age = age;
-        this.aadharNumber = aadharNumber;
         this.address = address;
-        this.voted = voted;
-        this.isEligible = this.age>=18;
+        this.aadharNumber = aadharNumber;
+        this.gender = gender;
+        this.age = age;
+        this.DOB = DOB;
     }
 
-    public void register(){
-        this.voterID= (int) (1000000*Math.random());
+    public String getName() {
+        return name;
     }
 
-    //generateAadharCard
-    public void generateAadharCard(){
-
+    public String getAddress() {
+        return address;
     }
 
-    //ouputs a voterID card in pdf/jpeg
-    public void generateVoterID(){
-
+    public String getAadharNumber() {
+        return aadharNumber;
     }
 
-    public void giveSurvey(SurveyAgency agency){
-        //questions to agree or disagree on then agency.updateIdeologyTracker()
+    public String getGender() {
+        return gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getDOB() {
+        return DOB;
+    }
+
+    @Override
+    public String toString() {
+        return "Citizen{" + "name='" + name + '\'' + ", address='" + address + '\'' + ", aadharNumber='" + aadharNumber + '\'' + ", gender='" + gender + '\'' + ", age=" + age + ", DOB='" + DOB + '\'' + '}';
     }
 }

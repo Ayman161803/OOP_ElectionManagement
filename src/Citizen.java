@@ -43,6 +43,10 @@ public class Citizen {
         return DOB;
     }
 
+    public boolean isAadharNumberValid(){
+
+    }
+
     @Override
     public String toString() {
         return "Citizen{" + "name='" + name + '\'' + ", address='" + address + '\'' + ", aadharNumber='" + aadharNumber + '\'' + ", gender='" + gender + '\'' + ", age=" + age + ", DOB='" + DOB + '\'' + '}';

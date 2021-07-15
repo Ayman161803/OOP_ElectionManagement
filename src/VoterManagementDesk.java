@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class VoterManagementDesk {
     ArrayList<Voter> voterList;
+    ArrayList<String> status;
 
     public int getCount(){
         return voterList.size();
@@ -11,6 +12,19 @@ public class VoterManagementDesk {
         if(citizen.isEligible()){
             Voter voterGettingAddedToList=new Voter(citizen.getName(),citizen.getAddress(), citizen.getAadharNumber(), citizen.getGender(),citizen.getAge(), citizen.getDOB(), voterList.size()+1);
             voterList.add(voterGettingAddedToList);
+            status.add("registered");
+        }
+        else{
+            if(citizen.getAge()<18){
+                Voter voterGettingAddedToList=new Voter(citizen.getName(),citizen.getAddress(), citizen.getAadharNumber(), citizen.getGender(),citizen.getAge(), citizen.getDOB(), voterList.size()+1);
+                voterList.add(voterGettingAddedToList);
+                status.add("UnderAge hence cannot be registered.");
+            }
+            else if(citizen.isAadharNumberValid()){
+                Voter voterGettingAddedToList=new Voter(citizen.getName(),citizen.getAddress(), citizen.getAadharNumber(), citizen.getGender(),citizen.getAge(), citizen.getDOB(), voterList.size()+1);
+                voterList.add(voterGettingAddedToList);
+                status.add("Aadhar number invalid ");
+            }
         }
     }
 
@@ -25,6 +39,11 @@ public class VoterManagementDesk {
                 count++;
         }
         return count;
+    }
+
+    //removes all entries with status other than registered
+    public void finaliseVoterList(){
+
     }
 
     public void displayVotedRegistered(){

@@ -8,7 +8,9 @@ public class Party {
     ArrayList<Candidate> partyMembers;
     Candidate chiefMinisterFace;
     String name;
+    String manifesto;
 
+    //discuss whether or to add picture for partySymbol
     public Party(String name) {
         this.name = name;
         this.chiefMinisterFace=null;
@@ -48,5 +50,22 @@ public class Party {
         this.chiefMinisterFace=candidate;
     }
 
+    public void buildManifesto(String filename){
+        File myObj = new File(filename);
+        Scanner myReader;
+        try {
+            myReader = new Scanner(myObj);
+            myReader.nextLine();
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                if(data==null){
+                    continue;
+                }
+                this.manifesto+=data;
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

@@ -60,6 +60,15 @@ public class PollingManagementDesk {
         System.out.println(candidates.get(maxIndex));
     }
 
+    public Candidate getWinner(){
+        int maxIndex=0;
+        for(int i=1;i<votesCounter.length;i++){
+            if(votesCounter[i]>votesCounter[maxIndex])
+                maxIndex=i;
+        }
+        return candidates.get(maxIndex);
+    }
+
     public void showVotesDistribution(){}//return a bar-graph of sorts as the output
 
     public long getTotalNoOfVotes(){

@@ -51,4 +51,7 @@ public class Citizen {
     public String toString() {
         return "Citizen{" + "name='" + name + '\'' + ", address='" + address + '\'' + ", aadharNumber='" + aadharNumber + '\'' + ", gender='" + gender + '\'' + ", age=" + age + ", DOB='" + DOB + '\'' + '}';
     }
+
+    public void generateAadharCard(){}
+
 }

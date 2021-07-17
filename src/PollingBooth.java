@@ -9,7 +9,7 @@ public class PollingBooth {
         this.name = name;
     }
 
-    //takes BalllotPaper in and counts votes
+    //takes BallotPaper in and counts votes
     public void processBallotPaper(String filename){
 
     }
@@ -20,5 +20,9 @@ public class PollingBooth {
 
     public int getID() {
         return ID;
+    }
+
+    public String getName() {
+        return name;
     }
 }

@@ -24,5 +24,7 @@ public class Voter extends Citizen{
         this.pollingBoothNumber=pollingBooth.getID();
     }
 
+    public void generateVoterIDCard(){}
 
+    public boolean hasVoted(){return this.hasVoted;}
 }

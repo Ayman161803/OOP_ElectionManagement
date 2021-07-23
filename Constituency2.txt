@@ -1,0 +1,78 @@
+Cyavana Mukhtar|07/04/1961|60|Male|9 Susheela Road|2
+Venkata Mandalik|15/06/1987|34|Male|18 Qutub Road Chowk|2
+Aditya Pandya|11/10/1956|65|Male|16 Chawri Bazar|2
+Vaibhav Pavagi|21/11/2012|9|Male|22 Waterloo Street|2
+Shudraka Devdhar|10/09/1975|46|Male|22 Qutub Road Chowk|2
+Pranav Jagatap|25/10/1966|55|Male|6 Juhu Lane|2
+Dharya Havaldar|17/03/1951|70|Male|23 Chawri Bazar|2
+Ranjit Divekar|13/03/2011|10|Male|7 Juhu Lane|2
+Yogarasa Thakore|04/11/2001|20|Male|20 Susheela Road|2
+Narayana Upasani|05/06/2004|17|Male|23 Qutub Road Chowk|2
+Vijya Divakar|25/09/1974|47|Male|4 Juhu Lane|2
+Kanada Adwani|27/05/2003|18|Male|9 Waterloo Street|2
+Megaduta Ashtekar|16/05/1962|59|Male|10 Qutub Road Chowk|2
+Gagan Ajagavakar|29/10/1991|30|Male|16 Susheela Road|2
+Rishu Shrivastava|05/05/1986|35|Male|17 Waterloo Street|2
+Amish Chaudhari|29/04/1973|48|Male|1 Waterloo Street|2
+Amish Chaudhari|12/08/1976|45|Male|4 Waterloo Street|2
+Benegal Thakore|10/29/2009|12|Male|25 Juhu Lane|2
+Abhinav Anagal|07/06/2007|14|Male|14 Chawri Bazar|2
+Sumit Nan|01/21/1994|27|Male|9 Juhu Lane|2
+Patanjali Joshi|08/23/1952|69|Male|15 Chawri Bazar|2
+Cyavana Phadanis|11/13/1984|37|Male|10 Susheela Road|2
+Aman Chattarak|05/28/1986|35|Male|10 Juhu Lane|2
+Ruldu Muzumdar|06/05/1956|65|Male|15 Chawri Bazar|2
+Navin Poddar|08/15/2013|8|Male|19 Susheela Road|2
+Sunder Pandey|10/05/1954|67|Male|11 Chawri Bazar|2
+Arjuna Bhatta|08/26/2002|19|Male|2 Qutub Road Chowk|2
+Chand Pavagi|03/14/2015|6|Male|25 Susheela Road|2
+Rajendra Munshif|04/23/1988|33|Male|24 Susheela Road|2
+Katyayana Shrivastav|06/16/2018|3|Male|14 Susheela Road|2
+Waazir Divakar|04/13/1979|42|Male|7 Qutub Road Chowk|2
+Keshav Shree|08/12/1990|31|Male|22 Susheela Road|2
+Jaswant Kamal|09/26/1972|49|Male|14 Susheela Road|2
+Pramod Acharekar|09/18/1960|61|Male|21 Chawri Bazar|2
+Sumit Bhattacharya|05/02/1990|31|Male|17 Chawri Bazar|2
+Vrikodara Ganapuli|01/31/1957|64|Male|16 Qutub Road Chowk|2
+Venkata Shevade|03/09/2020|1|Male|1 Chawri Bazar|2
+Prakash Thakre|02/03/1975|46|Male|20 Juhu Lane|2
+Chandi Parikh|12/06/1981|40|Female|3 Juhu Lane|2
+Vayu Khamavant|07/14/1979|42|Female|15 Susheela Road|2
+Kanti Nambisan|02/03/2008|13|Female|20 Qutub Road Chowk|2
+Sulini Thakre|03/01/1977|44|Female|1 Chawri Bazar|2
+Priyanshi Devdhar|12/06/2000|21|Female|17 Qutub Road Chowk|2
+Sonamoni Bhattacharya|07/01/2013|8|Female|13 Susheela Road|2
+Priya Ahuja|12/24/1997|24|Female|13 Chawri Bazar|2
+Tivra Sharma|09/14/1962|59|Female|21 Waterloo Street|2
+Paraminta Heravdakar|07/09/1961|60|Female|24 Juhu Lane|2
+Mamta Satavelekar|01/15/1958|63|Female|14 Chawri Bazar|2
+Shakuntala Sabanis|08/17/1957|64|Female|16 Susheela Road|2
+Paraminta Upandhye|08/16/1976|45|Female|18 Waterloo Street|2
+Arya Mukhtar|06/03/1966|55|Female|1 Chawri Bazar|2
+Arya Padagavakar|01/22/1973|48|Female|4 Juhu Lane|2
+Satya Marwah|08/06/1982|39|Female|13 Juhu Lane|2
+Sambridhi Bakshi|02/06/2002|19|Female|25 Susheela Road|2
+Phoolan Sabanis|04/21/1991|30|Female|18 Susheela Road|2
+Kanak Haradas|06/29/2012|9|Female|12 Susheela Road|2
+Draupati Ranganekary|04/20/1982|39|Female|13 Juhu Lane|2
+Ruhi Randhawa|01/22/1962|59|Female|25 Chawri Bazar|2
+Ananya Kapadia|08/15/1972|49|Female|5 Juhu Lane|2
+Jayanti Upandhye|11/27/1955|66|Female|20 Susheela Road|2
+Alia Badakar|01/26/1951|70|Female|19 Juhu Lane|2
+Indu Dhebar|06/18/2012|9|Female|14 Waterloo Street|2
+Vaidehi Nan|08/18/1980|41|Female|12 Qutub Road Chowk|2
+Gauri Vaikar|08/18/1971|50|Female|7 Qutub Road Chowk|2
+Kavuri Muzumdar|06/07/2021|0|Female|7 Waterloo Street|2
+Kumari Vaikar|01/01/2006|15|Female|3 Qutub Road Chowk|2
+Surya Divakar|02/14/1994|27|Female|4 Juhu Lane|2
+Maya Randhawa|01/23/1976|45|Female|3 Qutub Road Chowk|2
+Kavuri Gurnani|06/19/1991|30|Female|8 Chawri Bazar|2
+Mahi Munshif|07/25/2020|1|Female|23 Qutub Road Chowk|2
+Jyoti Prabhu|12/09/1988|33|Female|6 Chawri Bazar|2
+Anushka Randhawa|02/05/1951|70|Female|1 Susheela Road|2
+Maya Shree|03/25/2021|0|Female|6 Juhu Lane|2
+Kusum Nan|08/02/1980|41|Female|17 Chawri Bazar|2
+Shristi Phadatare|10/27/2015|6|Female|1 Juhu Lane|2
+Draupati Bhatavadekar|12/29/1985|36|Female|9 Susheela Road|2
+Sarojini Chaudhari|08/05/2006|15|Female|19 Susheela Road|2
+Aaina Mukhtar|09/30/1950|71|Female|2 Waterloo Street|2

@@ -1,0 +1,113 @@
+Rishu Dattachaudhuri|11/05/2009|12|Male|12 New Tharagupet|6
+Nakula Nambisan|07/13/1997|24|Male|23 New Tharagupet|6
+Waazir Sirasikar|11/04/1980|41|Male|7 Sterling Centre|6
+Ravi Kanungo|04/30/1975|46|Male|16 Ganesh Chowk|6
+Daksha Dalavi|05/09/2009|12|Male|6 New Tharagupet|6
+Veer Gayakvad|10/08/1986|35|Male|4 Ganesh Chowk|6
+Aditya Tavade|11/03/2010|11|Male|9 Sterling Centre|6
+Maha Kusari|08/22/1960|61|Male|13 Gali Madarsa Wali|6
+Amish Devdhar|05/29/2012|9|Male|23 Jesal Park|6
+Arun Gandhi|01/20/2020|1|Male|21 Jesal Park|6
+Gopal Devarukhkar|01/02/1962|59|Male|6 Jesal Park|6
+Shackcham Singh|07/04/1968|53|Male|20 Ganesh Chowk|6
+Dyal Phadanis|04/04/1975|46|Male|18 Sterling Centre|6
+Ananda Kumar|11/01/2017|4|Male|21 Sterling Centre|6
+Jeet Adwani|04/08/2017|4|Male|7 New Tharagupet|6
+Chunder Sinha|06/24/1982|39|Male|16 Jesal Park|6
+Sumit Gayakvad|07/05/1976|45|Male|5 Sterling Centre|6
+Prashant Kapil|09/19/2019|2|Male|21 Jesal Park|6
+Baibhav Padhya|12/07/1995|26|Male|11 Jesal Park|6
+Lakshmana Sardar|04/12/1961|60|Male|3 New Tharagupet|6
+Ashutosh Upasani|08/05/1978|43|Male|25 Ganesh Chowk|6
+Kanada Devadhikar|10/10/1980|41|Male|18 Jesal Park|6
+Amitodana Bakshi|10/02/1993|28|Male|1 Sterling Centre|6
+Amitodana Upasani|10/15/1950|71|Male|4 Jesal Park|6
+Jawahar Tamhanakar|09/13/1976|45|Male|13 Sterling Centre|6
+Benegal Chetti|01/17/1953|68|Male|23 Gali Madarsa Wali|6
+Saurabh Dongerkerry|09/25/1995|26|Male|22 Ganesh Chowk|6
+Sayana Chetti|05/12/2017|4|Male|10 Sterling Centre|6
+Nasatya Satavelekar|01/15/2007|14|Male|12 Jesal Park|6
+Panini Mahanta|04/14/1976|45|Male|20 Sterling Centre|6
+Yudhishthira Raj|01/06/2007|14|Male|5 Ganesh Chowk|6
+Har Havaldar|05/26/1951|70|Male|6 Jesal Park|6
+Viswamitra Ayyangar|02/05/2003|18|Male|22 Mehrauli Road|6
+Shanti Ayyangar|12/08/1987|34|Male|21 Gali Madarsa Wali|6
+Vijya Chaudhari|07/31/1972|49|Male|19 Sterling Centre|6
+Ananda Shree|08/28/1960|61|Male|22 Ganesh Chowk|6
+Sumit Valimbe|10/04/1990|31|Male|9 New Tharagupet|6
+Purshottama Patvardhan|02/05/1968|53|Male|6 Mehrauli Road|6
+Chakravarti Shrivastava|09/10/1987|34|Male|4 New Tharagupet|6
+Chatur Tamhanakar|07/11/2021|0|Male|8 Ganesh Chowk|6
+Prakash Divekar|06/21/2002|19|Male|13 Gali Madarsa Wali|6
+Ragoba Shiravadakar|03/25/2009|12|Male|4 Ganesh Chowk|6
+Karam Gupta|12/23/1986|35|Male|7 Sterling Centre|6
+Ayaan Upadhyay|04/07/2019|2|Male|14 Jesal Park|6
+Madhavacharta Singh|11/07/1997|24|Male|13 Gali Madarsa Wali|6
+Arun Kamath|10/19/2003|18|Male|10 Jesal Park|6
+Jatayu Raj|06/18/1951|70|Male|10 Sterling Centre|6
+Arjuna Choraghad|05/16/1955|66|Male|11 New Tharagupet|6
+Abhi Sharma|12/15/1984|37|Male|16 Jesal Park|6
+Aryabhata Punja|12/08/1965|56|Male|15 Mehrauli Road|6
+Santosh Parekh|06/17/1968|53|Male|3 Ganesh Chowk|6
+Krishna Phadatare|01/11/1992|29|Male|14 Gali Madarsa Wali|6
+Karam Choraghad|03/09/2009|12|Male|6 Mehrauli Road|6
+Aman Ahuja|04/20/1971|50|Male|15 Ganesh Chowk|6
+Viswarupa Devdhar|04/06/2012|9|Male|12 Ganesh Chowk|6
+Krishna Bhave|07/18/1964|57|Male|7 Ganesh Chowk|6
+Pandu Kanungo|01/01/1973|48|Male|22 Jesal Park|6
+Chunder Jogalekar|10/30/1996|25|Male|3 New Tharagupet|6
+Kalpana Barigai|10/08/1984|37|Female|23 Mehrauli Road|6
+Akshara Bakshi|06/21/2006|15|Female|2 Gali Madarsa Wali|6
+Bhageerathi Phadatare|01/29/1994|27|Female|14 Mehrauli Road|6
+Shanti Havaldar|01/17/2008|13|Female|21 New Tharagupet|6
+Sukanya Bajpai|10/21/2010|11|Female|14 Ganesh Chowk|6
+Bhadrakali Bajpai|06/23/2016|5|Female|11 Sterling Centre|6
+Mahi Kapudia|12/23/1970|51|Female|20 Ganesh Chowk|6
+Kamala Dhavale|07/10/2010|11|Female|8 Sterling Centre|6
+Paraminta Haldar|07/08/2000|21|Female|17 Ganesh Chowk|6
+Shanti Ashtekar|01/27/2001|20|Female|20 New Tharagupet|6
+Akshara Dheer|08/16/1967|54|Female|5 New Tharagupet|6
+Rani Panda|01/16/1995|26|Female|2 Mehrauli Road|6
+Manasa Prabhu|12/27/1994|27|Female|10 Sterling Centre|6
+Kusum Sanyal|08/07/1953|68|Female|5 Mehrauli Road|6
+Anarkali Mahanti|08/22/1970|51|Female|11 New Tharagupet|6
+Phoolan Heravdakar|07/30/1983|38|Female|23 New Tharagupet|6
+Amandara Patel|08/31/1953|68|Female|14 Jesal Park|6
+Nehal Prabhu|10/08/1965|56|Female|12 Sterling Centre|6
+Mataji Badakar|03/16/1972|49|Female|15 New Tharagupet|6
+Ashia Gulati|07/29/2020|1|Female|14 Sterling Centre|6
+Shanti Chopade|11/25/1975|46|Female|19 Jesal Park|6
+Minakshi Phadatare|06/28/1971|50|Female|18 Jesal Park|6
+Samarj Kumar|04/21/1984|37|Female|25 Gali Madarsa Wali|6
+Chandi Holkar|08/29/1991|30|Female|1 Gali Madarsa Wali|6
+Bhairavi Deshmukh|08/24/2007|14|Female|20 Mehrauli Road|6
+Vayu Shrivastava|03/17/1998|23|Female|17 Ganesh Chowk|6
+Bhairavi Mahanta|03/22/1979|42|Female|12 New Tharagupet|6
+Arpita Joshi|02/09/1955|66|Female|23 Ganesh Chowk|6
+Kusum Kayal|01/30/1986|35|Female|21 Gali Madarsa Wali|6
+Shitala Patil|05/04/1970|51|Female|18 Gali Madarsa Wali|6
+Neha Munshi|03/18/1997|24|Female|7 Jesal Park|6
+Nehal Kayal|09/06/1994|27|Female|24 Ganesh Chowk|6
+Surya Choraghad|12/22/2000|21|Female|9 Ganesh Chowk|6
+Mahi Thacker|03/04/1983|38|Female|16 Sterling Centre|6
+Sita Limbu|02/28/1967|54|Female|6 Sterling Centre|6
+Madri Holkar|12/03/1965|56|Female|22 Ganesh Chowk|6
+Sambridhi Bandyopadhyay|06/15/2011|10|Female|18 Ganesh Chowk|6
+Lia Chakarvarti|04/15/2010|11|Female|16 Ganesh Chowk|6
+Tarabai Devarukhkar|03/26/1953|68|Female|5 New Tharagupet|6
+Kanwal Jagatap|10/13/2014|7|Female|14 Ganesh Chowk|6
+Kanak Achaval|10/20/1979|42|Female|9 Sterling Centre|6
+Kasturbai Ashtekar|03/19/1965|56|Female|14 Ganesh Chowk|6
+Mina Pandey|10/18/2017|4|Female|2 Sterling Centre|6
+Karuna Dongerkerry|02/16/2014|7|Female|5 Ganesh Chowk|6
+Sena Padhya|01/25/2008|13|Female|11 Jesal Park|6
+Raktavati Dhebar|05/03/1981|40|Female|1 Sterling Centre|6
+Rushpa Patel|03/11/1976|45|Female|14 Jesal Park|6
+Leela Tavade|11/02/2017|4|Female|24 Sterling Centre|6
+Madri Valimbe|05/02/1985|36|Female|24 Jesal Park|6
+Akshara Bhagat|11/09/1971|50|Female|18 New Tharagupet|6
+Rani Sirasikar|09/09/2014|7|Female|19 New Tharagupet|6
+Anushree Gayakvad|12/27/1967|54|Female|24 Gali Madarsa Wali|6
+Tivra Chakarvarti|12/06/1962|59|Female|5 Sterling Centre|6
+Sena Bhate|04/23/2001|20|Female|16 Jesal Park|6
+Chhotimai Bhattacharya|01/08/2021|0|Female|9 Gali Madarsa Wali|6

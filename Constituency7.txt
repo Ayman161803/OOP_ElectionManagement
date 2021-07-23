@@ -1,0 +1,88 @@
+Daksha Nijasure|02/01/1991|30|Male|4 Waghodia Road|7
+Vikas Muzumdar|06/16/1986|35|Male|1 Mandvi|7
+Dayananda Thakore|11/10/2017|4|Male|3 Sashtri Nagar|7
+Kanada Sardar|08/23/2008|13|Male|21 Jayanagar|7
+Sharya Srivastav|09/02/1954|67|Male|12 Waghodia Road|7
+Ragoba Pande|01/10/1955|66|Male|18 Sashtri Nagar|7
+Sahadeva Parekh|06/21/1999|22|Male|1 Phonix Complex|7
+Yad Jagatap|11/08/2005|16|Male|8 Waghodia Road|7
+Abhi Bhatavadekar|02/13/1976|45|Male|4 Sashtri Nagar|7
+Aman Roychaudhuri|09/22/2000|21|Male|12 Waghodia Road|7
+Daas Deshmukh|08/19/1966|55|Male|23 Mandvi|7
+Baibhav Mandalik|04/29/1980|41|Male|22 Sashtri Nagar|7
+Daksha Vad|09/12/1952|69|Male|1 Phonix Complex|7
+Amish Kamal|01/17/1950|71|Male|10 Sashtri Nagar|7
+Navneet Pande|07/30/1975|46|Male|2 Mandvi|7
+Pandu Dongerkerry|05/05/1980|41|Male|9 Waghodia Road|7
+Megh Badakar|05/04/1998|23|Male|20 Waghodia Road|7
+Benegal Dvivedi|11/18/1972|49|Male|10 Waghodia Road|7
+Hala Ojha|08/27/2012|9|Male|18 Phonix Complex|7
+Nasatya Tavade|01/28/2009|12|Male|16 Phonix Complex|7
+Prem Banahatti|10/02/1997|24|Male|5 Waghodia Road|7
+Viswarupa Thacker|10/29/1993|28|Male|10 Sashtri Nagar|7
+Chander Haradas|05/31/2014|7|Male|12 Sashtri Nagar|7
+Jamadagni Punja|10/31/1952|69|Male|4 Jayanagar|7
+Ramaeshwara Talavalakar|07/13/1999|22|Male|3 Waghodia Road|7
+Karam Munshif|06/22/2007|14|Male|22 Mandvi|7
+Jayadeva Chitanis|08/21/1954|67|Male|14 Jayanagar|7
+Sharad Hegadi|09/05/1972|49|Male|1 Mandvi|7
+Kanada Nambisan|03/01/1952|69|Male|11 Jayanagar|7
+Sharad Mandalik|12/22/2009|12|Male|22 Waghodia Road|7
+Maha Patel|04/13/1993|28|Male|15 Jayanagar|7
+Daksha Dhebar|12/20/2018|3|Male|6 Phonix Complex|7
+Mishri Randhawa|05/13/1979|42|Male|5 Mandvi|7
+Srijan Pandey|01/21/1966|55|Male|17 Mandvi|7
+Mishri Chopade|11/19/1968|53|Male|23 Mandvi|7
+Pranav Nan|06/01/1998|23|Male|21 Waghodia Road|7
+Bhavabhuti Thakre|05/16/1952|69|Male|11 Phonix Complex|7
+Anguri Anagal|09/02/1991|30|Male|3 Phonix Complex|7
+Kapila Pandya|01/24/1970|51|Male|4 Waghodia Road|7
+Nakshatra Ganapuli|12/16/1972|49|Male|23 Sashtri Nagar|7
+Daksha Sabanis|11/21/1964|57|Male|19 Phonix Complex|7
+Nakshatra Singh|03/19/1983|38|Male|3 Jayanagar|7
+Mahadaji Harish|09/11/1999|22|Male|19 Sashtri Nagar|7
+Chander Vaikar|05/23/1955|66|Male|15 Jayanagar|7
+Venkata Chaudhari|11/17/1983|38|Male|14 Sashtri Nagar|7
+Durga Mirchandani|04/07/1988|33|Female|3 Waghodia Road|7
+Anarkali Gurnani|06/18/1966|55|Female|11 Waghodia Road|7
+Mahamai Gupta|09/13/2017|4|Female|10 Mandvi|7
+Rekha Nancy|06/15/1954|67|Female|9 Sashtri Nagar|7
+Ananya Vadekar|04/10/1992|29|Female|23 Sashtri Nagar|7
+Nutan Kamath|07/22/1995|26|Female|11 Phonix Complex|7
+Bhageerathi Karamchand|02/03/1971|50|Female|4 Mandvi|7
+Kaumari Nambiyar|01/06/2000|21|Female|24 Jayanagar|7
+Archita Malviya|10/28/1952|69|Female|18 Waghodia Road|7
+Rekha Parachure|12/21/1983|38|Female|24 Waghodia Road|7
+Kalpana Divakar|03/25/2005|16|Female|12 Jayanagar|7
+Shanti Gazdar|09/30/2020|1|Female|22 Sashtri Nagar|7
+Neha Barvadekar|06/23/1965|56|Female|6 Waghodia Road|7
+Aaliya Panikkar|03/14/1956|65|Female|24 Sashtri Nagar|7
+Mahamai Kapudia|09/27/2002|19|Female|24 Mandvi|7
+Anya Shree|05/31/1973|48|Female|15 Phonix Complex|7
+Sanskriti Thakre|08/30/1953|68|Female|22 Mandvi|7
+Aasmi Pavagi|03/13/1987|34|Female|16 Jayanagar|7
+Ujali Sanyal|05/06/2000|21|Female|6 Sashtri Nagar|7
+Usha Patel|01/28/2005|16|Female|21 Sashtri Nagar|7
+Ambika Gurnani|12/07/1990|31|Female|19 Phonix Complex|7
+Dakini Panja|11/05/1974|47|Female|9 Phonix Complex|7
+Neha Upasani|05/13/1997|24|Female|4 Sashtri Nagar|7
+Ujali Nijasure|01/20/1964|57|Female|3 Waghodia Road|7
+Shalini Vaikar|08/23/1957|64|Female|15 Waghodia Road|7
+Rushpa Sarkar|04/13/1995|26|Female|5 Mandvi|7
+Kanti Punja|05/08/1986|35|Female|18 Mandvi|7
+Durgawati Chopade|12/13/2015|6|Female|5 Mandvi|7
+Sanskriti Shiravadakar|12/02/1957|64|Female|3 Phonix Complex|7
+Palak Divekar|11/18/2012|9|Female|5 Sashtri Nagar|7
+Shristi Bandyopadhyay|12/08/2018|3|Female|11 Mandvi|7
+Praanvi Devdhar|02/08/2017|4|Female|12 Mandvi|7
+Bhadrakali Barvadekar|08/06/2002|19|Female|22 Sashtri Nagar|7
+Indira Upadhyay|05/02/2003|18|Female|10 Sashtri Nagar|7
+Shambhavi Bhardvaj|04/13/1994|27|Female|2 Phonix Complex|7
+Satya Kanungo|08/11/1979|42|Female|21 Jayanagar|7
+Mahamai Chetti|07/12/1953|68|Female|5 Jayanagar|7
+Rati Srivastav|05/20/2020|1|Female|12 Phonix Complex|7
+Raktavati Bhaumik|06/19/2018|3|Female|15 Phonix Complex|7
+Jindan Naidu|07/19/2004|17|Female|10 Mandvi|7
+Indira Chadda|08/27/1984|37|Female|11 Phonix Complex|7
+Sarasvati Nan|01/31/2018|3|Female|6 Sashtri Nagar|7
+Jaya Munshi|02/21/1982|39|Female|18 Jayanagar|7

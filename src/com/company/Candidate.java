@@ -1,7 +1,10 @@
+package com.company;
+
 public class Candidate extends Citizen{
     private String alliedPartyName;
     private final String constituencyName;
     private final int candidateID;
+    private boolean hasWon;
 
     public Candidate(String name, String address, String aadharNumber, String gender, int age, String DOB, String constituency, int candidateID) {
         super(name, address, aadharNumber, gender, age, DOB);
@@ -23,5 +26,13 @@ public class Candidate extends Citizen{
 
     public String toString(){
         return "Name : "+this.getName()+"\n"+"Party : "+alliedPartyName;
+    }
+
+    protected void setHasWon(boolean bool){
+        this.hasWon=bool;
+    }
+
+    public boolean hasWon(){
+        return this.hasWon;
     }
 }

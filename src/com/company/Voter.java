@@ -1,5 +1,8 @@
+package com.company;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Voter extends Citizen{
 
@@ -18,10 +21,6 @@ public class Voter extends Citizen{
     @Override
     public String toString() {
         return "Voter{name='" + this.getName() + '\'' + ", address='" + this.getName() + '\'' + ", aadharNumber='" + this.getAadharNumber() + '\'' + ", gender='" + this.getGender() + '\'' + ", age=" + this.getAge() + ", DOB='" + this.getDOB() + '\''  + "VoterID=" + VoterID + ", hasVoted=" + hasVoted + '}';
-    }
-
-    public void assignBooth(PollingBooth pollingBooth){
-        this.pollingBoothNumber=pollingBooth.getID();
     }
 
     public void generateVoterIDCard(){}

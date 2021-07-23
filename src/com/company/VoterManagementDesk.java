@@ -1,5 +1,9 @@
+package com.company;
+import com.company.Voter;
+
 import java.util.ArrayList;
 import java.util.Locale;
+
 
 public class VoterManagementDesk {
     private static ArrayList<Voter> voterList;
@@ -29,7 +33,7 @@ public class VoterManagementDesk {
         }
     }
 
-    public ArrayList<Voter> getVoterList() {
+    ArrayList<Voter> getVoterList() {
         return voterList;
     }
 

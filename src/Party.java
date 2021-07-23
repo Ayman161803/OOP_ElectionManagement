@@ -1,3 +1,5 @@
+import com.company.Candidate;
+
 import javax.xml.crypto.Data;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,20 +12,12 @@ public class Party {
     String name;
     String manifesto;
 
-    //discuss whether or to add picture for partySymbol
-    public Party(String name) {
-        this.name = name;
-        this.chiefMinisterFace=null;
-    }
-
     public Party(Candidate chiefMinisterFace, String name) {
         this.chiefMinisterFace = chiefMinisterFace;
         this.name = name;
     }
 
     public Candidate showCM(){
-        if(this.chiefMinisterFace==null)
-            return partyMembers.get((int)(Math.random()*partyMembers.size()));
         return chiefMinisterFace;
     }
 
@@ -66,6 +60,19 @@ public class Party {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    public int getSeatsWon(){
+        int length=partyMembers.size(),count=0;
+        for(int i=0;i<length;i++){
+            if(partyMembers.get(i).hasWon())
+                count++;
+        }
+        return count;
+    }
+
+    public double percentageOfSeatsWon(){
+        return 100.00*this.getSeatsWon()/partyMembers.size();
     }
 
 }

@@ -1,3 +1,8 @@
+package com.company;
+
+import com.company.Candidate;
+import com.company.Voter;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -8,6 +13,7 @@ public class PollingManagementDesk {
     private int[] votesCounter=null;
     private long totalNoOfVotes =0;
 
+    //
     public void registerCandidate(Candidate candidate){
         candidates.add(candidate);
     }
@@ -45,7 +51,7 @@ public class PollingManagementDesk {
         }
     }
 
-    public void showCandidates(){
+    public void showAllCandidates(){
         for (int i=0;i<candidates.size();i++){
             System.out.println(candidates.get(i)+"\n");
         }

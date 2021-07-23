@@ -1,3 +1,7 @@
+package com.company;
+
+import com.company.VoterManagementDesk;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -56,4 +60,10 @@ public class Constituency {
     public double voterTurnOut(){
         return 100.00*this.pollingManagementDesk.getTotalNoOfVotes()/voterManagementDesk.getCount();
     }
+
+    //shows result on command line
+    public void showResult(){
+
+    }
+
 }

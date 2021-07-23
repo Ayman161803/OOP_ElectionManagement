@@ -1,4 +1,6 @@
-public class Citizen {
+package com.company;
+
+class Citizen {
     private String name;
     private String address;//FORMAT: Door number, street number, constituency-sector, constituencyName, pincode
     private String aadharNumber;
@@ -49,7 +51,7 @@ public class Citizen {
 
     @Override
     public String toString() {
-        return "Citizen{" + "name='" + name + '\'' + ", address='" + address + '\'' + ", aadharNumber='" + aadharNumber + '\'' + ", gender='" + gender + '\'' + ", age=" + age + ", DOB='" + DOB + '\'' + '}';
+        return "com.company.Citizen{" + "name='" + name + '\'' + ", address='" + address + '\'' + ", aadharNumber='" + aadharNumber + '\'' + ", gender='" + gender + '\'' + ", age=" + age + ", DOB='" + DOB + '\'' + '}';
     }
 
     public void generateAadharCard(){}

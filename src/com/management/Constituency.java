@@ -21,8 +21,9 @@ public class Constituency {
         pollingManagementDesk=new com.management.PollingManagementDesk();
     }
 
-    public void buildConstituency(String filename){
-        File myObj = new File(filename);
+    public void build(){
+        File myObj;
+        myObj = new File(this.Name);
         Scanner myReader;
         try {
             myReader = new Scanner(myObj);
@@ -40,8 +41,8 @@ public class Constituency {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        voterManagementDesk.buildList(this.Name+"Voters");
-        pollingManagementDesk.addCandidates(this.Name+"Candidates");
+        voterManagementDesk.build(this.Name+"Voters");
+        pollingManagementDesk.build(this.Name+"Candidates");
     }
 
     public static String registerCitizen(String data){
@@ -79,5 +80,5 @@ public class Constituency {
         return 100.00*this.pollingManagementDesk.getTotalNoOfVotes()/voterManagementDesk.getCount();
     }
 
-
+    public int getCount(){return citizens.size();}
 }

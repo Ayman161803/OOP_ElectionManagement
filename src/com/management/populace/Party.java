@@ -35,7 +35,7 @@ public class Party {
                     continue;
                 }
                 String[] candidateData=data.split(",");
-                partyMembers.add(new Candidate(candidateData[0],candidateData[1],candidateData[2],candidateData[3],Integer.parseInt(candidateData[4]),candidateData[5],Integer.parseInt(candidateData[6]),Integer.parseInt(candidateData[7]),candidateData[8]));
+                partyMembers.add(new Candidate(candidateData[0],candidateData[1],candidateData[2],Integer.parseInt(candidateData[3]),candidateData[4],Integer.parseInt(candidateData[5]),Integer.parseInt(candidateData[6]),candidateData[7]));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

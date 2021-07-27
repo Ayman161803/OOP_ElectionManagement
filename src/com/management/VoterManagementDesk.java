@@ -1,6 +1,6 @@
 package com.management;
 
-import com.company.populace.Citizen;
+import com.management.populace.Citizen;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -16,6 +16,9 @@ public class VoterManagementDesk {
     }
 
     public static String registerIndividual(String AadharNumber){
+        if(isAadharNumberValid(AadharNumber)){
+            return "Invalid Aadhar Number";
+        }
         Citizen citizen=returnCitizenWithAadharNumber(AadharNumber);
         String fileName="Constituency"+AadharNumber.charAt(AadharNumber.length()-2)+"Voters.txt";
         if(citizen==null){
@@ -103,7 +106,7 @@ public class VoterManagementDesk {
         return citizen.getAge()>=18;
     }
 
-    public void buildList(String filename){
+    public void build(String filename){
         File myObj = new File(filename);
         Scanner myReader;
         try {

@@ -18,7 +18,7 @@ public class PollingManagementDesk {
         candidates.add(candidate);
     }
 
-    public void addCandidates(String filename){
+    public void build(String filename){
         File myObj = new File(filename);
         Scanner myReader;
         try {
@@ -30,14 +30,14 @@ public class PollingManagementDesk {
                     continue;
                 }
                 String[] candidateData=data.split("\\|");
-                candidates.add(new Candidate(candidateData[0],candidateData[1],candidateData[2],candidateData[3],Integer.parseInt(candidateData[4]),candidateData[5],Integer.parseInt(candidateData[6]),Integer.parseInt(candidateData[7]),candidateData[8]));
+                candidates.add(new Candidate(candidateData[0],candidateData[1],candidateData[2],Integer.parseInt(candidateData[3]),candidateData[4],Integer.parseInt(candidateData[5]),Integer.parseInt(candidateData[6]),candidateData[7]));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    public int getNumberOfCandidates(){
+    public int getCount(){
         return candidates.size();
     }
 

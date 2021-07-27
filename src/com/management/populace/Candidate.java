@@ -1,7 +1,7 @@
 package com.management.populace;
 
 
-import com.company.populace.Citizen;
+import com.management.populace.Citizen;
 
 public class Candidate extends Citizen {
     private String alliedPartyName;
@@ -12,7 +12,7 @@ public class Candidate extends Citizen {
         this.alliedPartyName = null;
     }
 
-    public Candidate(String name, String address, String aadharNumber, String gender, int age, String DOB, int constituencyNum, int candidateID,String AlliedPartyName) {
+    public Candidate(String name, String address, String gender, int age, String DOB, int constituencyNum, int candidateID,String AlliedPartyName) {
         super(name,DOB,age,gender,address,constituencyNum);
         this.alliedPartyName = AlliedPartyName;
     }
@@ -32,4 +32,5 @@ public class Candidate extends Citizen {
     public boolean hasWon(){
         return this.hasWon;
     }
+
 }

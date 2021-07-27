@@ -1,88 +1,107 @@
-Daksha Nijasure|02/01/1991|30|Male|4 Waghodia Road|7
-Vikas Muzumdar|06/16/1986|35|Male|1 Mandvi|7
-Dayananda Thakore|11/10/2017|4|Male|3 Sashtri Nagar|7
-Kanada Sardar|08/23/2008|13|Male|21 Jayanagar|7
-Sharya Srivastav|09/02/1954|67|Male|12 Waghodia Road|7
-Ragoba Pande|01/10/1955|66|Male|18 Sashtri Nagar|7
-Sahadeva Parekh|06/21/1999|22|Male|1 Phonix Complex|7
-Yad Jagatap|11/08/2005|16|Male|8 Waghodia Road|7
-Abhi Bhatavadekar|02/13/1976|45|Male|4 Sashtri Nagar|7
-Aman Roychaudhuri|09/22/2000|21|Male|12 Waghodia Road|7
-Daas Deshmukh|08/19/1966|55|Male|23 Mandvi|7
-Baibhav Mandalik|04/29/1980|41|Male|22 Sashtri Nagar|7
-Daksha Vad|09/12/1952|69|Male|1 Phonix Complex|7
-Amish Kamal|01/17/1950|71|Male|10 Sashtri Nagar|7
-Navneet Pande|07/30/1975|46|Male|2 Mandvi|7
-Pandu Dongerkerry|05/05/1980|41|Male|9 Waghodia Road|7
-Megh Badakar|05/04/1998|23|Male|20 Waghodia Road|7
-Benegal Dvivedi|11/18/1972|49|Male|10 Waghodia Road|7
-Hala Ojha|08/27/2012|9|Male|18 Phonix Complex|7
-Nasatya Tavade|01/28/2009|12|Male|16 Phonix Complex|7
-Prem Banahatti|10/02/1997|24|Male|5 Waghodia Road|7
-Viswarupa Thacker|10/29/1993|28|Male|10 Sashtri Nagar|7
-Chander Haradas|05/31/2014|7|Male|12 Sashtri Nagar|7
-Jamadagni Punja|10/31/1952|69|Male|4 Jayanagar|7
-Ramaeshwara Talavalakar|07/13/1999|22|Male|3 Waghodia Road|7
-Karam Munshif|06/22/2007|14|Male|22 Mandvi|7
-Jayadeva Chitanis|08/21/1954|67|Male|14 Jayanagar|7
-Sharad Hegadi|09/05/1972|49|Male|1 Mandvi|7
-Kanada Nambisan|03/01/1952|69|Male|11 Jayanagar|7
-Sharad Mandalik|12/22/2009|12|Male|22 Waghodia Road|7
-Maha Patel|04/13/1993|28|Male|15 Jayanagar|7
-Daksha Dhebar|12/20/2018|3|Male|6 Phonix Complex|7
-Mishri Randhawa|05/13/1979|42|Male|5 Mandvi|7
-Srijan Pandey|01/21/1966|55|Male|17 Mandvi|7
-Mishri Chopade|11/19/1968|53|Male|23 Mandvi|7
-Pranav Nan|06/01/1998|23|Male|21 Waghodia Road|7
-Bhavabhuti Thakre|05/16/1952|69|Male|11 Phonix Complex|7
-Anguri Anagal|09/02/1991|30|Male|3 Phonix Complex|7
-Kapila Pandya|01/24/1970|51|Male|4 Waghodia Road|7
-Nakshatra Ganapuli|12/16/1972|49|Male|23 Sashtri Nagar|7
-Daksha Sabanis|11/21/1964|57|Male|19 Phonix Complex|7
-Nakshatra Singh|03/19/1983|38|Male|3 Jayanagar|7
-Mahadaji Harish|09/11/1999|22|Male|19 Sashtri Nagar|7
-Chander Vaikar|05/23/1955|66|Male|15 Jayanagar|7
-Venkata Chaudhari|11/17/1983|38|Male|14 Sashtri Nagar|7
-Durga Mirchandani|04/07/1988|33|Female|3 Waghodia Road|7
-Anarkali Gurnani|06/18/1966|55|Female|11 Waghodia Road|7
-Mahamai Gupta|09/13/2017|4|Female|10 Mandvi|7
-Rekha Nancy|06/15/1954|67|Female|9 Sashtri Nagar|7
-Ananya Vadekar|04/10/1992|29|Female|23 Sashtri Nagar|7
-Nutan Kamath|07/22/1995|26|Female|11 Phonix Complex|7
-Bhageerathi Karamchand|02/03/1971|50|Female|4 Mandvi|7
-Kaumari Nambiyar|01/06/2000|21|Female|24 Jayanagar|7
-Archita Malviya|10/28/1952|69|Female|18 Waghodia Road|7
-Rekha Parachure|12/21/1983|38|Female|24 Waghodia Road|7
-Kalpana Divakar|03/25/2005|16|Female|12 Jayanagar|7
-Shanti Gazdar|09/30/2020|1|Female|22 Sashtri Nagar|7
-Neha Barvadekar|06/23/1965|56|Female|6 Waghodia Road|7
-Aaliya Panikkar|03/14/1956|65|Female|24 Sashtri Nagar|7
-Mahamai Kapudia|09/27/2002|19|Female|24 Mandvi|7
-Anya Shree|05/31/1973|48|Female|15 Phonix Complex|7
-Sanskriti Thakre|08/30/1953|68|Female|22 Mandvi|7
-Aasmi Pavagi|03/13/1987|34|Female|16 Jayanagar|7
-Ujali Sanyal|05/06/2000|21|Female|6 Sashtri Nagar|7
-Usha Patel|01/28/2005|16|Female|21 Sashtri Nagar|7
-Ambika Gurnani|12/07/1990|31|Female|19 Phonix Complex|7
-Dakini Panja|11/05/1974|47|Female|9 Phonix Complex|7
-Neha Upasani|05/13/1997|24|Female|4 Sashtri Nagar|7
-Ujali Nijasure|01/20/1964|57|Female|3 Waghodia Road|7
-Shalini Vaikar|08/23/1957|64|Female|15 Waghodia Road|7
-Rushpa Sarkar|04/13/1995|26|Female|5 Mandvi|7
-Kanti Punja|05/08/1986|35|Female|18 Mandvi|7
-Durgawati Chopade|12/13/2015|6|Female|5 Mandvi|7
-Sanskriti Shiravadakar|12/02/1957|64|Female|3 Phonix Complex|7
-Palak Divekar|11/18/2012|9|Female|5 Sashtri Nagar|7
-Shristi Bandyopadhyay|12/08/2018|3|Female|11 Mandvi|7
-Praanvi Devdhar|02/08/2017|4|Female|12 Mandvi|7
-Bhadrakali Barvadekar|08/06/2002|19|Female|22 Sashtri Nagar|7
-Indira Upadhyay|05/02/2003|18|Female|10 Sashtri Nagar|7
-Shambhavi Bhardvaj|04/13/1994|27|Female|2 Phonix Complex|7
-Satya Kanungo|08/11/1979|42|Female|21 Jayanagar|7
-Mahamai Chetti|07/12/1953|68|Female|5 Jayanagar|7
-Rati Srivastav|05/20/2020|1|Female|12 Phonix Complex|7
-Raktavati Bhaumik|06/19/2018|3|Female|15 Phonix Complex|7
-Jindan Naidu|07/19/2004|17|Female|10 Mandvi|7
-Indira Chadda|08/27/1984|37|Female|11 Phonix Complex|7
-Sarasvati Nan|01/31/2018|3|Female|6 Sashtri Nagar|7
-Jaya Munshi|02/21/1982|39|Female|18 Jayanagar|7
+Kahoda Sinha|08/21/1954|67|Male|9 Commercial Street|8|0821195476
+Navneet Kamal|09/05/1972|49|Male|5 Chinch Bunder|8|0905197275
+Chanda Goyal|03/01/1952|69|Male|25 Chinch Bunder|8|0301195277
+Anguri Sirasikar|12/22/2009|12|Male|18 Hutatma Chowk|8|122220097X
+Mahava Bhate|04/13/1993|28|Male|16 Panchal Road|8|0413199371
+Narayana Kapadia|01/21/1966|55|Male|2 Hutatma Chowk|8|0121196674
+Vineet Devdhar|05/16/1952|69|Male|22 Highcourt Colony|8|0516195271
+Gopal Sinha|09/02/1991|30|Male|7 Sahakari Bhandar|8|090219917X
+Gagan Jagatap|03/22/1983|38|Male|9 Sahakari Bhandar|8|0322198372
+Daas Bhavalakar|08/07/1995|26|Male|1 Chinch Bunder|8|0807199575
+Manas Ganapuli|08/12/1978|43|Male|16 Panchal Road|8|0812197879
+Akshey Shrivastav|07/23/1976|45|Male|3 Highcourt Colony|8|0723197679
+Vinod Ayyangar|01/10/1987|34|Male|4 Highcourt Colony|8|0110198778
+Chhotu Ajagavakar|11/03/1976|45|Male|21 Sahakari Bhandar|8|1103197673
+Ragunath Patel|09/27/2019|2|Male|12 Sahakari Bhandar|8|0927201976
+Amrit Chitanis|01/14/1987|34|Male|19 Chinch Bunder|8|0114198772
+Amitabh Adhya|10/27/2010|11|Male|23 Sahakari Bhandar|8|1027201075
+Surendranath Nan|07/02/1963|58|Male|2 Sahakari Bhandar|8|0702196371
+Amish Holkar|01/25/1995|26|Male|6 Commercial Street|8|0125199570
+Hira Ashtekar|12/01/1993|28|Male|1 Highcourt Colony|8|1201199379
+Shankaracharya Mirchandani|07/20/2000|21|Male|17 Highcourt Colony|8|0720200075
+Nakshatra Divekar|07/02/1989|32|Male|4 Sahakari Bhandar|8|0702198978
+Asha Thakre|09/14/2014|7|Male|8 Chinch Bunder|8|0914201476
+Chanda Mukhtar|03/27/1992|29|Male|11 Commercial Street|8|032719927X
+Saurabh Nijasure|01/10/1980|41|Male|7 Chinch Bunder|8|0110198077
+Ganesh Gupta|07/18/2016|5|Male|24 Panchal Road|8|0718201671
+Kanada Devarukhkar|07/25/1995|26|Male|12 Panchal Road|8|0725199571
+Vinay Srivastav|01/06/2002|19|Male|8 Chinch Bunder|8|0106200275
+Hala Poddar|01/10/2008|13|Male|21 Commercial Street|8|011020087X
+Abhinav Chadda|02/22/1998|23|Male|1 Highcourt Colony|8|0222199873
+Daksha Kapadia|01/03/1963|58|Male|14 Commercial Street|8|0103196374
+Katyayana Badakar|07/31/1959|62|Male|24 Sahakari Bhandar|8|0731195973
+Vaibhav Bandyopadhyay|10/30/1975|46|Male|2 Sahakari Bhandar|8|1030197571
+Baibhav Kapadia|09/10/2005|16|Male|17 Chinch Bunder|8|0910200572
+Sharad Sardar|01/01/1957|64|Male|9 Highcourt Colony|8|010119577X
+Sunder Talavalakar|05/19/1952|69|Male|10 Hutatma Chowk|8|0519195272
+Chettur Banahatti|07/02/1951|70|Male|8 Hutatma Chowk|8|0702195170
+Yudhishthira Ayyangar|08/17/2001|20|Male|22 Highcourt Colony|8|0817200177
+Jamadagni Karamchand|08/04/1955|66|Male|10 Hutatma Chowk|8|0804195579
+Amish Kamal|09/15/1954|67|Male|17 Highcourt Colony|8|091519547X
+Ashtavakra Viswan|07/20/1987|34|Male|11 Highcourt Colony|8|0720198771
+Kanada Devadhikar|01/06/2015|6|Male|3 Chinch Bunder|8|0106201573
+Dhani Ayyangar|09/20/1951|70|Male|25 Panchal Road|8|0920195172
+Yudhishthira Sharma|12/07/1999|22|Male|12 Commercial Street|8|1207199974
+Ganesh Kamal|11/20/1977|44|Male|7 Sahakari Bhandar|8|1120197775
+Chunder Anagal|08/01/1974|47|Male|22 Panchal Road|8|0801197473
+Bana Choraghad|04/25/1959|62|Male|3 Chinch Bunder|8|042519597X
+Pramod Gurnani|09/22/1989|32|Male|4 Panchal Road|8|0922198977
+Vijya Patvardhan|01/11/1986|35|Male|10 Panchal Road|8|0111198674
+Panini Gupta|02/11/2021|0|Male|19 Commercial Street|8|0211202177
+Gagan Sinha|02/25/1965|56|Male|17 Hutatma Chowk|8|0225196573
+Roodra Sanyal|12/03/1954|67|Male|16 Commercial Street|8|1203195478
+Amitodana Ranganekary|12/04/1956|65|Male|21 Hutatma Chowk|8|1204195676
+Shackcham Lata|12/07/1977|44|Male|17 Panchal Road|8|1207197777
+Lia Sanyal|06/23/1966|55|Female|1 Highcourt Colony|8|0623196670
+Lasya Nambiyar|12/02/2007|14|Female|5 Commercial Street|8|120220077X
+Sambridhi Jogalekar|09/17/2015|6|Female|8 Panchal Road|8|0917201574
+Rishabha Acharekar|06/14/1999|22|Female|8 Sahakari Bhandar|8|0614199972
+Sonamoni Tamhanakar|12/14/2011|10|Female|6 Highcourt Colony|8|1214201172
+Durgawati Kanungo|09/08/1997|24|Female|12 Highcourt Colony|8|0908199775
+Madri Navathe|06/21/1952|69|Female|17 Highcourt Colony|8|0621195278
+Durgautti Bhave|01/25/1990|31|Female|16 Highcourt Colony|8|0125199074
+Anushka Naidu|10/24/2018|3|Female|12 Panchal Road|8|1024201872
+Versha Gurnani|02/19/2006|15|Female|11 Commercial Street|8|021920067X
+Shakti Sardar|12/12/1981|40|Female|18 Panchal Road|8|1212198174
+Saurandhri Padagavakar|05/25/1974|47|Female|19 Sahakari Bhandar|8|0525197478
+Sulini Padhi|01/11/1989|32|Female|12 Highcourt Colony|8|0111198976
+Draupati Talavalakar|06/05/1966|55|Female|6 Hutatma Chowk|8|0605196672
+Parvati Kapil|09/09/1974|47|Female|15 Hutatma Chowk|8|0909197474
+Saryu Naidu|10/28/1990|31|Female|14 Commercial Street|8|1028199074
+Priya Nancy|06/23/1963|58|Female|21 Sahakari Bhandar|8|0623196379
+Arpita Chetti|12/08/1978|43|Female|8 Hutatma Chowk|8|1208197878
+Kareena Mudaliyar|11/16/2010|11|Female|16 Chinch Bunder|8|1116201070
+Satya Phadanis|08/25/1962|59|Female|17 Commercial Street|8|0825196272
+Kanti Bagchi|09/05/1957|64|Female|1 Highcourt Colony|8|0905195779
+Kasturbai Nancy|05/28/2008|13|Female|19 Hutatma Chowk|8|0528200879
+Vayu Phadatare|03/20/1961|60|Female|2 Hutatma Chowk|8|0320196178
+Sena Vyas|08/12/2020|1|Female|14 Highcourt Colony|8|0812202074
+Mina Naidu|04/03/1978|43|Female|12 Hutatma Chowk|8|0403197872
+Sukanya Pandey|03/15/1973|48|Female|4 Hutatma Chowk|8|0315197374
+Shruti Pandey|08/12/1956|65|Female|3 Hutatma Chowk|8|0812195671
+Aasiya Vadekar|11/30/2014|7|Female|8 Highcourt Colony|8|1130201473
+Paraminta Padhya|01/27/1975|46|Female|11 Chinch Bunder|8|0127197575
+Padmini Ayyangar|10/29/2002|19|Female|6 Panchal Road|8|1029200270
+Shakuntala Dheer|05/21/1999|22|Female|4 Sahakari Bhandar|8|0521199972
+Nehal Parikh|11/03/1974|47|Female|21 Highcourt Colony|8|1103197479
+Priya Singh|01/13/1950|71|Female|22 Commercial Street|8|0113195079
+Anya Vaknis|10/31/1955|66|Female|2 Panchal Road|8|1031195572
+Aasiya Badakar|03/12/1958|63|Female|14 Sahakari Bhandar|8|0312195877
+Kanti Divakar|06/24/2000|21|Female|14 Panchal Road|8|0624200078
+Kunti Parikh|02/14/1995|26|Female|11 Hutatma Chowk|8|0214199576
+Lasya Ojha|12/19/1950|71|Female|2 Commercial Street|8|1219195073
+Sita Barigai|11/03/1979|42|Female|24 Commercial Street|8|1103197975
+Shitala Gayakvad|11/25/1955|66|Female|14 Sahakari Bhandar|8|1125195576
+Lasya Joshi|11/17/1989|32|Female|9 Hutatma Chowk|8|1117198979
+Kanak Devdhar|10/27/2007|14|Female|3 Commercial Street|8|102720077X
+Mahi Chitanis|08/20/1975|46|Female|10 Panchal Road|8|0820197572
+Indu Kayal|07/19/1962|59|Female|6 Commercial Street|8|0719196272
+Lia Khamavant|09/23/2016|5|Female|13 Commercial Street|8|092320167X
+Mina Kusari|07/30/1982|39|Female|3 Hutatma Chowk|8|0730198278
+Damayanti Deshmukh|06/30/1966|55|Female|9 Sahakari Bhandar|8|0630196672
+Divya Upasani|07/15/1978|43|Female|5 Commercial Street|8|0715197878
+Shalini Raj|08/23/1958|63|Female|12 Commercial Street|8|0823195872
+Durgautti Sinha|06/16/1960|61|Female|13 Highcourt Colony|8|0616196075
+Parvati Mahanti|04/19/2006|15|Female|1 Sahakari Bhandar|8|0419200673
+Mahamai Haldar|10/11/1966|55|Female|13 Highcourt Colony|8|1011196670
+Aahana Vyas|10/09/1997|24|Female|20 Hutatma Chowk|8|1009199773

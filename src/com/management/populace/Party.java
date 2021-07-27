@@ -1,6 +1,8 @@
-import com.company.Candidate;
+package com.management.populace;
 
-import javax.xml.crypto.Data;
+import com.management.Voter;
+import com.management.populace.Candidate;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -33,7 +35,7 @@ public class Party {
                     continue;
                 }
                 String[] candidateData=data.split(",");
-                partyMembers.add(new Candidate(candidateData[0],candidateData[1],candidateData[3],candidateData[4],Integer.parseInt(candidateData[5]),candidateData[6],(candidateData[7]),Integer.parseInt(candidateData[8])));
+                partyMembers.add(new Candidate(candidateData[0],candidateData[1],candidateData[2],candidateData[3],Integer.parseInt(candidateData[4]),candidateData[5],Integer.parseInt(candidateData[6]),Integer.parseInt(candidateData[7]),candidateData[8]));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

@@ -1,97 +1,77 @@
-Gopal Pavagi|05/03/2018|3|Male|18 Kirti Nagar|1
-Shackcham Poddar|29/11/1982|39|Male|13 Connaught Place|1
-Asvalayana Ahuja|24/04/1957|64|Male|1 Kirti Nagar|1
-Dharya Hegadi|25/01/1990|31|Male|12 B B D Bag East|1
-Prem Srivastav|07/08/1956|65|Male|22 Connaught Place|1
-Rura Upadhyay|01/01/2021|0|Male|24 Kirti Nagar|1
-Pravarasena Holkar|27/06/1961|60|Male|9 Hanuman Nagar|1
-Anuraag Sabanis|29/01/1963|58|Male|22 B B D Bag East|1
-Din Kanungo|30/12/1978|43|Male|21 Hanuman Nagar|1
-Mahadaji Dhibar|02/06/1971|50|Male|6 Hanuman Nagar|1
-Govinda Sabanis|18/09/1971|50|Male|11 Connaught Place|1
-Amrit Upandhye|29/04/1993|28|Male|4 Connaught Place|1
-Mishri Tavade|06/01/1983|38|Male|7 Kennedy Bridge|1
-Santosh Padhya|21/12/1983|38|Male|7 Kirti Nagar|1
-Krishan Marwah|03/01/2013|8|Male|15 Kirti Nagar|1
-Prakash Pandya|26/07/2011|10|Male|24 Connaught Place|1
-Amitabh Bhatavadekar|29/06/2016|5|Male|17 Hanuman Nagar|1
-Viswarupa Padagavakar|28/03/1988|33|Male|4 B B D Bag East|1
-Vikas Gaur|20/01/1993|28|Male|3 Kirti Nagar|1
-Nakshatra Bhattacharya|06/12/1995|26|Male|7 Hanuman Nagar|1
-Ananda Ashtekar|21/11/1974|47|Male|3 Kennedy Bridge|1
-Savyaschin Bhaumik|04/07/1998|23|Male|10 Kennedy Bridge|1
-Varuni Vaknis|13/06/2003|18|Male|2 Hanuman Nagar|1
-Dhirtarashtra Shiravadakar|07/01/1994|27|Male|23 Kirti Nagar|1
-Acarya Padagavakar|19/10/1951|70|Male|18 Connaught Place|1
-Navneet Padhi|07/04/1961|60|Male|25 B B D Bag East|1
-Pranav Badakar|15/06/1987|34|Male|16 Kennedy Bridge|1
-Dharya Nan|11/10/1956|65|Male|16 Kennedy Bridge|1
-Om Banahatti|21/11/2012|9|Male|4 Kirti Nagar|1
-Ragoba Satavelekar|10/09/1975|46|Male|16 Kennedy Bridge|1
-Rura Talavalakar|25/10/1966|55|Male|13 Hanuman Nagar|1
-Roodra Rajavade|17/03/1951|70|Male|3 Kennedy Bridge|1
-Bhrigu Kashyap|13/03/2011|10|Male|17 Kennedy Bridge|1
-Chanda Jadhav|04/11/2001|20|Male|16 Kennedy Bridge|1
-Ranjan Chopade|05/06/2004|17|Male|4 Kennedy Bridge|1
-Pravarasena Munshif|25/09/1974|47|Male|19 Hanuman Nagar|1
-Gagan Mahanti|27/05/2003|18|Male|23 Hanuman Nagar|1
-Pandu Patvardhan|16/05/1962|59|Male|21 Hanuman Nagar|1
-Chakravarti Bajpai|29/10/1991|30|Male|16 Kirti Nagar|1
-Yad Pandya|05/05/1986|35|Male|2 B B D Bag East|1
-Navneet Mahanti|29/04/1973|48|Male|22 Kirti Nagar|1
-Ishwar Mudaliyar|16/02/1951|70|Male|1 Hanuman Nagar|1
-Hira Patel|15/03/2017|4|Male|16 Connaught Place|1
-Gunadhya Adwani|13/05/1954|67|Male|13 Kirti Nagar|1
-Waazir Valimbe|16/01/1959|62|Male|6 Hanuman Nagar|1
-Asvalayana Vaknis|09/05/2017|4|Male|4 Kirti Nagar|1
-Vijya Chadda|27/05/1997|24|Male|18 Kirti Nagar|1
-Arpit Padagavakar|14/05/2011|10|Male|13 Connaught Place|1
-Srijan Vaikar|18/01/1964|57|Male|23 B B D Bag East|1
-Harsh Thakur|20/02/2019|2|Male|1 B B D Bag East|1
-Vineet Bhave|20/07/2005|16|Male|2 Kirti Nagar|1
-Bhrigu Badakar|10/10/1985|36|Male|5 Hanuman Nagar|1
-Har Divekar|10/02/1976|45|Male|4 Connaught Place|1
-Purshottama Chadda|09/07/2014|7|Male|8 B B D Bag East|1
-Megaduta Patil|24/11/2010|11|Male|23 B B D Bag East|1
-Aakash Dvivedi|28/08/1955|66|Male|6 B B D Bag East|1
-Har Kapil|30/12/2013|8|Male|24 B B D Bag East|1
-Kareena Ghoshal|06/05/1957|64|Female|4 B B D Bag East|1
-Lia Upandhye|22/04/1974|47|Female|18 Connaught Place|1
-Indu Bhatavadekar|02/10/2002|19|Female|23 Connaught Place|1
-Chambeli Joshi|12/04/1960|61|Female|12 Connaught Place|1
-Kunti Bhardvaj|16/11/1988|33|Female|16 B B D Bag East|1
-Shambhavi Patil|12/09/2015|6|Female|2 B B D Bag East|1
-Komal Dheer|20/08/2018|3|Female|20 Hanuman Nagar|1
-Karuna Malhotra|08/04/1969|52|Female|20 Kennedy Bridge|1
-Jaya Shrivastava|17/11/1989|32|Female|1 Kirti Nagar|1
-Sambridhi Shree|30/11/1996|25|Female|3 Kennedy Bridge|1
-Bhadrakali Kamath|08/10/1994|27|Female|23 Kennedy Bridge|1
-Maya Dheer|15/07/1970|51|Female|21 Hanuman Nagar|1
-Radha Dhebar|06/01/2008|13|Female|10 Hanuman Nagar|1
-Salani Panda|25/05/1994|27|Female|12 Kirti Nagar|1
-Alia Nancy|23/12/1984|37|Female|20 Kirti Nagar|1
-Snigdha Acharekar|27/12/1987|34|Female|22 Kirti Nagar|1
-Shanti Nayar|12/05/1969|52|Female|24 Kirti Nagar|1
-Jindan Mahanta|16/04/1985|36|Female|3 Kirti Nagar|1
-Chandika Munshi|29/05/1968|53|Female|23 Kennedy Bridge|1
-Kanwal Kashyap|08/07/1958|63|Female|11 Kirti Nagar|1
-Krishna Ayyar|17/11/1993|28|Female|9 Hanuman Nagar|1
-Aasiya Bhaumik|08/07/1983|38|Female|3 Kennedy Bridge|1
-Shalini Bagchi|07/06/1975|46|Female|2 Connaught Place|1
-Kamala Panda|30/04/2019|2|Female|25 Hanuman Nagar|1
-Korravai Ahuja|26/10/1995|26|Female|4 B B D Bag East|1
-Minakshi Dvivedi|14/12/1965|56|Female|23 Kennedy Bridge|1
-Kareena Kashyap|01/02/2002|19|Female|7 Connaught Place|1
-Sarasvati Barigai|29/03/1962|59|Female|4 Connaught Place|1
-Kanti Ranganekary|23/08/1987|34|Female|8 Kirti Nagar|1
-Maya Kashyap|04/12/2013|8|Female|18 B B D Bag East|1
-Shinu Gayakvad|23/01/2012|9|Female|14 B B D Bag East|1
-Surya Parachure|12/02/2007|14|Female|22 Connaught Place|1
-Kavuri Ghoshal|10/08/1961|60|Female|2 Connaught Place|1
-Lasya Khamavant|27/06/1953|68|Female|24 B B D Bag East|1
-Bhadrakali Upalekar|20/12/1991|30|Female|15 Kirti Nagar|1
-Tarabai Misra|07/04/1955|66|Female|13 Kirti Nagar|1
-Ruhi Padhya|30/03/2008|13|Female|18 Hanuman Nagar|1
-Shinu Jadhav|30/07/1999|22|Female|11 Connaught Place|1
-Kaumari Misra|05/04/1986|35|Female|24 B B D Bag East|1
-Manasa Sabanis|21/02/2009|12|Female|16 B B D Bag East|1
+Venkata Mandalik|15/06/1987|34|Male|18 Qutub Road Chowk|2|1506198716
+Aditya Pandya|11/10/1956|65|Male|16 Chawri Bazar|2|1110195613
+Vaibhav Pavagi|21/11/2012|9|Male|22 Waterloo Street|2|2111201219
+Shudraka Devdhar|10/09/1975|46|Male|22 Qutub Road Chowk|2|1009197517
+Pranav Jagatap|25/10/1966|55|Male|6 Juhu Lane|2|2510196618
+Dharya Havaldar|17/03/1951|70|Male|23 Chawri Bazar|2|1703195116
+Ranjit Divekar|13/03/2011|10|Male|7 Juhu Lane|2|1303201119
+Yogarasa Thakore|04/11/2001|20|Male|20 Susheela Road|2|0411200119
+Narayana Upasani|05/06/2004|17|Male|23 Qutub Road Chowk|2|0506200418
+Vijya Divakar|25/09/1974|47|Male|4 Juhu Lane|2|250919741X
+Kanada Adwani|27/05/2003|18|Male|9 Waterloo Street|2|2705200312
+Megaduta Ashtekar|16/05/1962|59|Male|10 Qutub Road Chowk|2|1605196215
+Gagan Ajagavakar|29/10/1991|30|Male|16 Susheela Road|2|2910199118
+Rishu Shrivastava|05/05/1986|35|Male|17 Waterloo Street|2|0505198614
+Amish Chaudhari|29/04/1973|48|Male|1 Waterloo Street|2|2904197311
+Amish Chaudhari|12/08/1976|45|Male|4 Waterloo Street|2|1208197614
+Benegal Thakore|10/29/2009|12|Male|25 Juhu Lane|2|1029200912
+Abhinav Anagal|07/06/2007|14|Male|14 Chawri Bazar|2|0706200713
+Sumit Nan|01/21/1994|27|Male|9 Juhu Lane|2|012119941X
+Patanjali Joshi|08/23/1952|69|Male|15 Chawri Bazar|2|082319521X
+Cyavana Phadanis|11/13/1984|37|Male|10 Susheela Road|2|1113198419
+Aman Chattarak|05/28/1986|35|Male|10 Juhu Lane|2|0528198610
+Ruldu Muzumdar|06/05/1956|65|Male|15 Chawri Bazar|2|0605195617
+Navin Poddar|08/15/2013|8|Male|19 Susheela Road|2|0815201311
+Sunder Pandey|10/05/1954|67|Male|11 Chawri Bazar|2|1005195412
+Arjuna Bhatta|08/26/2002|19|Male|2 Qutub Road Chowk|2|0826200214
+Chand Pavagi|03/14/2015|6|Male|25 Susheela Road|2|0314201513
+Rajendra Munshif|04/23/1988|33|Male|24 Susheela Road|2|0423198815
+Katyayana Shrivastav|06/16/2018|3|Male|14 Susheela Road|2|0616201818
+Waazir Divakar|04/13/1979|42|Male|7 Qutub Road Chowk|2|0413197913
+Keshav Shree|08/12/1990|31|Male|22 Susheela Road|2|0812199014
+Jaswant Kamal|09/26/1972|49|Male|14 Susheela Road|2|0926197215
+Pramod Acharekar|09/18/1960|61|Male|21 Chawri Bazar|2|0918196019
+Sumit Bhattacharya|05/02/1990|31|Male|17 Chawri Bazar|2|0502199016
+Vrikodara Ganapuli|01/31/1957|64|Male|16 Qutub Road Chowk|2|0131195719
+Venkata Shevade|03/09/2020|1|Male|1 Chawri Bazar|2|0309202019
+Prakash Thakre|02/03/1975|46|Male|20 Juhu Lane|2|0203197518
+Chandi Parikh|12/06/1981|40|Female|3 Juhu Lane|2|1206198117
+Vayu Khamavant|07/14/1979|42|Female|15 Susheela Road|2|0714197912
+Kanti Nambisan|02/03/2008|13|Female|20 Qutub Road Chowk|2|0203200810
+Sulini Thakre|03/01/1977|44|Female|1 Chawri Bazar|2|0301197717
+Priyanshi Devdhar|12/06/2000|21|Female|17 Qutub Road Chowk|2|1206200014
+Sonamoni Bhattacharya|07/01/2013|8|Female|13 Susheela Road|2|0701201312
+Priya Ahuja|12/24/1997|24|Female|13 Chawri Bazar|2|1224199715
+Tivra Sharma|09/14/1962|59|Female|21 Waterloo Street|2|0914196219
+Paraminta Heravdakar|07/09/1961|60|Female|24 Juhu Lane|2|0709196113
+Mamta Satavelekar|01/15/1958|63|Female|14 Chawri Bazar|2|0115195815
+Shakuntala Sabanis|08/17/1957|64|Female|16 Susheela Road|2|0817195718
+Paraminta Upandhye|08/16/1976|45|Female|18 Waterloo Street|2|081619761X
+Arya Mukhtar|06/03/1966|55|Female|1 Chawri Bazar|2|0603196616
+Arya Padagavakar|01/22/1973|48|Female|4 Juhu Lane|2|0122197313
+Satya Marwah|08/06/1982|39|Female|13 Juhu Lane|2|0806198214
+Sambridhi Bakshi|02/06/2002|19|Female|25 Susheela Road|2|0206200218
+Phoolan Sabanis|04/21/1991|30|Female|18 Susheela Road|2|0421199113
+Kanak Haradas|06/29/2012|9|Female|12 Susheela Road|2|0629201218
+Draupati Ranganekary|04/20/1982|39|Female|13 Juhu Lane|2|0420198210
+Ruhi Randhawa|01/22/1962|59|Female|25 Chawri Bazar|2|012219621X
+Ananya Kapadia|08/15/1972|49|Female|5 Juhu Lane|2|0815197217
+Jayanti Upandhye|11/27/1955|66|Female|20 Susheela Road|2|1127195514
+Alia Badakar|01/26/1951|70|Female|19 Juhu Lane|2|0126195110
+Indu Dhebar|06/18/2012|9|Female|14 Waterloo Street|2|0618201211
+Vaidehi Nan|08/18/1980|41|Female|12 Qutub Road Chowk|2|081819801X
+Gauri Vaikar|08/18/1971|50|Female|7 Qutub Road Chowk|2|0818197110
+Kavuri Muzumdar|06/07/2021|0|Female|7 Waterloo Street|2|0607202114
+Kumari Vaikar|01/01/2006|15|Female|3 Qutub Road Chowk|2|0101200617
+Surya Divakar|02/14/1994|27|Female|4 Juhu Lane|2|021419941X
+Maya Randhawa|01/23/1976|45|Female|3 Qutub Road Chowk|2|0123197619
+Kavuri Gurnani|06/19/1991|30|Female|8 Chawri Bazar|2|0619199113
+Mahi Munshif|07/25/2020|1|Female|23 Qutub Road Chowk|2|0725202017
+Jyoti Prabhu|12/09/1988|33|Female|6 Chawri Bazar|2|1209198819
+Anushka Randhawa|02/05/1951|70|Female|1 Susheela Road|2|0205195113
+Maya Shree|03/25/2021|0|Female|6 Juhu Lane|2|0325202117
+Kusum Nan|08/02/1980|41|Female|17 Chawri Bazar|2|0802198015
+Shristi Phadatare|10/27/2015|6|Female|1 Juhu Lane|2|1027201512
+Draupati Bhatavadekar|12/29/1985|36|Female|9 Susheela Road|2|1229198512
+Sarojini Chaudhari|08/05/2006|15|Female|19 Susheela Road|2|0805200614
+Aaina Mukhtar|09/30/1950|71|Female|2 Waterloo Street|2|0930195019

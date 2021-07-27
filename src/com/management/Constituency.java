@@ -1,7 +1,7 @@
 package com.management;
 
 import com.management.VoterManagementDesk;
-import com.company.populace.Citizen;
+import com.management.populace.Citizen;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -16,13 +16,15 @@ public class Constituency {
     private int noOfEligibleCitizens=0;
 
     public Constituency(String name) {
+        citizens=new ArrayList<>();
         Name = name;
         voterManagementDesk=new VoterManagementDesk();
-        pollingManagementDesk=new com.management.PollingManagementDesk();
+        pollingManagementDesk=new PollingManagementDesk();
     }
 
-    public void buildConstituency(String filename){
-        File myObj = new File(filename);
+    public void build(){
+        File myObj;
+        myObj = new File(this.Name+".txt");
         Scanner myReader;
         try {
             myReader = new Scanner(myObj);
@@ -40,8 +42,8 @@ public class Constituency {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        voterManagementDesk.buildList(this.Name+"Voters");
-        pollingManagementDesk.addCandidates(this.Name+"Candidates");
+        voterManagementDesk.build(this.Name+"Voters.txt");
+        pollingManagementDesk.build(this.Name+"Candidates.txt");
     }
 
     public static String registerCitizen(String data){
@@ -79,5 +81,17 @@ public class Constituency {
         return 100.00*this.pollingManagementDesk.getTotalNoOfVotes()/voterManagementDesk.getCount();
     }
 
+    public int getCount(){return citizens.size();}
 
+    public String getName() {
+        return Name;
+    }
+
+    public VoterManagementDesk getVoterManagementDesk() {
+        return voterManagementDesk;
+    }
+
+    public PollingManagementDesk getPollingManagementDesk() {
+        return pollingManagementDesk;
+    }
 }

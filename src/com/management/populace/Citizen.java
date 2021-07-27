@@ -1,4 +1,6 @@
-package com.company.populace;
+package com.management.populace;
+
+import java.util.Locale;
 
 public class Citizen {
     private String name;
@@ -14,9 +16,10 @@ public class Citizen {
     }
 
     public Citizen(String name, String DOB,int age, String gender,String address,int constituencyNum) {
+        int genderCode= gender.toLowerCase(Locale.ROOT).equals("male")?0:1;
         this.name = name;
         this.address = address;
-        this.aadharNumber = generateAadharNumber(DOB+(constituencyNum-1));
+        this.aadharNumber = generateAadharNumber(DOB+(constituencyNum-1),address)+genderCode;
         this.gender = gender;
         this.age = age;
         this.DOB = DOB;
@@ -24,7 +27,8 @@ public class Citizen {
     }
 
     //data is DDMMYYYY<Constituencynum-1>
-    private static String generateAadharNumber(String data){
+    private static String generateAadharNumber(String data,String address){
+        address=address.trim();
         String[] DOBdata=data.split("/");
         String DDMMYYYYC="";
         for(int i=0;i<3;i++)
@@ -42,15 +46,15 @@ public class Citizen {
         }
         if(checkSum==0){
             long number=Long.parseLong(DDMMYYYYC)*10;
-            return String.format("%010d",number);
+            return String.format("%010d",number)+address.charAt(0);
         }
         else if (checkSum > 0 && checkSum < 10) {
             long number=Long.parseLong(DDMMYYYYC)*10+checkSum;
-            return String.format("%010d",number);
+            return String.format("%010d",number)+address.charAt(0);
         }
         else if(checkSum==10) {
             long number = Long.parseLong(DDMMYYYYC);
-            return String.format("%09dX", number);
+            return String.format("%09dX", number)+address.charAt(0);
         }
         return null;
     }

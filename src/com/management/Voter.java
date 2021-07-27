@@ -1,6 +1,6 @@
 package com.management;
 
-import com.company.populace.Citizen;
+import com.management.populace.Citizen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,7 @@ public class Voter extends Citizen {
 
     public Voter(String name, String address, String gender, int age, String DOB,int constituencyNum) {
         super(name,DOB,age,gender,address,constituencyNum);
+        System.out.println(this.getAadharNumber());
     }
 
     protected void markVoted() {
@@ -22,8 +23,6 @@ public class Voter extends Citizen {
     public String toString() {
         return "Voter{name='" + this.getName() + '\'' + ", address='" + this.getName() + '\'' + ", aadharNumber='" + this.getAadharNumber() + '\'' + ", gender='" + this.getGender() + '\'' + ", age=" + this.getAge() + ", DOB='" + this.getDOB() + '\''  + ", hasVoted=" + hasVoted + '}';
     }
-
-    public void generateVoterIDCard(){}
 
     public boolean hasVoted(){return this.hasVoted;}
 }

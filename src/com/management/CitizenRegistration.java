@@ -27,7 +27,7 @@ public class CitizenRegistration {
     private JFrame frame;
 
     public CitizenRegistration(){
-        frame=new JFrame("VoterRegistrationPage");
+        frame=new JFrame("CitizenRegistrationPage");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(290,400));
         frame.setResizable(true);

@@ -1,6 +1,6 @@
 package com.management;
 
-import com.company.populace.Citizen;
+import com.management.populace.Citizen;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,13 +9,20 @@ import java.util.Scanner;
 
 
 public class VoterManagementDesk {
-    private static ArrayList<Voter> voterList;
+    private  ArrayList<Voter> voterList;
+
+    public VoterManagementDesk() {
+        this.voterList = new ArrayList<>();
+    }
 
     public int getCount(){
         return voterList.size();
     }
 
     public static String registerIndividual(String AadharNumber){
+        if(isAadharNumberValid(AadharNumber)){
+            return "Invalid Aadhar Number";
+        }
         Citizen citizen=returnCitizenWithAadharNumber(AadharNumber);
         String fileName="Constituency"+AadharNumber.charAt(AadharNumber.length()-2)+"Voters.txt";
         if(citizen==null){
@@ -43,7 +50,7 @@ public class VoterManagementDesk {
     }
 
     private static Citizen returnCitizenWithAadharNumber(String AadharNumber){
-        String filename="Constituency"+AadharNumber.charAt(AadharNumber.length()-2)+".txt";
+        String filename="Constituency"+AadharNumber.charAt(8)+".txt";
         File myObj = new File(filename);
         Scanner myReader;
         try {
@@ -103,22 +110,43 @@ public class VoterManagementDesk {
         return citizen.getAge()>=18;
     }
 
-    public void buildList(String filename){
+    public void build(String filename){
         File myObj = new File(filename);
         Scanner myReader;
         try {
             myReader = new Scanner(myObj);
-            myReader.nextLine();
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                if(data==null){
+                if(data==null || data.equals("")){
                     continue;
                 }
-                String[] citizenData=data.split(",");
+                String[] citizenData=data.split("\\|");
                 voterList.add(new Voter(citizenData[0],citizenData[1],citizenData[2],Integer.parseInt(citizenData[3]),citizenData[4],Integer.parseInt(citizenData[5])));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
+
+    protected boolean doesExist(String aadhar){
+        for(int i=0;i<voterList.size();i++){
+            if(aadhar.equals(voterList.get(i).getAadharNumber())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    protected String getAadhar(int n){
+        return voterList.get(n).getAadharNumber();
+    }
+
+    protected void markVoted(String aadhar){
+        for (Voter voter : voterList) {
+            if (aadhar.equals(voter.getAadharNumber())) {
+                voter.markVoted();
+            }
+        }
+    }
+
 }

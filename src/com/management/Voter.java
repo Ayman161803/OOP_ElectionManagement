@@ -12,6 +12,7 @@ public class Voter extends Citizen {
 
     public Voter(String name, String address, String gender, int age, String DOB,int constituencyNum) {
         super(name,DOB,age,gender,address,constituencyNum);
+        System.out.println(this.getAadharNumber());
     }
 
     protected void markVoted() {

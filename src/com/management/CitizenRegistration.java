@@ -50,4 +50,7 @@ public class CitizenRegistration {
         });
     }
 
+    public static void main(String[] args) {
+        new CitizenRegistration();
+    }
 }

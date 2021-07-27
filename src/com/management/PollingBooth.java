@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class PollingBooth{
+
     public static void main(String[] args) {
         Constituency[] c=new Constituency[10];
 
@@ -53,7 +54,7 @@ public class PollingBooth{
 
             for(int j=0;j<n/2;j++){
                 t = ps[j];
-                ps[i] = ps[n-j -1];
+                ps[j] = ps[n-j -1];
                 ps[n-j-1] = t;
             }
 

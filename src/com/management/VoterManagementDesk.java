@@ -24,7 +24,7 @@ public class VoterManagementDesk {
             return "Invalid Aadhar Number";
         }
         Citizen citizen=returnCitizenWithAadharNumber(AadharNumber);
-        String fileName="Constituency"+AadharNumber.charAt(AadharNumber.length()-2)+"Voters.txt";
+        String fileName="Constituency"+AadharNumber.charAt(8)+"Voters.txt";
         if(citizen==null){
             return "Error : AadharID not found.";
         }
@@ -34,7 +34,7 @@ public class VoterManagementDesk {
         else{
             {
                 try {
-                    String str=citizen.getName()+"|"+citizen.getAddress()+"|"+citizen.getGender()+"|"+citizen.getAge()+"|"+citizen.getDOB()+"|"+citizen.getConstituency();
+                    String str=citizen.getName()+"|"+citizen.getAddress()+"|"+citizen.getGender()+"|"+citizen.getAge()+"|"+citizen.getDOB()+"|"+citizen.getConstituency()+"|"+citizen.getAadharNumber();
                     // Open given file in append mode.
                     BufferedWriter out = new BufferedWriter(
                             new FileWriter(fileName, true));
@@ -76,9 +76,10 @@ public class VoterManagementDesk {
     private static boolean isAadharNumberValid(String AadharNumber){
         char[] numbers=AadharNumber.toCharArray();
         int checkSum=0;
-        for(int i=0;i<10;i++){
+        for(int i=0;i<9;i++){
             checkSum+=(i+1)*Integer.parseInt(String.valueOf(numbers[i]));
         }
+        checkSum+=Integer.parseInt(String.valueOf(numbers[9]));
         return checkSum%11==0;
     }
 

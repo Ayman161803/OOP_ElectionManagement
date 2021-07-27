@@ -1,9 +1,6 @@
 package com.management;
 
-import com.management.Constituency;
-
 import java.util.Scanner;
-import java.lang.Math;
 
 public class PollingBooth{
 

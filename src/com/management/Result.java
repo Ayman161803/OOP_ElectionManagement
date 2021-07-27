@@ -1,6 +1,6 @@
 package com.management;
 
-import com.company.populace.Citizen;
+import com.management.populace.Citizen;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 

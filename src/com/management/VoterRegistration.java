@@ -1,7 +1,5 @@
 package com.management;
 
-import com.management.VoterManagementDesk;
-
 import javax.swing.*;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;

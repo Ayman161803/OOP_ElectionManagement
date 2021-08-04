@@ -3,41 +3,41 @@ package com.management;
 import java.util.Scanner;
 
 public class PollingBooth{
+    Constituency[] constituencies;
 
-    public static void main(String[] args) {
-        Constituency[] c=new Constituency[10];
-
+    public void PollingBooth(){
+        constituencies=new Constituency[10];
         for(int i=0;i<10;i++){
-            c[i]=new Constituency("Constituency"+(i));
-            c[i].build();
+            constituencies[i]=new Constituency("Constituency"+(i));
+            constituencies[i].build();
         }
+    }
 
+    public void registerVote(){
         Scanner sc=new Scanner(System.in);
-
-        for (int i=0;i<7;i++){
-            System.out.print("Enter your Aadhar:");
-            String aadhar=sc.nextLine();
-            int constituencyno=Integer.parseInt(String.valueOf(aadhar.charAt(8)));
+        System.out.print("Enter your Aadhar:");
+        String aadhar=sc.nextLine();
+        int constituencyno=Integer.parseInt(String.valueOf(aadhar.charAt(8)));
 
 
-            if (c[constituencyno].getVoterManagementDesk().doesExist(aadhar)){
-                c[constituencyno].getPollingManagementDesk().showAllCandidates();
-                System.out.print("Cast your vote:");
+        if (constituencies[constituencyno].getVoterManagementDesk().doesExist(aadhar)){
+            constituencies[constituencyno].getPollingManagementDesk().showAllCandidates();
+            System.out.print("Cast your vote:");
 
-                int vote=sc.nextInt();
-                c[constituencyno].getPollingManagementDesk().updateVote(vote-1);
+            int vote=sc.nextInt();
+            constituencies[constituencyno].getPollingManagementDesk().updateVote(vote-1);
 
-                System.out.println("Vote successfully registered!");
+            System.out.println("Vote successfully registered!");
 
-                c[constituencyno].getVoterManagementDesk().markVoted(aadhar);
-                break;
-            }
-            else
-                System.out.println("Wrong VoterID entered!");
+            constituencies[constituencyno].getVoterManagementDesk().markVoted(aadhar);
 
         }
+        else
+            System.out.println("Invalid AadharID entered!");
+    }
 
-        //automation
+    public void automateVoting(){
+        Constituency[] c=constituencies;
         for(int i=0;i<10;i++){
             double[] ps=new double[c[i].getPollingManagementDesk().getCount()];
             double sum=0;
@@ -79,7 +79,7 @@ public class PollingBooth{
                     c[i].getPollingManagementDesk().updateVote(1);
                 }
 
-                c[i].getVoterManagementDesk().markVoted(c[i].getVoterManagementDesk().getAadhar(k));
+                c[i].getVoterManagementDesk().markVoted(c[i].getVoterManagementDesk().getAadharFromIndex(k));
 
             }
 

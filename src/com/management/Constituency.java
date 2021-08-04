@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Constituency {
-    private final String Name;
+public class Constituency implements Registrar{
+    private  String Name;
     private VoterManagementDesk voterManagementDesk;
     private com.management.PollingManagementDesk pollingManagementDesk;
     private ArrayList<Citizen> citizens;
@@ -21,6 +21,8 @@ public class Constituency {
         voterManagementDesk=new VoterManagementDesk();
         pollingManagementDesk=new PollingManagementDesk();
     }
+
+    public Constituency(){}
 
     public void build(){
         File myObj;
@@ -46,7 +48,7 @@ public class Constituency {
         pollingManagementDesk.build(this.Name+"Candidates.txt");
     }
 
-    public static String registerCitizen(String data){
+    public String addToList(String data){
         String filename="Constituency"+data.charAt(data.length()-1)+".txt";
         String[] citizenData=data.split("\\|");
         Citizen citizenConcerned=new Citizen(citizenData[0],citizenData[1],Integer.parseInt(citizenData[2]),(citizenData[3]),citizenData[4],Integer.parseInt(citizenData[5]));
@@ -81,6 +83,10 @@ public class Constituency {
         return 100.00*this.pollingManagementDesk.getTotalNoOfVotes()/voterManagementDesk.getCount();
     }
 
+    public int getNoOfEligibleCitizens(){
+        return noOfEligibleCitizens;
+    }
+
     public int getCount(){return citizens.size();}
 
     public String getName() {
@@ -94,4 +100,5 @@ public class Constituency {
     public PollingManagementDesk getPollingManagementDesk() {
         return pollingManagementDesk;
     }
+
 }

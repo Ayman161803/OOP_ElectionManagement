@@ -1,13 +1,16 @@
 package com.management;
 
+import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.management.populace.Candidate;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PollingManagementDesk {
+public class PollingManagementDesk implements Desk{
     private ArrayList<Candidate> candidates;
     private int[] votesCounter = null;
     private long totalNoOfVotes = 0;
@@ -77,23 +80,62 @@ public class PollingManagementDesk {
         return candidates.get(maxIndex);
     }
 
-    public void showVotesDistribution() {
-    }//return a bar-graph of sorts as the output
-
     public long getTotalNoOfVotes() {
         return totalNoOfVotes;
     }
 
-    public void updateVote(int n) {
+    protected void updateVote(int n) {
         votesCounter[n]++;
         totalNoOfVotes++;
     }
+
     public double getPopularityScore(int j) {
         return candidates.get(j).getPopularityScore();
     }
 
     public ArrayList<Candidate> getCandidates() {
         return candidates;
+    }
+
+    public void releaseCandidateList(){
+        int num = this.getCandidates().size();
+        String name[] = new String[this.getCount()];
+        String party[] = new String[num];
+        int constituency[] = new int[num];
+        for (int i = 0; i < num; i++) {
+            name[i] = candidates.get(i).getName();
+            party[i] = candidates.get(i).getAlliedPartyName();
+            constituency[i] = candidates.get(i).getConstituency();
+        }
+
+        Document doc = new Document();
+
+        try {
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\CandidatesList.pdf"));
+            System.out.println("PDF created.");
+
+            doc.open();
+
+            Paragraph o = new Paragraph("LIST OF CANDIDATES");
+            o.setAlignment(Element.ALIGN_CENTER);
+            o.setFont(new Font(Font.FontFamily.TIMES_ROMAN,15f,Font.BOLD, BaseColor.BLACK));
+            doc.add(o);
+            Paragraph p = new Paragraph();
+            for (int i = 0; i < num; i++) {
+                p.add("Name : "+name[i]+'\n');
+                p.add("Party : " + party[i]+'\n');
+                p.add("Constituency : "+constituency[i]+"\n\n");
+            }
+            doc.add(p);
+
+            doc.close();
+            writer.close();
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 }
 

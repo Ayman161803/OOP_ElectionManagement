@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CitizenRegistration {
+public class CitizenRegistrationForm implements Form{
     private JPanel panelAll;
     private JTextField nameTextField;
     private JTextField constituencyTextField;
@@ -26,7 +26,7 @@ public class CitizenRegistration {
     private JTextPane ReturnMessage;
     private JFrame frame;
 
-    public CitizenRegistration(){
+    public CitizenRegistrationForm(){
         frame=new JFrame("CitizenRegistrationPage");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(290,400));
@@ -40,8 +40,9 @@ public class CitizenRegistration {
         enterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Constituency constituency= new Constituency();
                 String dataFromForm=nameTextField.getText()+"|"+DOBTextField.getText()+"|"+ageTextField.getText()+"|"+genderTextField.getText()+"|"+addressTextField.getText()+"|"+constituencyTextField.getText();
-                ReturnMessage.setText(Constituency.registerCitizen(dataFromForm));
+                ReturnMessage.setText(constituency.addToList(dataFromForm));
                 StyledDocument doc = ReturnMessage.getStyledDocument();
                 SimpleAttributeSet center = new SimpleAttributeSet();
                 StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
@@ -50,4 +51,8 @@ public class CitizenRegistration {
         });
     }
 
+    @Override
+    public boolean isDataInFormat() {
+        return false;
+    }
 }

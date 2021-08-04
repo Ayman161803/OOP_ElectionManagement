@@ -1,14 +1,17 @@
 package com.management;
 
+import com.itextpdf.text.*;
+import com.itextpdf.text.pdf.PdfWriter;
 import com.management.populace.Citizen;
 
 import java.io.*;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
 
-public class VoterManagementDesk {
+public class VoterManagementDesk implements Desk,Registrar{
     private  ArrayList<Voter> voterList;
 
     public VoterManagementDesk() {
@@ -19,7 +22,7 @@ public class VoterManagementDesk {
         return voterList.size();
     }
 
-    public static String registerIndividual(String AadharNumber){
+    public String registerIndividual(String AadharNumber){
         if(isAadharNumberValid(AadharNumber)){
             return "Invalid Aadhar Number";
         }
@@ -32,24 +35,26 @@ public class VoterManagementDesk {
             return "Error : Age of the citizen is below 18";
         }
         else{
-            {
-                try {
-                    String str=citizen.getName()+"|"+citizen.getAddress()+"|"+citizen.getGender()+"|"+citizen.getAge()+"|"+citizen.getDOB()+"|"+citizen.getConstituency()+"|"+citizen.getAadharNumber();
-                    // Open given file in append mode.
-                    BufferedWriter out = new BufferedWriter(
-                            new FileWriter(fileName, true));
-                    out.write(str);
-                    out.close();
-                }
-                catch (IOException e) {
-                    System.out.println("exception occoured" + e);
-                }
-            }
-            return "Registration successful!";
+            String str=citizen.getName()+"|"+citizen.getAddress()+"|"+citizen.getGender()+"|"+citizen.getAge()+"|"+citizen.getDOB()+"|"+citizen.getConstituency()+"|"+citizen.getAadharNumber();
+            return addToList(str);
         }
     }
 
-    private static Citizen returnCitizenWithAadharNumber(String AadharNumber){
+    public String addToList(String str){
+        String fileName= "Constituency"+str.split("\\|")[str.split("\\|").length-2]+".txt";
+        try {
+            BufferedWriter out = new BufferedWriter(
+                    new FileWriter(fileName, true));
+            out.write(str);
+            out.close();
+        }
+        catch (IOException e) {
+            System.out.println("exception occoured" + e);
+        }
+        return "Registration Successful";
+    };
+
+    private Citizen returnCitizenWithAadharNumber(String AadharNumber){
         String filename="Constituency"+AadharNumber.charAt(8)+".txt";
         File myObj = new File(filename);
         Scanner myReader;
@@ -73,7 +78,7 @@ public class VoterManagementDesk {
         return null;
     }
 
-    private static boolean isAadharNumberValid(String AadharNumber){
+    private boolean isAadharNumberValid(String AadharNumber){
         char[] numbers=AadharNumber.toCharArray();
         int checkSum=0;
         for(int i=0;i<9;i++){
@@ -81,15 +86,6 @@ public class VoterManagementDesk {
         }
         checkSum+=Integer.parseInt(String.valueOf(numbers[9]));
         return checkSum%11==0;
-    }
-
-    public int membersBetweenAge(int lowestAge , int highestAge){
-        int count=0;
-        for(int i=0;i<voterList.size();i++){
-            if(voterList.get(i).getAge()>=lowestAge && voterList.get(i).getAge()<=highestAge)
-                count++;
-        }
-        return count;
     }
 
     public int memberOfGender(String gender){
@@ -107,7 +103,7 @@ public class VoterManagementDesk {
             System.out.println(voterList.get(i));
     }
 
-    private static boolean isEligibleByAge(Citizen citizen){
+    private boolean isEligibleByAge(Citizen citizen){
         return citizen.getAge()>=18;
     }
 
@@ -138,7 +134,7 @@ public class VoterManagementDesk {
         return false;
     }
 
-    protected String getAadhar(int n){
+    protected String getAadharFromIndex(int n){
         return voterList.get(n).getAadharNumber();
     }
 
@@ -148,6 +144,72 @@ public class VoterManagementDesk {
                 voter.markVoted();
             }
         }
+    }
+
+    public String genrateAadharCard(String AadharNumber){
+        if(isAadharNumberValid(AadharNumber)){
+            return "Invalid Aadhar Number";
+        }
+        Citizen citizen=returnCitizenWithAadharNumber(AadharNumber);
+        Document doc = new Document();
+        String name = citizen.getName();
+        String DOB = citizen.getDOB();
+        String gender = citizen.getGender();
+        String num = citizen.getAadharNumber();
+
+        try
+        {
+//generate a PDF at the specified location
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\AadharCard.pdf"));
+            System.out.println("PDF created.");
+//opens the PDF
+            doc.open();
+//adds paragraph to the PDF file
+
+            Image img = Image.getInstance("aadhar.jpg");
+            img.scaleToFit(300f, 600f);
+            img.setAbsolutePosition(150f, 720f);
+            doc.add(img);
+            Image img1 = Image.getInstance("unisex-avatar.png");
+            img1.scaleAbsolute(70f, 70f);
+            img1.setAbsolutePosition(390f, 630f);
+            Image img2 = Image.getInstance("aadhar1.jpg");
+            img2.scaleAbsolute(320f,30f);
+            img2.setAbsolutePosition(150f,580f);
+            doc.add(img1);
+            doc.add(img2);
+            Font f =new Font(Font.FontFamily.TIMES_ROMAN,12f,Font.NORMAL, BaseColor.BLACK);
+            Paragraph p = new Paragraph("Name : ",f);
+            p.setSpacingBefore(100f);
+            p.setIndentationLeft(125f);
+            p.add(name+'\n');
+            p.add("Date of birth : "+ DOB+'\n');
+            p.add("Gender : "+gender);
+            p.add("\n");
+            Font f2 = new Font(Font.FontFamily.TIMES_ROMAN,15f,Font.BOLD,BaseColor.BLACK);
+            Paragraph p1 = new Paragraph(num,f2);
+            p1.setAlignment(Paragraph.ALIGN_CENTER);
+            p1.setSpacingBefore(10f);
+            doc.add(p);
+            doc.add(p1);
+//close the PDF file
+            doc.close();
+
+//closes the writer
+            writer.close();
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (BadElementException e) {
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "AadharCard generation successful!";
     }
 
 }

@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VoterRegistration extends JFrame{
+public class VoterRegistrationForm extends JFrame implements Form{
     private JTextField AadharNumberTextField;
     private JPanel panel1;
     private JButton EnterButton;
@@ -16,7 +16,7 @@ public class VoterRegistration extends JFrame{
     private JTextPane textPane1;
     private JFrame frame;
     private static int count=0;
-    public VoterRegistration(){
+    public VoterRegistrationForm(){
         frame=new JFrame("VoterRegistrationPage");
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(290,380));
@@ -29,7 +29,8 @@ public class VoterRegistration extends JFrame{
         EnterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                textPane1.setText(VoterManagementDesk.registerIndividual(AadharNumberTextField.getText()));
+                VoterManagementDesk voterManagementDesk= new VoterManagementDesk();
+                textPane1.setText(voterManagementDesk.registerIndividual(AadharNumberTextField.getText()));
                 StyledDocument doc = textPane1.getStyledDocument();
                 SimpleAttributeSet center = new SimpleAttributeSet();
                 StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
@@ -38,4 +39,8 @@ public class VoterRegistration extends JFrame{
         });
     }
 
+    @Override
+    public boolean isDataInFormat() {
+        return false;
+    }
 }

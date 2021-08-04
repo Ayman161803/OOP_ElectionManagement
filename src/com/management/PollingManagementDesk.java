@@ -1,6 +1,5 @@
 package com.management;
 
-import com.management.Voter;
 import com.management.populace.Candidate;
 
 import java.io.File;
@@ -94,5 +93,8 @@ public class PollingManagementDesk {
         return candidates.get(j).getPopularityScore();
     }
 
+    public ArrayList<Candidate> getCandidates() {
+        return candidates;
+    }
 }
 

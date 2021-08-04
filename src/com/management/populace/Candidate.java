@@ -1,8 +1,6 @@
 package com.management.populace;
 
 
-import com.management.populace.Citizen;
-
 public class Candidate extends Citizen {
     private String alliedPartyName;
     private boolean hasWon= false;
@@ -38,5 +36,9 @@ public class Candidate extends Citizen {
 
     public double getPopularityScore() {
         return popularityScore;
+    }
+
+    public String getAlliedPartyName() {
+        return alliedPartyName;
     }
 }

@@ -16,7 +16,6 @@ public class PollingManagementDesk {
         this.candidates = new ArrayList<>();
     }
 
-    //
     public void registerCandidate(Candidate candidate) {
         candidates.add(candidate);
     }

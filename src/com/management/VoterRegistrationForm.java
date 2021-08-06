@@ -39,6 +39,9 @@ public class VoterRegistrationForm extends JFrame implements Form{
         });
     }
 
+    public static void main(String[] args) {
+        new VoterRegistrationForm();
+    }
     @Override
     public boolean isDataInFormat() {
         return false;

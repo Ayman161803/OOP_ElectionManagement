@@ -35,13 +35,13 @@ public class VoterManagementDesk implements Desk,Registrar{
             return "Error : Age of the citizen is below 18";
         }
         else{
-            String str=citizen.getName()+"|"+citizen.getAddress()+"|"+citizen.getGender()+"|"+citizen.getAge()+"|"+citizen.getDOB()+"|"+citizen.getConstituency()+"|"+citizen.getAadharNumber();
+            String str=citizen.getName()+"|"+citizen.getDOB()+"|"+citizen.getAge()+"|"+citizen.getGender()+"|"+citizen.getAddress()+"|"+citizen.getConstituency()+"|"+citizen.getAadharNumber();
             return addToList(str);
         }
     }
 
     public String addToList(String str){
-        String fileName= "Constituency"+str.split("\\|")[str.split("\\|").length-2]+".txt";
+        String fileName= "Constituency"+(Integer.parseInt(str.split("\\|")[str.split("\\|").length-2])-1)+"Voter.txt";
         try {
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(fileName, true));
@@ -83,6 +83,10 @@ public class VoterManagementDesk implements Desk,Registrar{
         int checkSum=0;
         for(int i=0;i<9;i++){
             checkSum+=(i+1)*Integer.parseInt(String.valueOf(numbers[i]));
+        }
+        if(numbers[9]=='X'){
+            checkSum+=10;
+            return checkSum%11==0;
         }
         checkSum+=Integer.parseInt(String.valueOf(numbers[9]));
         return checkSum%11==0;

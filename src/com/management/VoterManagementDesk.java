@@ -45,7 +45,7 @@ public class VoterManagementDesk implements Desk,Registrar{
         try {
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(fileName, true));
-            out.write(str);
+            out.write("\n"+str);
             out.close();
         }
         catch (IOException e) {

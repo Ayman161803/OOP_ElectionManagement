@@ -6,10 +6,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Party {
-    ArrayList<Candidate> partyMembers;
-    Candidate chiefMinisterFace;
-    String name;
-    String manifesto;
+    private ArrayList<Candidate> partyMembers;
+    private Candidate chiefMinisterFace;
+    private String name;
 
     public Party( String name) {
         this.name = name;
@@ -60,24 +59,6 @@ public class Party {
 
     public void changeCMto(Candidate candidate){
         this.chiefMinisterFace=candidate;
-    }
-
-    public void buildManifesto(String filename){
-        File myObj = new File(filename);
-        Scanner myReader;
-        try {
-            myReader = new Scanner(myObj);
-            myReader.nextLine();
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                if(data==null){
-                    continue;
-                }
-                this.manifesto+=data;
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
     public int getSeatsWon(){

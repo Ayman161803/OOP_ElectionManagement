@@ -3,7 +3,7 @@ package com.management;
 import java.util.Scanner;
 
 public class PollingBooth{
-    Constituency[] constituencies;
+    private Constituency[] constituencies;
 
     public void PollingBooth(){
         constituencies=new Constituency[10];

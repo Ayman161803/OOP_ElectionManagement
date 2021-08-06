@@ -14,8 +14,8 @@ import java.util.ArrayList;
 
 public class Result {
 
-     ArrayList<Constituency> constituencies;
-     ArrayList<Party> parties;
+     private ArrayList<Constituency> constituencies;
+     private ArrayList<Party> parties;
 
     public Result(PollingBooth pollingBooth){
         String str = "Constituency";

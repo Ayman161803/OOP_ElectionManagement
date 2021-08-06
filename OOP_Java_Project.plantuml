@@ -1,0 +1,253 @@
+@startuml
+
+title __OOP_JAVAPROJECT's Class Diagram__\n
+
+  namespace com.management {
+    class com.management.AadharGenerator {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.CitizenRegistrationForm {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.Constituency {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.Constituency {
+    }
+  }
+  
+
+  namespace com.management {
+    interface com.management.Desk {
+    }
+  }
+  
+
+  namespace com.management {
+    interface com.management.Desk {
+    }
+  }
+  
+
+  namespace com.management {
+    interface com.management.Form {
+    }
+  }
+  
+
+  namespace com.management {
+    interface com.management.Form {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.PollingBooth {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.PollingBooth {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.PollingBooth {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.PollingBooth {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.PollingBooth {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.PollingManagementDesk {
+    }
+  }
+  
+
+  namespace com.management {
+    interface com.management.Registrar {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.Result {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.Voter {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.VoterManagementDesk {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.VoterRegistration {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.VoterRegistration {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.VoterRegistration {
+    }
+  }
+  
+
+  namespace com.management {
+    class com.management.VoterRegistrationForm {
+    }
+  }
+  
+
+  namespace com.management {
+    namespace populace {
+      class com.management.populace.Candidate {
+      }
+    }
+  }
+  
+
+  namespace com.management {
+    namespace populace {
+      class com.management.populace.Citizen {
+      }
+    }
+  }
+  
+
+  namespace com.management {
+    namespace populace {
+      class com.management.populace.Party {
+      }
+    }
+  }
+  
+
+  namespace election {
+    class election.AadharGenerator {
+    }
+  }
+  
+
+  namespace election {
+    class election.Candidate {
+    }
+  }
+  
+
+  namespace election {
+    class election.Citizen {
+    }
+  }
+  
+
+  namespace election {
+    class election.CitizenRegistrationForm {
+    }
+  }
+  
+
+  namespace election {
+    class election.Party {
+    }
+  }
+  
+
+  namespace election {
+    class election.PollingManagementDesk {
+    }
+  }
+  
+
+  namespace election {
+    class election.Voter {
+    }
+  }
+  
+
+  namespace election {
+    class election.VoterManagementDesk {
+    }
+  }
+  
+
+  namespace election {
+    class election.VoterRegistrationForm {
+    }
+  }
+  
+
+  com.management.AadharGenerator .up.|> com.management.Form
+  com.management.CitizenRegistrationForm .up.|> com.management.Form
+  com.management.Constituency .up.|> com.management.Registrar
+  com.management.Constituency o-- com.management.PollingManagementDesk : pollingManagementDesk
+  com.management.Constituency o-- com.management.VoterManagementDesk : voterManagementDesk
+  com.management.Constituency .up.|> com.management.Registrar
+  com.management.Constituency o-- com.management.PollingManagementDesk : pollingManagementDesk
+  com.management.Constituency o-- com.management.VoterManagementDesk : voterManagementDesk
+  com.management.PollingManagementDesk .up.|> com.management.Desk
+  com.management.Voter -up-|> com.management.populace.Citizen
+  com.management.VoterManagementDesk .up.|> com.management.Desk
+  com.management.VoterManagementDesk .up.|> com.management.Registrar
+  com.management.VoterRegistration -up-|> javax.swing.JFrame
+  com.management.VoterRegistration -up-|> javax.swing.JFrame
+  com.management.VoterRegistration -up-|> javax.swing.JFrame
+  com.management.VoterRegistrationForm .up.|> com.management.Form
+  com.management.VoterRegistrationForm -up-|> javax.swing.JFrame
+  com.management.populace.Candidate -up-|> com.management.populace.Citizen
+  com.management.populace.Party o-- com.management.populace.Candidate : chiefMinisterFace
+  election.AadharGenerator .up.|> com.management.Form
+  election.Candidate -up-|> election.Citizen
+  election.CitizenRegistrationForm .up.|> com.management.Form
+  election.Party o-- election.Candidate : chiefMinisterFace
+  election.PollingManagementDesk .up.|> com.management.Desk
+  election.Voter -up-|> com.management.populace.Citizen
+  election.VoterManagementDesk .up.|> com.management.Desk
+  election.VoterManagementDesk .up.|> com.management.Registrar
+  election.VoterRegistrationForm .up.|> com.management.Form
+  election.VoterRegistrationForm -up-|> javax.swing.JFrame
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

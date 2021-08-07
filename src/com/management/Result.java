@@ -22,7 +22,6 @@ public class Result {
         ArrayList<String> arr = new ArrayList<>();
         for (int i = 0; i <= 10; i++) {
             constituencies.add(new Constituency(str+i));
-            constituencies.get(i).build();
             ArrayList<Candidate> obj =  constituencies.get(i).getPollingManagementDesk().getCandidates();
             int n = obj.size();
             for (int j = 0; j < n; j++) {

@@ -11,7 +11,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 
-public class VoterManagementDesk implements Desk,Registrar{
+public class VoterManagementDesk implements Desk{
     private  ArrayList<Voter> voterList;
 
     public VoterManagementDesk() {
@@ -26,7 +26,7 @@ public class VoterManagementDesk implements Desk,Registrar{
         if(isAadharNumberValid(AadharNumber)){
             return "Invalid Aadhar Number";
         }
-        Citizen citizen=returnCitizenWithAadharNumber(AadharNumber);
+        Citizen citizen=returnIndividualWithAadharID( AadharNumber);
         String fileName="Constituency"+AadharNumber.charAt(8)+"Voters.txt";
         if(citizen==null){
             return "Error : AadharID not found.";
@@ -53,30 +53,6 @@ public class VoterManagementDesk implements Desk,Registrar{
         }
         return "Registration Successful";
     };
-
-    private Citizen returnCitizenWithAadharNumber(String AadharNumber){
-        String filename="Constituency"+AadharNumber.charAt(8)+".txt";
-        File myObj = new File(filename);
-        Scanner myReader;
-        try {
-            myReader = new Scanner(myObj);
-            myReader.nextLine();
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                if(data==null){
-                    continue;
-                }
-                String[] citizenData=data.split("\\|");
-                if(citizenData[citizenData.length-1].equals(AadharNumber)) {
-                    System.out.println(citizenData[2]);
-                    return new Citizen(citizenData[0], citizenData[1], Integer.parseInt(citizenData[2]), (citizenData[3]), citizenData[4], Integer.parseInt(citizenData[5]));
-                }
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
     private boolean isAadharNumberValid(String AadharNumber){
         char[] numbers=AadharNumber.toCharArray();
@@ -154,7 +130,7 @@ public class VoterManagementDesk implements Desk,Registrar{
         if(isAadharNumberValid(AadharNumber)){
             return "Invalid Aadhar Number";
         }
-        Citizen citizen=returnCitizenWithAadharNumber(AadharNumber);
+        Citizen citizen=returnIndividualWithAadharID(AadharNumber);
         Document doc = new Document();
         String name = citizen.getName();
         String DOB = citizen.getDOB();
@@ -220,4 +196,8 @@ public class VoterManagementDesk implements Desk,Registrar{
         new VoterRegistrationForm();
     }
 
+    @Override
+    public Citizen returnIndividualWithAadharID(String AadharID) {
+        return null;
+    }
 }

@@ -3,6 +3,7 @@ package com.management;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.management.populace.Candidate;
+import com.management.populace.Citizen;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,7 +11,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PollingManagementDesk implements Desk,Registrar{
+public class PollingManagementDesk implements Desk{
     private ArrayList<Candidate> candidates;
     private int[] votesCounter = null;
     private long totalNoOfVotes = 0;
@@ -139,6 +140,11 @@ public class PollingManagementDesk implements Desk,Registrar{
     }
 
     public void openRegistrationPortal(){new CandidateAdditionPortal();}
+
+    @Override
+    public Citizen returnIndividualWithAadharID(String AadharID) {
+        return null;
+    }
 
     @Override
     public String addToList(String data) {

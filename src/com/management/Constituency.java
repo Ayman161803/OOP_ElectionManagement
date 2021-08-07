@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Constituency implements Registrar{
+public class Constituency implements Desk{
     private  String Name;
     private VoterManagementDesk voterManagementDesk;
     private com.management.PollingManagementDesk pollingManagementDesk;
@@ -20,33 +20,10 @@ public class Constituency implements Registrar{
         Name = name;
         voterManagementDesk=new VoterManagementDesk();
         pollingManagementDesk=new PollingManagementDesk();
+        this.build(name);
     }
 
     public Constituency(){}
-
-    public void build(){
-        File myObj;
-        myObj = new File(this.Name+".txt");
-        Scanner myReader;
-        try {
-            myReader = new Scanner(myObj);
-            myReader.nextLine();
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                if(data==null){
-                    continue;
-                }
-                String[] citizenData=data.split("\\|");
-                citizens.add(new Citizen(citizenData[0],citizenData[1],Integer.parseInt(citizenData[2]),(citizenData[3]),citizenData[4],Integer.parseInt(citizenData[5])));
-                if(Integer.parseInt(citizenData[2])>=18)
-                    noOfEligibleCitizens++;
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        voterManagementDesk.build(this.Name+"Voters.txt");
-        pollingManagementDesk.build(this.Name+"Candidates.txt");
-    }
 
     public String addToList(String data){
         String filename="Constituency"+data.charAt(data.length()-1)+".txt";
@@ -68,6 +45,11 @@ public class Constituency implements Registrar{
     @Override
     public void openRegistrationPortal() {
         new CitizenRegistrationForm();
+    }
+
+    @Override
+    public Citizen returnIndividualWithAadharID(String AadharID) {
+        return null;
     }
 
     public double percentageRegistered(){
@@ -93,6 +75,31 @@ public class Constituency implements Registrar{
     }
 
     public int getCount(){return citizens.size();}
+
+    @Override
+    public void build(String filename) {
+            File myObj;
+            myObj = new File(this.Name+".txt");
+            Scanner myReader;
+            try {
+                myReader = new Scanner(myObj);
+                myReader.nextLine();
+                while (myReader.hasNextLine()) {
+                    String data = myReader.nextLine();
+                    if(data==null){
+                        continue;
+                    }
+                    String[] citizenData=data.split("\\|");
+                    citizens.add(new Citizen(citizenData[0],citizenData[1],Integer.parseInt(citizenData[2]),(citizenData[3]),citizenData[4],Integer.parseInt(citizenData[5])));
+                    if(Integer.parseInt(citizenData[2])>=18)
+                        noOfEligibleCitizens++;
+                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            voterManagementDesk.build(this.Name+"Voters.txt");
+            pollingManagementDesk.build(this.Name+"Candidates.txt");
+    }
 
     public String getName() {
         return Name;

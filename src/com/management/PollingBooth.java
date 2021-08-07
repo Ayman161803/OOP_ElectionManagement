@@ -8,8 +8,7 @@ public class PollingBooth{
     public void PollingBooth(){
         constituencies=new Constituency[10];
         for(int i=0;i<10;i++){
-            constituencies[i]=new Constituency("Constituency"+(i));
-            constituencies[i].build();
+            constituencies[i]=new Constituency("Constituency"+(i));;
         }
     }
 

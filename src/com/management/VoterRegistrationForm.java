@@ -15,7 +15,6 @@ public class VoterRegistrationForm extends JFrame implements Form{
     private JLabel AadharNumberText;
     private JTextPane textPane1;
     private JFrame frame;
-    private static int count=0;
     public VoterRegistrationForm(){
         frame=new JFrame("VoterRegistrationPage");
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);

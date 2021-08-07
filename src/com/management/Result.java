@@ -117,5 +117,7 @@ public class Result {
 
     }
 
+    public void showCandidateResult(String aadharID){}
 
+    public void showConstituencyResult(String constituencyName){}
 }

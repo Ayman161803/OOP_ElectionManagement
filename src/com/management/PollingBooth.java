@@ -84,4 +84,6 @@ public class PollingBooth{
 
         }
     }
+
+    private void markVoted(Voter voter){}
 }

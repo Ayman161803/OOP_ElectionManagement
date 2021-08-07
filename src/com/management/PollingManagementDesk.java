@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PollingManagementDesk implements Desk{
+public class PollingManagementDesk implements Desk,Registrar{
     private ArrayList<Candidate> candidates;
     private int[] votesCounter = null;
     private long totalNoOfVotes = 0;
@@ -136,6 +136,13 @@ public class PollingManagementDesk implements Desk{
             e.printStackTrace();
         }
 
+    }
+
+    public void openRegistrationPortal(){new CandidateAdditionPortal();}
+
+    @Override
+    public String addToList(String data) {
+        return null;
     }
 }
 

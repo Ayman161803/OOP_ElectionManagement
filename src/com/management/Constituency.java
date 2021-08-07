@@ -65,6 +65,11 @@ public class Constituency implements Registrar{
         return "AadharID generated : "+citizenConcerned.getAadharNumber();
     }
 
+    @Override
+    public void openRegistrationPortal() {
+        new CitizenRegistrationForm();
+    }
+
     public double percentageRegistered(){
         return this.voterManagementDesk.getCount()*100.00/noOfEligibleCitizens;
     }
@@ -100,5 +105,4 @@ public class Constituency implements Registrar{
     public PollingManagementDesk getPollingManagementDesk() {
         return pollingManagementDesk;
     }
-
 }

@@ -216,4 +216,8 @@ public class VoterManagementDesk implements Desk,Registrar{
         return "AadharCard generation successful!";
     }
 
+    public void openRegistrationPortal(){
+        new VoterRegistrationForm();
+    }
+
 }

@@ -20,8 +20,13 @@ public class PollingManagementDesk implements Desk{
         this.candidates = new ArrayList<>();
     }
 
-    public void registerCandidate(Candidate candidate) {
-        candidates.add(candidate);
+    public String registerIndividual(String data) {
+        return null;
+    }
+
+    //call this from register individual
+    public boolean isEligibleByAge(){
+        return false;
     }
 
     public void build(String filename) {

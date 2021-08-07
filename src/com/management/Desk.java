@@ -8,4 +8,5 @@ public interface Desk {
     String addToList(String data);
     void openRegistrationPortal();
     Citizen returnIndividualWithAadharID(String AadharID);
+    String registerIndividual(String data);
 }

@@ -25,6 +25,10 @@ public class Constituency implements Desk{
 
     public Constituency(){}
 
+    public String registerIndividual(String data){
+        return this.addToList(data);
+    }
+
     public String addToList(String data){
         String filename="Constituency"+data.charAt(data.length()-1)+".txt";
         String[] citizenData=data.split("\\|");

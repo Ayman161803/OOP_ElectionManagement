@@ -3,25 +3,23 @@ package com.management;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.management.populace.Candidate;
-import com.management.populace.Citizen;
 import com.management.populace.Party;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 
 public class Result {
 
-     private ArrayList<Constituency> constituencies;
-     private ArrayList<Party> parties;
+     private ArrayList<Constituency> constituencies = new ArrayList<>();
+     private ArrayList<Party> parties = new ArrayList<>();
 
     public Result(PollingBooth pollingBooth){
         String str = "Constituency";
         ArrayList<String> arr = new ArrayList<>();
-        for (int i = 0; i <= 10; i++) {
-            constituencies.add(new Constituency(str+i));
+        Constituency con[] = pollingBooth.getConstituencies();
+        for (int i = 0; i < 10; i++) {
+            constituencies.add(con[i]);
             ArrayList<Candidate> obj =  constituencies.get(i).getPollingManagementDesk().getCandidates();
             int n = obj.size();
             for (int j = 0; j < n; j++) {
@@ -85,6 +83,7 @@ public class Result {
             obj.setAlignment(Element.ALIGN_CENTER);
             Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLD,BaseColor.BLACK);
             obj.setFont(font1);
+            obj.add("Short Result !!");
             Paragraph obj1 = new Paragraph();
             Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
             obj1.setFont(font2);
@@ -117,7 +116,76 @@ public class Result {
 
     }
 
-    public void showCandidateResult(String aadharID){}
+    public void showCandidateResult(String aadharID){
+        Candidate per = null;
+        for (int i = 0; i < 10; i++) {
+            per = constituencies.get(i).getPollingManagementDesk().returnCandidate(aadharID);
+            if(per==null){
+                continue;
+            }
+            else {
+                break;
+            }
+        }
+        String name,gender,partyName,aadharNum;
+        boolean result;
+        int age,constituency;
+        name= per.getName();
+        gender = per.getGender();
+        partyName = per.getAlliedPartyName();
+        constituency =per.getConstituency();
+        result = per.hasWon();
+        age = per.getAge();
+        aadharNum = per.getAadharNumber();
+
+        Document doc = new Document();
+
+        try{
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\CandidatesList.pdf"));
+            System.out.println("PDF created.");
+
+            doc.open();
+
+            Paragraph obj = new Paragraph();
+            obj.setAlignment(Element.ALIGN_CENTER);
+            Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLD,BaseColor.BLACK);
+            obj.setFont(font1);
+            obj.add("Candidate Detail");
+            Paragraph obj1 = new Paragraph();
+            obj1.setSpacingBefore(10f);
+            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
+            obj1.setFont(font2);
+            obj1.add("Name       : "+name +"\n");
+            obj1.add("Age        : "+age +"\n");
+            obj1.add("Gender     : "+gender+"\n");
+            obj1.add("Aadhar number :"+aadharNum+"\n");
+            obj1.add("Party Name : "+partyName+"\n");
+            obj1.add("Constituency : "+constituency+"\n");
+            String res;
+            if(result){
+                res="Won";
+            }
+            else {
+                res ="Lost";
+            }
+            obj1.add("Result of Election :"+res+"\n");
+
+            doc.add(obj);
+            doc.add(obj1);
+
+
+            doc.close();
+
+            writer.close();
+
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
     public void showConstituencyResult(String constituencyName){}
 }

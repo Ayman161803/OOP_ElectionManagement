@@ -86,4 +86,8 @@ public class PollingBooth{
     }
 
     private void markVoted(Voter voter){}
+
+    public Constituency[] getConstituencies() {
+        return constituencies;
+    }
 }

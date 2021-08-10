@@ -83,6 +83,7 @@ public class PollingManagementDesk implements Desk{
             if (votesCounter[i] > votesCounter[maxIndex])
                 maxIndex = i;
         }
+        candidates.get(maxIndex).setHasWon(true);
         return candidates.get(maxIndex);
     }
 
@@ -148,6 +149,14 @@ public class PollingManagementDesk implements Desk{
 
     @Override
     public Citizen returnIndividualWithAadharID(String AadharID) {
+        return null;
+    }
+
+    public Candidate returnCandidate(String AadharID){
+        for (int i = 0; i < candidates.size(); i++) {
+            if(candidates.get(i).getAadharNumber().equals(AadharID))
+                return candidates.get(i);
+        }
         return null;
     }
 

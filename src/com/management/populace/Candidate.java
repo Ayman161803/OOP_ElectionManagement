@@ -26,7 +26,7 @@ public class Candidate extends Citizen {
         return "Name : "+this.getName()+"\n"+"com.company.Party : "+alliedPartyName;
     }
 
-    protected void setHasWon(boolean bool){
+    public void setHasWon(boolean bool){
         this.hasWon=bool;
     }
 

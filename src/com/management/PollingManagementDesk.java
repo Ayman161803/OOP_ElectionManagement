@@ -170,7 +170,6 @@ public class PollingManagementDesk implements Desk{
         for (int i = 0; i < candidates.size(); i++) {
             name[i] = candidates.get(i).getAlliedPartyName();
         }
-
         return name;
     }
 
@@ -179,7 +178,6 @@ public class PollingManagementDesk implements Desk{
         for (int i = 0; i < getCandidates().size(); i++) {
             result[i]=100.0*votesCounter[i]/totalNoOfVotes;
         }
-
         return result;
     }
 

@@ -164,5 +164,24 @@ public class PollingManagementDesk implements Desk{
     public String addToList(String data) {
         return null;
     }
+
+    public String[] partiesName(){
+        String[] name= new String[candidates.size()];
+        for (int i = 0; i < candidates.size(); i++) {
+            name[i] = candidates.get(i).getAlliedPartyName();
+        }
+
+        return name;
+    }
+
+    public double[] partiesVotePercentage(){
+        double[] result = new double[candidates.size()];
+        for (int i = 0; i < getCandidates().size(); i++) {
+            result[i]=100.0*votesCounter[i]/totalNoOfVotes;
+        }
+
+        return result;
+    }
+
 }
 

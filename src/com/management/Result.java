@@ -1,10 +1,20 @@
 package com.management;
 
+import com.itextpdf.awt.DefaultFontMapper;
 import com.itextpdf.text.*;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.pdf.PdfContentByte;
+import com.itextpdf.text.pdf.PdfTemplate;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.management.populace.Candidate;
 import com.management.populace.Party;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.general.DefaultPieDataset;
 
+import java.awt.*;
+import java.awt.geom.Rectangle2D;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
@@ -74,7 +84,7 @@ public class Result {
         Document doc = new Document();
 
         try {
-            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\CandidatesList.pdf"));
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\StateShortResult.pdf"));
             System.out.println("PDF created.");
 
             doc.open();
@@ -141,14 +151,14 @@ public class Result {
         Document doc = new Document();
 
         try{
-            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\CandidatesList.pdf"));
-            System.out.println("PDF created.");
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\CandidatesResult.pdf"));
+            System.out.println("PDF created");
 
             doc.open();
 
             Paragraph obj = new Paragraph();
             obj.setAlignment(Element.ALIGN_CENTER);
-            Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLD,BaseColor.BLACK);
+            Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLDITALIC,BaseColor.BLACK);
             obj.setFont(font1);
             obj.add("Candidate Detail");
             Paragraph obj1 = new Paragraph();
@@ -187,5 +197,85 @@ public class Result {
 
     }
 
-    public void showConstituencyResult(String constituencyName){}
+    public void showConstituencyResult(int constituency){
+        double male,female;
+        male = constituencies.get(constituency).getVoterManagementDesk().maleRatio();
+        female = constituencies.get(constituency).getVoterManagementDesk().femaleRatio();
+        Candidate winner = constituencies.get(constituency).getPollingManagementDesk().getWinner();
+        String name,party,gender,aadharNum;
+        name = winner.getName();
+        party = winner.getAlliedPartyName();
+        aadharNum = winner.getAadharNumber();
+        double voterTurnOut = constituencies.get(constituency).voterTurnOut();
+
+        Document doc = new Document();
+
+        try{
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\Constituency"+constituency+"Result.pdf"));
+            System.out.println("PDF created");
+
+            doc.open();
+
+            Paragraph obj = new Paragraph();
+            obj.setAlignment(Element.ALIGN_CENTER);
+            Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLDITALIC,BaseColor.BLACK);
+            obj.setFont(font1);
+            obj.add("Constituency "+constituency+ "  Result !!");
+            Paragraph obj1 = new Paragraph();
+            obj1.setSpacingBefore(8f);
+            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
+            obj1.setFont(font2);
+            obj1.add("Winner Name    :  "+name+"\n");
+            obj1.add("Party Name       :   "+party+"\n");
+            obj1.add("Aadhar Number     :   "+aadharNum+"\n");
+            obj1.add("\n\n\n");
+            obj1.add("Voter Turn Out \n");
+            obj1.add(" "+voterTurnOut+"%  has  voted in Constituency "+constituency+"\n");
+            obj1.add("\n\n\n");
+            obj1.add("Male and Female Ratio \n");
+            obj1.add(" "+male+"%  has voted in Constituency\n");
+            obj1.add(" "+female+"% voted in  Constituency\n");
+
+            String[] names = constituencies.get(constituency).getPollingManagementDesk().partiesName();
+            double[] votes = constituencies.get(constituency).getPollingManagementDesk().partiesVotePercentage();
+
+
+            int width = 500,height=400;
+            DefaultPieDataset dataSet = new DefaultPieDataset();
+            for (int i = 0; i < names.length; i++) {
+                dataSet.setValue(names[i],votes[i]);
+            }
+            JFreeChart chart = ChartFactory.createPieChart(
+                    "Party Vote Distribution", dataSet, true, true, false);
+
+            PdfContentByte contentByte = writer.getDirectContent();
+            PdfTemplate template = contentByte.createTemplate(width, height);
+            Graphics2D graphics2d = template.createGraphics(width, height,
+                    new DefaultFontMapper());
+            Rectangle2D rectangle2d = new Rectangle2D.Double(0, 0, width,
+                    height);
+
+            chart.draw(graphics2d, rectangle2d);
+
+            graphics2d.dispose();
+            Image img =Image.getInstance(template);
+            img.scaleAbsolute(300,200);
+            img.setAbsolutePosition(150f,25f);
+
+
+            doc.add(obj);
+            doc.add(obj1);
+            doc.add(img);
+
+            doc.close();
+
+            writer.close();
+
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

@@ -200,4 +200,36 @@ public class VoterManagementDesk implements Desk{
     public Citizen returnIndividualWithAadharID(String AadharID) {
         return null;
     }
+
+    public double maleRatio(){
+        int totcount = 0,maleCount= 0;
+        String gender = "male";
+        for (int i = 0; i < voterList.size(); i++) {
+            Voter voter =  voterList.get(i);
+            if(voter.hasVoted()){
+                totcount++;
+                if(voter.getGender().toLowerCase(Locale.ROOT).equals(gender.toLowerCase(Locale.ROOT))){
+                    maleCount++;
+                }
+            }
+        }
+
+        return 100*maleCount/totcount;
+    }
+
+    public double femaleRatio(){
+        int totcount =0,femaleCount=0;
+        String gender = "female";
+        for (int i = 0; i < voterList.size(); i++) {
+            Voter voter =  voterList.get(i);
+            if(voter.hasVoted()){
+                totcount++;
+                if(voter.getGender().toLowerCase(Locale.ROOT).equals(gender.toLowerCase(Locale.ROOT))){
+                    femaleCount++;
+                }
+            }
+        }
+
+        return 100*femaleCount/totcount;
+    }
 }

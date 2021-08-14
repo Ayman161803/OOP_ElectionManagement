@@ -129,7 +129,7 @@ public class Result {
     public void showCandidateResult(String aadharID){
         Candidate per = null;
         for (int i = 0; i < 10; i++) {
-            per = constituencies.get(i).getPollingManagementDesk().returnCandidate(aadharID);
+            per = (Candidate) constituencies.get(i).getPollingManagementDesk().returnIndividualWithAadharID(aadharID);
             if(per==null){
                 continue;
             }

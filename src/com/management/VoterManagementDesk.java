@@ -23,7 +23,7 @@ public class VoterManagementDesk implements Desk{
     }
 
     public String registerIndividual(String AadharNumber){
-        if(isAadharNumberValid(AadharNumber)){
+        if(this.isAadharNumberValid(AadharNumber)){
             return "Invalid Aadhar Number";
         }
         Citizen citizen=returnIndividualWithAadharID( AadharNumber);
@@ -54,19 +54,6 @@ public class VoterManagementDesk implements Desk{
         return "Registration Successful";
     };
 
-    private boolean isAadharNumberValid(String AadharNumber){
-        char[] numbers=AadharNumber.toCharArray();
-        int checkSum=0;
-        for(int i=0;i<9;i++){
-            checkSum+=(i+1)*Integer.parseInt(String.valueOf(numbers[i]));
-        }
-        if(numbers[9]=='X'){
-            checkSum+=10;
-            return checkSum%11==0;
-        }
-        checkSum+=Integer.parseInt(String.valueOf(numbers[9]));
-        return checkSum%11==0;
-    }
 
     public int memberOfGender(String gender){
         int count=0;
@@ -126,11 +113,18 @@ public class VoterManagementDesk implements Desk{
         }
     }
 
+    public void openAadharCardGenerationPortal (){
+        new AadharGenerator();
+    }
+
     public String genrateAadharCard(String AadharNumber){
         if(isAadharNumberValid(AadharNumber)){
             return "Invalid Aadhar Number";
         }
         Citizen citizen=returnIndividualWithAadharID(AadharNumber);
+        if(citizen==null){
+            return "Error : Aadhar ID not found";
+        }
         Document doc = new Document();
         String name = citizen.getName();
         String DOB = citizen.getDOB();
@@ -198,6 +192,8 @@ public class VoterManagementDesk implements Desk{
 
     @Override
     public Citizen returnIndividualWithAadharID(String AadharID) {
+
+
         return null;
     }
 

@@ -20,7 +20,6 @@ public class VoterRegistrationForm extends JFrame implements Form{
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(290,380));
         frame.setResizable(true);
-
         frame.add(panel1);
         frame.pack();
         frame.setLocationRelativeTo(null);
@@ -28,6 +27,14 @@ public class VoterRegistrationForm extends JFrame implements Form{
         EnterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(!isDataInFormat(AadharNumberTextField.getText())){
+                    textPane1.setText("Data entered is in wrong format.");
+                    StyledDocument doc = textPane1.getStyledDocument();
+                    SimpleAttributeSet center = new SimpleAttributeSet();
+                    StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+                    doc.setParagraphAttributes(0, doc.getLength(), center, false);
+                    return;
+                }
                 VoterManagementDesk voterManagementDesk= new VoterManagementDesk();
                 textPane1.setText(voterManagementDesk.registerIndividual(AadharNumberTextField.getText()));
                 StyledDocument doc = textPane1.getStyledDocument();
@@ -37,12 +44,15 @@ public class VoterRegistrationForm extends JFrame implements Form{
             }
         });
     }
-
-    public static void main(String[] args) {
-        new VoterRegistrationForm();
-    }
     @Override
-    public boolean isDataInFormat() {
-        return false;
+    public boolean isDataInFormat(String aadhar) {
+        if(aadhar.length()<12){
+            return false;
+        }
+        for(int i = 0; i<aadhar.length(); i++){
+            if((!(aadhar.charAt(i)>='0'&&aadhar.charAt(i)<='9')) && aadhar.charAt(i)!='X')
+               return false;
+        }
+        return true;
     }
 }

@@ -9,4 +9,17 @@ public interface Desk {
     void openRegistrationPortal();
     Citizen returnIndividualWithAadharID(String AadharID);
     String registerIndividual(String data);
+    default boolean isAadharNumberValid(String AadharNumber){
+        char[] numbers=AadharNumber.toCharArray();
+        int checkSum=0;
+        for(int i=0;i<9;i++){
+            checkSum+=(i+1)*Integer.parseInt(String.valueOf(numbers[i]));
+        }
+        if(numbers[9]=='X'){
+            checkSum+=10;
+            return checkSum%11==0;
+        }
+        checkSum+=Integer.parseInt(String.valueOf(numbers[9]));
+        return checkSum%11==0;
+    }
 }

@@ -5,9 +5,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import com.management.populace.Candidate;
 import com.management.populace.Citizen;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,13 +18,27 @@ public class PollingManagementDesk implements Desk{
         this.candidates = new ArrayList<>();
     }
 
-    public String registerIndividual(String data) {
-        return null;
+    public String registerIndividual(String AadharNumber) {
+        if(this.isAadharNumberValid(AadharNumber)){
+            return "Invalid Aadhar Number";
+        }
+        Citizen citizen=returnIndividualWithAadharID( AadharNumber);
+        if(isEligibleByAge(citizen)){
+
+        }
+        String fileName="Constituency"+AadharNumber.charAt(8)+"Candidates.txt";
+        if(citizen==null){
+            return "Error : AadharID not found.";
+        }
+        else{
+            String str=citizen.getName()+"|"+citizen.getDOB()+"|"+citizen.getAge()+"|"+citizen.getGender()+"|"+citizen.getAddress()+"|"+citizen.getConstituency()+"|"+citizen.getAadharNumber();
+            return addToList(str);
+        }
     }
 
     //call this from register individual
-    public boolean isEligibleByAge(){
-        return false;
+    public boolean isEligibleByAge(Citizen citizen){
+        return citizen.getAge()>=25;
     }
 
     public void build(String filename) {
@@ -152,17 +164,19 @@ public class PollingManagementDesk implements Desk{
         return null;
     }
 
-    public Candidate returnCandidate(String AadharID){
-        for (int i = 0; i < candidates.size(); i++) {
-            if(candidates.get(i).getAadharNumber().equals(AadharID))
-                return candidates.get(i);
-        }
-        return null;
-    }
-
     @Override
-    public String addToList(String data) {
-        return null;
+    public String addToList(String str) {
+        String fileName= "Constituency"+(Integer.parseInt(str.split("\\|")[str.split("\\|").length-2])-1)+"Candidate.txt";
+        try {
+            BufferedWriter out = new BufferedWriter(
+                    new FileWriter(fileName, true));
+            out.write("\n"+str);
+            out.close();
+        }
+        catch (IOException e) {
+            System.out.println("exception occoured" + e);
+        }
+        return "Candidate added successfully";
     }
 
     public String[] partiesName(){

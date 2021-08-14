@@ -42,6 +42,14 @@ public class CitizenRegistrationForm implements Form{
             public void actionPerformed(ActionEvent e) {
                 Constituency constituency= new Constituency();
                 String dataFromForm=nameTextField.getText()+"|"+DOBTextField.getText()+"|"+ageTextField.getText()+"|"+genderTextField.getText()+"|"+addressTextField.getText()+"|"+constituencyTextField.getText();
+                if(!isDataInFormat(dataFromForm)){
+                    ReturnMessage.setText("Data entered is in wrong format.");
+                    StyledDocument doc = ReturnMessage.getStyledDocument();
+                    SimpleAttributeSet center = new SimpleAttributeSet();
+                    StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+                    doc.setParagraphAttributes(0, doc.getLength(), center, false);
+                    return;
+                }
                 ReturnMessage.setText(constituency.addToList(dataFromForm));
                 StyledDocument doc = ReturnMessage.getStyledDocument();
                 SimpleAttributeSet center = new SimpleAttributeSet();
@@ -52,7 +60,38 @@ public class CitizenRegistrationForm implements Form{
     }
 
     @Override
-    public boolean isDataInFormat() {
-        return false;
+    public boolean isDataInFormat(String data) {
+        String[] dataArray=data.split("\\|");
+        String DOB=dataArray[1].trim();
+
+        //DOB format check
+        {
+            if(DOB.length()!=10)
+                return false;
+            if(DOB.charAt(2)!='/' ||DOB.charAt(5)!='/')
+                return false;
+            for(int i=0;i<DOB.length();i++){
+                if(i==2 || i==5)
+                    continue;
+                if(!(DOB.charAt(i)>'0' && DOB.charAt(i)<='9'))
+                    return false;
+            }
+        }
+
+        String address=dataArray[4].trim();
+        //Address format check
+        {
+            if(address.charAt(0)<'0' || address.charAt(0)>'9')
+                return false;
+        }
+
+        String age=dataArray[2].trim();
+        {
+            for(int i=0;i<age.length();i++){
+                if(!(DOB.charAt(i)>'0' && DOB.charAt(i)<='9'))
+                    return false;
+            }
+        }
+        return true;
     }
 }

@@ -137,7 +137,7 @@ public class PollingManagementDesk implements Desk{
 
             Paragraph o = new Paragraph("LIST OF CANDIDATES");
             o.setAlignment(Element.ALIGN_CENTER);
-            o.setFont(new Font(Font.FontFamily.TIMES_ROMAN,15f,Font.BOLD, BaseColor.BLACK));
+            o.setFont(new Font(Font.FontFamily.TIMES_ROMAN,13f,Font.BOLD, BaseColor.BLACK));
             doc.add(o);
             Paragraph p = new Paragraph();
             for (int i = 0; i < num; i++) {
@@ -193,6 +193,14 @@ public class PollingManagementDesk implements Desk{
             result[i]=100.0*votesCounter[i]/totalNoOfVotes;
         }
         return result;
+    }
+
+    public Candidate returnCandidate(String AadharID){
+        for (int i = 0; i < candidates.size(); i++) {
+            if(candidates.get(i).getAadharNumber().equals(AadharID))
+                return candidates.get(i);
+        }
+        return null;
     }
 
 }

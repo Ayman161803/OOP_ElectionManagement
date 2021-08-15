@@ -29,7 +29,7 @@ public class Party {
         return chiefMinisterFace;
     }
 
-    public String getCMNAme(){
+    public String getCMName(){
         return  chiefMinisterFace.getName();
     }
 

@@ -193,7 +193,6 @@ public class VoterManagementDesk implements Desk{
     @Override
     public Citizen returnIndividualWithAadharID(String AadharID) {
 
-
         return null;
     }
 
@@ -227,5 +226,14 @@ public class VoterManagementDesk implements Desk{
         }
 
         return 100*femaleCount/totcount;
+    }
+
+    public Voter returnVoter(String AadharID){
+        for (int i = 0; i < voterList.size(); i++) {
+            if(voterList.get(i).getAadharNumber().equals(AadharID)){
+                return voterList.get(i);
+            }
+        }
+        return  null;
     }
 }

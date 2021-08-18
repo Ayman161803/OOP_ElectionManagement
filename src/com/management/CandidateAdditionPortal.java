@@ -17,10 +17,11 @@ public class CandidateAdditionPortal implements Form {
     private JButton EnterButton;
     private JLabel AadharNumberText;
     private JTextPane textPane1;
+    private JTextField Party;
     private JFrame frame;
-    public CandidateAdditionPortal() {frame=new JFrame("VoterRegistrationPage");
+    public CandidateAdditionPortal() {frame=new JFrame("CandidateRegistrationPage");
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        frame.setPreferredSize(new Dimension(290,380));
+        frame.setPreferredSize(new Dimension(290,280));
         frame.setResizable(true);
         frame.add(panel1);
         frame.pack();
@@ -37,7 +38,9 @@ public class CandidateAdditionPortal implements Form {
                     doc.setParagraphAttributes(0, doc.getLength(), center, false);
                     return;
                 }
-
+                PollingManagementDesk pollingManagementDesk= new PollingManagementDesk();
+                System.out.println(Party.getText());
+                textPane1.setText( pollingManagementDesk.registerIndividual(AadharNumberTextField.getText()+"|"+Party.getText()));
                 StyledDocument doc = textPane1.getStyledDocument();
                 SimpleAttributeSet center = new SimpleAttributeSet();
                 StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
@@ -48,13 +51,17 @@ public class CandidateAdditionPortal implements Form {
 
     @Override
     public boolean isDataInFormat(String aadhar) {
-        if(aadhar.length()!=12){
+        if(aadhar.trim().length()<12){
             return false;
         }
         for(int i = 0; i<aadhar.length(); i++){
             if((!(aadhar.charAt(i)>='0'&&aadhar.charAt(i)<='9')) && aadhar.charAt(i)!='X')
                 return false;
         }
-        return false;
+        return true;
+    }
+
+    public static void main(String[] args) {
+        new CandidateAdditionPortal();
     }
 }

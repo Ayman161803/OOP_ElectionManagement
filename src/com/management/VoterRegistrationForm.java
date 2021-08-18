@@ -55,4 +55,8 @@ public class VoterRegistrationForm extends JFrame implements Form{
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        new VoterRegistrationForm();
+    }
 }

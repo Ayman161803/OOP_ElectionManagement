@@ -12,7 +12,7 @@ public class Candidate extends Citizen {
         this.popularityScore=5+(int)(Math.random()*5)+Math.random();
     }
 
-    public Candidate(String name, String address, String gender, int age, String DOB, int constituencyNum, int candidateID,String AlliedPartyName) {
+    public Candidate(String name, String DOB, int age, String gender, String address, int constituencyNum,String AlliedPartyName) {
         super(name,DOB,age,gender,address,constituencyNum);
         this.alliedPartyName = AlliedPartyName;
         this.popularityScore=5+(int)(Math.random()*5)+Math.random();
@@ -23,7 +23,7 @@ public class Candidate extends Citizen {
     }
 
     public String toString(){
-        return "Name : "+this.getName()+"\n"+"com.company.Party : "+alliedPartyName;
+        return "Name : "+this.getName()+"\n"+"Party : "+alliedPartyName;
     }
 
     public void setHasWon(boolean bool){

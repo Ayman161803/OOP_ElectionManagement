@@ -15,32 +15,53 @@ import org.jfree.data.general.DefaultPieDataset;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Result {
 
-     private ArrayList<Constituency> constituencies = new ArrayList<>();
-     private ArrayList<Party> parties = new ArrayList<>();
+     private ArrayList<Constituency> constituencies ;
+     private ArrayList<Party> parties ;
 
     public Result(PollingBooth pollingBooth){
+        constituencies=new ArrayList<Constituency>();
         String str = "Constituency";
-        ArrayList<String> arr = new ArrayList<>();
-        Constituency con[] = pollingBooth.getConstituencies();
-        for (int i = 0; i < 10; i++) {
-            constituencies.add(con[i]);
-            ArrayList<Candidate> obj =  constituencies.get(i).getPollingManagementDesk().getCandidates();
-            int n = obj.size();
-            for (int j = 0; j < n; j++) {
-                if(!arr.contains(obj.get(j).getAlliedPartyName())){
-                    arr.add(obj.get(j).getAlliedPartyName());
+        parties = new ArrayList<Party>();
+        constituencies= pollingBooth.getConstituencies();
+        initiateParties();
+        int noOfConstituency=constituencies.size();
+        int noOfParties=parties.size();
+        for(int i=0;i<noOfConstituency;i++){
+            for(int j=0;j<noOfParties;j++){
+                Candidate candidateWithPartyJ=constituencies.get(i).getPollingManagementDesk().getCandidateWithParty(parties.get(j).getName());
+                if(candidateWithPartyJ!=null){
+                    parties.get(j).add(candidateWithPartyJ);
                 }
             }
         }
-        int size = arr.size();
-        for (int i = 0; i < size; i++) {
-            parties.add(new Party(arr.get(i)));
+    }
+
+    private void initiateParties(){
+        File myObj = new File("Parties"+".txt");
+        Scanner myReader;
+        try {
+            myReader = new Scanner(myObj);
+            myReader.nextLine();
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                if(data==null){
+                    continue;
+                }
+                String[] PartyData =data.split("\\|");
+                for (int i=0;i<PartyData.length;i++){
+                    parties.add(new Party(PartyData[i]));
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 

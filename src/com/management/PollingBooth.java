@@ -1,14 +1,21 @@
 package com.management;
 
+import com.management.populace.Candidate;
+
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
 
 public class PollingBooth{
-    private Constituency[] constituencies;
+    private ArrayList<Constituency> constituencies;
 
-    public void PollingBooth(){
-        constituencies=new Constituency[10];
-        for(int i=0;i<10;i++){
-            constituencies[i]=new Constituency("Constituency"+(i));;
+    public PollingBooth(){
+        File directory= new File("CitizenData");
+        int length=directory.listFiles().length;
+        System.out.println(length);
+        constituencies=new ArrayList<Constituency>();
+        for(int i=0;i<length;i++){
+            constituencies.add(new Constituency(String.valueOf(i)));
         }
     }
 
@@ -19,16 +26,16 @@ public class PollingBooth{
         int constituencyno=Integer.parseInt(String.valueOf(aadhar.charAt(8)));
 
 
-        if (constituencies[constituencyno].getVoterManagementDesk().doesExist(aadhar)){
-            constituencies[constituencyno].getPollingManagementDesk().showAllCandidates();
+        if (constituencies.get(constituencyno).getVoterManagementDesk().doesExist(aadhar)){
+            constituencies.get(constituencyno).getPollingManagementDesk().showAllCandidates();
             System.out.print("Cast your vote:");
 
             int vote=sc.nextInt();
-            constituencies[constituencyno].getPollingManagementDesk().updateVote(vote-1);
+            constituencies.get(constituencyno).getPollingManagementDesk().updateVote(vote-1);
 
             System.out.println("Vote successfully registered!");
 
-            constituencies[constituencyno].getVoterManagementDesk().markVoted(aadhar);
+            constituencies.get(constituencyno).getVoterManagementDesk().markVoted(aadhar);
 
         }
         else
@@ -36,15 +43,14 @@ public class PollingBooth{
     }
 
     public void automateVoting(){
-        Constituency[] c=constituencies;
         for(int i=0;i<10;i++){
-            double[] ps=new double[c[i].getPollingManagementDesk().getCount()];
+            double[] ps=new double[constituencies.get(i).getPollingManagementDesk().getCount()];
             double sum=0;
             double t;
-            int n=c[i].getPollingManagementDesk().getCount();
+            int n=constituencies.get(i).getPollingManagementDesk().getCount();
 
             for(int j=0;j<n;j++){
-                ps[j]=10-c[i].getPollingManagementDesk().getPopularityScore(j);
+                ps[j]=10-constituencies.get(i).getPollingManagementDesk().getPopularityScore(j);
                 sum+=ps[j];
             }
 
@@ -58,14 +64,14 @@ public class PollingBooth{
                 ps[j]/=sum;
             }
 
-            for(int k=0;k<c[i].getVoterManagementDesk().getCount();k++){
+            for(int k=0;k<constituencies.get(i).getVoterManagementDesk().getCount();k++){
                 double rand=Math.random();
                 double low=0,high=ps[n-1];
                 int flag=0;
 
                 for (int j=n-1;j==1;j--) {
                     if (rand > low && rand < high) {
-                        c[i].getPollingManagementDesk().updateVote(j + 1); //reason for j+1:check updateVote
+                        constituencies.get(i).getPollingManagementDesk().updateVote(j + 1); //reason for j+1:check updateVote
                         flag = 1;
                         break;
                     }
@@ -75,19 +81,26 @@ public class PollingBooth{
                 }
 
                 if (flag==0){
-                    c[i].getPollingManagementDesk().updateVote(1);
+                    constituencies.get(i).getPollingManagementDesk().updateVote(1);
                 }
 
-                c[i].getVoterManagementDesk().markVoted(c[i].getVoterManagementDesk().getAadharFromIndex(k));
+                constituencies.get(i).getVoterManagementDesk().markVoted(constituencies.get(i).getVoterManagementDesk().getAadharFromIndex(k));
 
             }
 
         }
     }
 
-    private void markVoted(Voter voter){}
+    private void markVoted(Voter voter){voter.markVoted();}
 
-    public Constituency[] getConstituencies() {
+    public ArrayList<Constituency> getConstituencies() {
         return constituencies;
+    }
+
+    public static void main(String[] args) {
+        PollingBooth pollingBooth=new PollingBooth();
+        for (int i = 0; i <10 ; i++) {
+            pollingBooth.registerVote();
+        }
     }
 }

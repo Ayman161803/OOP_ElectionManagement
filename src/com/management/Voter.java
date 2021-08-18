@@ -9,7 +9,7 @@ public class Voter extends Citizen {
 
     private boolean hasVoted=false;
 
-    public Voter(String name, String address, String gender, int age, String DOB,int constituencyNum) {
+    public Voter(String name, String DOB, int age, String gender,String address,int constituencyNum) {
         super(name,DOB,age,gender,address,constituencyNum);
         System.out.println(this.getAadharNumber());
     }

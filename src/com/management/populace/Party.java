@@ -25,6 +25,9 @@ public class Party {
 
     }
 
+    public void add(Candidate candidate){
+        partyMembers.add(candidate);
+    }
     public Candidate showCM(){
         return chiefMinisterFace;
     }
@@ -35,30 +38,6 @@ public class Party {
 
     public String getName() {
         return name;
-    }
-
-    public void buildParty(String filename){
-        File myObj = new File(filename);
-        Scanner myReader;
-        try {
-            myReader = new Scanner(myObj);
-            myReader.nextLine();
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                if(data==null){
-                    continue;
-                }
-                String[] candidateData=data.split(",");
-                partyMembers.add(new Candidate(candidateData[0],candidateData[1],candidateData[2],Integer.parseInt(candidateData[3]),candidateData[4],Integer.parseInt(candidateData[5]),Integer.parseInt(candidateData[6]),candidateData[7]));
-            }
-            this.chooseCM();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void changeCMto(Candidate candidate){
-        this.chiefMinisterFace=candidate;
     }
 
     public int getSeatsWon(){

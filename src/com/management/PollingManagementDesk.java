@@ -18,26 +18,34 @@ public class PollingManagementDesk implements Desk{
         this.candidates = new ArrayList<>();
     }
 
-    public String registerIndividual(String AadharNumber) {
+    public String registerIndividual(String AadharNumberAndParty) {
+        String AadharNumber=AadharNumberAndParty.split("\\|")[0];
+        String Party=AadharNumberAndParty.split("\\|")[1];
+
+        //check if aadharNumber is valid
         if(this.isAadharNumberValid(AadharNumber)){
             return "Invalid Aadhar Number";
         }
-        Citizen citizen=returnIndividualWithAadharID( AadharNumber);
-        if(isEligibleByAge(citizen)){
 
-        }
-        String fileName="Constituency"+AadharNumber.charAt(8)+"Candidates.txt";
+        //get citizen from aadharID
+        Citizen citizen=returnIndividualWithAadharID( AadharNumber);
+
+        //if no citizen correspnding to aadhar found.
         if(citizen==null){
             return "Error : AadharID not found.";
         }
-        else{
-            String str=citizen.getName()+"|"+citizen.getDOB()+"|"+citizen.getAge()+"|"+citizen.getGender()+"|"+citizen.getAddress()+"|"+citizen.getConstituency()+"|"+citizen.getAadharNumber();
+
+        //if the citizen is under age
+        if(isEligibleByAge(citizen)){
+            String str=citizen.getName()+"|"+citizen.getDOB()+"|"+citizen.getAge()+"|"+citizen.getGender()+"|"+citizen.getAddress()+"|"+citizen.getConstituency()+"|"+citizen.getAadharNumber()+"|"+Party;
             return addToList(str);
         }
+
+        return "Citizen is underAge";
     }
 
     //call this from register individual
-    public boolean isEligibleByAge(Citizen citizen){
+    private boolean isEligibleByAge(Citizen citizen){
         return citizen.getAge()>=25;
     }
 
@@ -53,11 +61,12 @@ public class PollingManagementDesk implements Desk{
                     continue;
                 }
                 String[] candidateData = data.split("\\|");
-                candidates.add(new Candidate(candidateData[0], candidateData[1], candidateData[2], Integer.parseInt(candidateData[3]), candidateData[4], Integer.parseInt(candidateData[5]), Integer.parseInt(candidateData[6]), candidateData[7]));
+                candidates.add(new Candidate(candidateData[0], candidateData[1], Integer.parseInt(candidateData[2]), (candidateData[3]), candidateData[4], Integer.parseInt(candidateData[5]), candidateData[7]));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        votesCounter=new int[candidates.size()];
     }
 
     public int getCount() {
@@ -76,7 +85,7 @@ public class PollingManagementDesk implements Desk{
 
     public void showAllCandidates() {
         for (int i = 0; i < candidates.size(); i++) {
-            System.out.println(candidates.get(i) + "\n");
+            System.out.println(i+"."+candidates.get(i) + "\n");
         }
     }
 
@@ -160,13 +169,21 @@ public class PollingManagementDesk implements Desk{
     public void openRegistrationPortal(){new CandidateAdditionPortal();}
 
     @Override
-    public Citizen returnIndividualWithAadharID(String AadharID) {
-        return null;
-    }
-
-    @Override
     public String addToList(String str) {
-        String fileName= "Constituency"+(Integer.parseInt(str.split("\\|")[str.split("\\|").length-2])-1)+"Candidate.txt";
+        //getting aadhar from data
+        String AadharID=(str.split("\\|")[str.split("\\|").length-2]);
+
+        //getting party from data
+        String PartyOfCandidateGrttingAdded=(str.split("\\|")[str.split("\\|").length-1]);
+
+        //getting constituency from aadharID
+        String numberConstituency="";
+        for(int i=8;i<=8+AadharID.length()-12;i++){
+            numberConstituency+=AadharID.charAt(i);
+        }
+
+        //adding data into Candidates files
+        String fileName= "./CandidateData/Constituency"+numberConstituency+"Candidates.txt";
         try {
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(fileName, true));
@@ -176,6 +193,41 @@ public class PollingManagementDesk implements Desk{
         catch (IOException e) {
             System.out.println("exception occoured" + e);
         }
+
+        //checking if party already registered
+        File myObj = new File("Parties"+".txt");
+        boolean isPartyAlreadyRegistered=false;
+        Scanner myReader;
+        try {
+            myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                if(data==null){
+                    continue;
+                }
+                String[] parties=data.split("\\|");
+                for(String partyInTheLine:parties){
+                    if(partyInTheLine.equals(PartyOfCandidateGrttingAdded))
+                        isPartyAlreadyRegistered=true;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        //adding party if not registered
+        if(!isPartyAlreadyRegistered){
+            try {
+                BufferedWriter out = new BufferedWriter(
+                        new FileWriter("Parties.txt", true));
+                out.write("\n"+PartyOfCandidateGrttingAdded);
+                out.close();
+            }
+            catch (IOException e) {
+                System.out.println("exception occurred" + e);
+            }
+        }
+
         return "Candidate added successfully";
     }
 
@@ -203,5 +255,14 @@ public class PollingManagementDesk implements Desk{
         return null;
     }
 
+    public Candidate getCandidateWithParty(String Party){
+        int length=candidates.size();
+        for(int i=0;i<length;i++){
+            if(candidates.get(i).getAlliedPartyName().equals(Party)){
+                return candidates.get(i);
+            }
+        }
+        return null;
+    }
 }
 

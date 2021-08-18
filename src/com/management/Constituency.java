@@ -1,6 +1,6 @@
 package com.management;
 
-import com.management.VoterManagementDesk;
+import com.management.populace.Candidate;
 import com.management.populace.Citizen;
 
 import java.io.*;
@@ -20,7 +20,7 @@ public class Constituency implements Desk{
         Name = name;
         voterManagementDesk=new VoterManagementDesk();
         pollingManagementDesk=new PollingManagementDesk();
-        this.build(name);
+        this.build("CitizenData/Constituency"+name+".txt");
     }
 
     public Constituency(){}
@@ -30,30 +30,28 @@ public class Constituency implements Desk{
     }
 
     public String addToList(String data){
-        String filename="Constituency"+data.charAt(data.length()-1)+".txt";
-        String[] citizenData=data.split("\\|");
-        Citizen citizenConcerned=new Citizen(citizenData[0],citizenData[1],Integer.parseInt(citizenData[2]),(citizenData[3]),citizenData[4],Integer.parseInt(citizenData[5]));
+        String AadharID=(data.split("\\|")[data.split("\\|").length-1]);
+        String numberConstituency="";
+        for(int i=8;i<=8+AadharID.length()-12;i++){
+            numberConstituency+=AadharID.charAt(i);
+        }
+        String filename= "Constituency"+numberConstituency+".txt";
         try {
             // Open given file in append mode.
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(filename, true));
-            out.write(citizenConcerned.toString()+"\n");
+            out.write(data+"\n");
             out.close();
         }
         catch (IOException e) {
             System.out.println("exception occoured" + e);
         }
-        return "AadharID generated : "+citizenConcerned.getAadharNumber();
+        return "AadharID generated : "+data.split("\\|")[data.split("\\|").length-1];
     }
 
     @Override
     public void openRegistrationPortal() {
         new CitizenRegistrationForm();
-    }
-
-    @Override
-    public Citizen returnIndividualWithAadharID(String AadharID) {
-        return null;
     }
 
     public double percentageRegistered(){
@@ -83,7 +81,7 @@ public class Constituency implements Desk{
     @Override
     public void build(String filename) {
             File myObj;
-            myObj = new File(this.Name+".txt");
+            myObj = new File(filename);
             Scanner myReader;
             try {
                 myReader = new Scanner(myObj);
@@ -101,8 +99,8 @@ public class Constituency implements Desk{
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            voterManagementDesk.build(this.Name+"Voters.txt");
-            pollingManagementDesk.build(this.Name+"Candidates.txt");
+            voterManagementDesk.build("VoterData/Constituency"+this.Name+"Voters.txt");
+            pollingManagementDesk.build("CandidateData/Constituency"+this.Name+"Candidates.txt");
     }
 
     public String getName() {

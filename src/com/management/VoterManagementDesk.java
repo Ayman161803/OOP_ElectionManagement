@@ -1,9 +1,13 @@
 package com.management;
 
 import com.itextpdf.text.*;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.Image;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.management.populace.Candidate;
 import com.management.populace.Citizen;
 
+import java.awt.*;
 import java.io.*;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
@@ -41,11 +45,17 @@ public class VoterManagementDesk implements Desk{
     }
 
     public String addToList(String str){
-        String fileName= "Constituency"+(Integer.parseInt(str.split("\\|")[str.split("\\|").length-2])-1)+"Voter.txt";
+        String AadharID=(str.split("\\|")[str.split("\\|").length-1]).trim();
+        String numberConstituency="";
+        for(int i=8;i<=8+AadharID.length()-13;i++){
+            numberConstituency+=AadharID.charAt(i);
+        }
+        System.out.println(AadharID.length());
+        String fileName= "./VoterData/Constituency"+numberConstituency+"Voters.txt";
         try {
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(fileName, true));
-            out.write("\n"+str);
+            out.write(str+"\n");
             out.close();
         }
         catch (IOException e) {
@@ -85,7 +95,11 @@ public class VoterManagementDesk implements Desk{
                     continue;
                 }
                 String[] citizenData=data.split("\\|");
-                voterList.add(new Voter(citizenData[0],citizenData[1],citizenData[2],Integer.parseInt(citizenData[3]),citizenData[4],Integer.parseInt(citizenData[5])));
+                System.out.println(citizenData.length);
+                for (int k = 0; k < 6; k++) {
+                    System.out.println(citizenData[k]);
+                }
+                voterList.add(new Voter(citizenData[0],citizenData[1],Integer.parseInt(citizenData[2]),(citizenData[3]),citizenData[4],Integer.parseInt(citizenData[5])));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -130,11 +144,10 @@ public class VoterManagementDesk implements Desk{
         String DOB = citizen.getDOB();
         String gender = citizen.getGender();
         String num = citizen.getAadharNumber();
-
         try
         {
 //generate a PDF at the specified location
-            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\AadharCard.pdf"));
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("AadharCard.pdf"));
             System.out.println("PDF created.");
 //opens the PDF
             doc.open();
@@ -183,17 +196,32 @@ public class VoterManagementDesk implements Desk{
         } catch (IOException e) {
             e.printStackTrace();
         }
+        try {
+
+            File pdfFile = new File("AadharCard.pdf");
+            if (pdfFile.exists()) {
+
+                if (Desktop.isDesktopSupported()) {
+                    Desktop.getDesktop().open(pdfFile);
+                } else {
+                    System.out.println("Awt Desktop is not supported!");
+                }
+
+            } else {
+                System.out.println("File is not exists!");
+            }
+
+            System.out.println("Done");
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
         return "AadharCard generation successful!";
     }
 
     public void openRegistrationPortal(){
         new VoterRegistrationForm();
-    }
-
-    @Override
-    public Citizen returnIndividualWithAadharID(String AadharID) {
-
-        return null;
     }
 
     public double maleRatio(){

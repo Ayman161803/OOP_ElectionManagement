@@ -48,7 +48,7 @@ public class AadharGenerator implements Form{
     }
     @Override
     public boolean isDataInFormat(String aadhar) {
-        if(aadhar.length()!=12){
+        if(aadhar.length()<12){
             return false;
         }
         for(int i = 0; i<aadhar.length(); i++){

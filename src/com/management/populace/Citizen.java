@@ -1,5 +1,8 @@
 package com.management.populace;
 
+import com.management.Constituency;
+import com.management.Desk;
+
 import java.util.Locale;
 
 public class Citizen {
@@ -19,20 +22,21 @@ public class Citizen {
         int genderCode= gender.toLowerCase(Locale.ROOT).equals("male")?0:1;
         this.name = name;
         this.address = address;
-        this.aadharNumber = generateAadharNumber(DOB+(constituencyNum-1),address)+genderCode;
+        this.aadharNumber = generateAadharID(DOB, String.valueOf((constituencyNum-1)),address)+genderCode;
+        System.out.println(aadharNumber);
         this.gender = gender;
         this.age = age;
         this.DOB = DOB;
         this.constituency=constituencyNum;
     }
 
-    //data is DDMMYYYY<Constituencynum-1>
-    private static String generateAadharNumber(String data,String address){
+    private static String generateAadharID(String data,String ConstituencyNum,String address){
         address=address.trim();
         String[] DOBdata=data.split("/");
         String DDMMYYYYC="";
         for(int i=0;i<3;i++)
             DDMMYYYYC+=DOBdata[i];
+        DDMMYYYYC+=ConstituencyNum.charAt(0);
         char[] isbn= new String(DDMMYYYYC).toCharArray();
         int checkSum=0;
         for(int i=10;i>=2;i--){
@@ -44,19 +48,12 @@ public class Citizen {
                 break;
             }
         }
-        if(checkSum==0){
-            long number=Long.parseLong(DDMMYYYYC)*10;
-            return String.format("%010d",number)+address.charAt(0);
+        if(checkSum!=10){
+            return DDMMYYYYC+ConstituencyNum+(checkSum) +address.charAt(0);
         }
-        else if (checkSum > 0 && checkSum < 10) {
-            long number=Long.parseLong(DDMMYYYYC)*10+checkSum;
-            return String.format("%010d",number)+address.charAt(0);
+        else {
+            return DDMMYYYYC+(ConstituencyNum)+"X" +address.charAt(0);
         }
-        else if(checkSum==10) {
-            long number = Long.parseLong(DDMMYYYYC);
-            return String.format("%09dX", number)+address.charAt(0);
-        }
-        return null;
     }
 
     public int getConstituency() {

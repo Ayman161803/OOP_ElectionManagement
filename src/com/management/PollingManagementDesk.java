@@ -105,8 +105,16 @@ public class PollingManagementDesk implements Desk{
             if (votesCounter[i] > votesCounter[maxIndex])
                 maxIndex = i;
         }
-        candidates.get(maxIndex).setHasWon(true);
         return candidates.get(maxIndex);
+    }
+
+    public void setWinner(){
+        int maxIndex = 0;
+        for (int i = 1; i < votesCounter.length; i++) {
+            if (votesCounter[i] > votesCounter[maxIndex])
+                maxIndex = i;
+        }
+        candidates.get(maxIndex).setHasWon(true);
     }
 
     public long getTotalNoOfVotes() {

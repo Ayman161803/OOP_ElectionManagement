@@ -41,6 +41,7 @@ public class Result {
                     parties.get(j).add(candidateWithPartyJ);
                 }
             }
+            constituencies.get(i).getPollingManagementDesk().setWinner();
         }
     }
 
@@ -65,7 +66,7 @@ public class Result {
         }
     }
 
-    private int winnerParty(){
+    private int getWinnerParty(){
         int max =0,index=0;
         for (int i = 0; i < this.parties.size(); i++) {
             if(max<parties.get(i).getSeatsWon()){
@@ -77,7 +78,7 @@ public class Result {
 
     }
 
-    public double stateVoterTurnout(){
+    private double stateVoterTurnout(){
         double n = constituencies.size();
         double sum = 0;
         for (int i = 0; i < n; i++) {
@@ -89,27 +90,7 @@ public class Result {
 
     }
 
-    private double stateMaleRatio(){
-        double num = constituencies.size();
-        double sum=0,result =0;
-        for (int i = 0; i < num; i++) {
-            sum = constituencies.get(i).getVoterManagementDesk().maleRatio();
-        }
-        result = sum/num;
-        return  result;
-    }
-
-    private double stateFemaleRatio(){
-        double num = constituencies.size();
-        double sum=0,result =0;
-        for (int i = 0; i < num; i++) {
-            sum = constituencies.get(i).getVoterManagementDesk().femaleRatio();
-        }
-        result = sum/num;
-        return  result;
-    }
-
-    public double[] partiesSeatPercentage(){
+    private double[] partiesSeatPercentage(){
         double totSeats =0;
         for (int i = 0; i < parties.size(); i++) {
             totSeats += parties.get(i).getSeatsWon();
@@ -122,7 +103,7 @@ public class Result {
     }
 
     public void stateShortResult(){
-        int n = this.winnerParty();
+        int n = this.getWinnerParty();
         String partyName = parties.get(n).getName();
         String CM = parties.get(n).getCMName();
         int seats[] = new int[parties.size()];
@@ -137,24 +118,24 @@ public class Result {
         Document doc = new Document();
 
         try {
-            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\StateShortResult.pdf"));
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("StateResultInShortFormat.pdf"));
             System.out.println("PDF created.");
 
             doc.open();
 
             Paragraph obj = new Paragraph();
             obj.setAlignment(Element.ALIGN_CENTER);
-            Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLDITALIC,BaseColor.BLACK);
+            Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLD,BaseColor.BLACK);
             obj.setFont(font1);
             obj.add("Short Result !!");
             Paragraph obj1 = new Paragraph();
             Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
             obj1.setFont(font2);
-            obj1.add("Winning Party                 :      " +partyName+"\n");
-            obj1.add("Upcoming Chief Minister       :      " + CM+"\n");
+            obj1.add("Winning Party is Party " +partyName+"\n");
+            obj1.add("Upcoming Chief Minister is  " + CM+"\n");
             Paragraph obj2 = new Paragraph();
             obj2.setAlignment(Element.ALIGN_CENTER);
-            obj2.setFont(new Font(Font.FontFamily.TIMES_ROMAN,18f,Font.BOLDITALIC,BaseColor.BLACK));
+            obj2.setFont(new Font(Font.FontFamily.TIMES_ROMAN,18f,Font.BOLD,BaseColor.BLACK));
             obj2.add("List Of Parties  with number of seats won \n");
             Paragraph obj3 = new Paragraph();
             obj3.setFont(font2);
@@ -184,15 +165,11 @@ public class Result {
 
     public void showCandidateResult(String aadharID){
         Candidate per = null;
-        for (int i = 0; i < 10; i++) {
-            per = constituencies.get(i).getPollingManagementDesk().returnCandidate(aadharID);
-            if(per==null){
-                continue;
-            }
-            else {
-                break;
-            }
+        String numberConstituency="";
+        for(int i=8;i<=8+aadharID.length()-12;i++){
+            numberConstituency+=aadharID.charAt(i);
         }
+        per = constituencies.get(Integer.parseInt(numberConstituency)).getPollingManagementDesk().returnCandidate(aadharID);
         if(per==null){
             System.out.println("Invalid Candidate aadharID");
         }
@@ -340,7 +317,7 @@ public class Result {
     }
 
     public void showStateResult(){
-        int n = this.winnerParty();
+        int n = this.getWinnerParty();
         String partyName = parties.get(n).getName();
         String CM = parties.get(n).getCMName();
         int seats[] = new int[parties.size()];
@@ -350,46 +327,39 @@ public class Result {
             seats[i] = parties.get(i).getSeatsWon();
         }
         double voterTurnOut = stateVoterTurnout();
-        double maleRatio = stateMaleRatio();
-        double femaleRatio = stateFemaleRatio();
         double seat[] = partiesSeatPercentage();
 
         Document doc = new Document();
 
         try{
-            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\Result.pdf"));
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("StateResult.pdf"));
             System.out.println("PDF created");
 
             doc.open();
 
             Paragraph obj = new Paragraph();
             obj.setAlignment(Element.ALIGN_CENTER);
-            Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLDITALIC,BaseColor.BLACK);
+            Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLD,BaseColor.BLACK);
             obj.setFont(font1);
-            obj.add("RESULT !!");
+            obj.add("RESULT !!\n\n\n\n");
             Paragraph obj1 = new Paragraph();
             obj1.setSpacingBefore(8f);
             Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
             obj1.setFont(font2);
-            obj1.add("Winning Party         :      " +partyName+"\n");
-            obj1.add("Upcoming Chief Minister     :      " + CM+"\n");
+            obj1.add("        Winning Party         :      " +partyName+"\n");
+            obj1.add("        Upcoming Chief Minister     :      " + CM+"\n\n\n\n");
             Paragraph obj2 = new Paragraph();
             obj2.setAlignment(Element.ALIGN_CENTER);
-            obj2.setFont(new Font(Font.FontFamily.TIMES_ROMAN,18f,Font.BOLDITALIC,BaseColor.BLACK));
-            obj2.add("List Of Parties  with number of seats won \n");
+            obj2.setFont(new Font(Font.FontFamily.TIMES_ROMAN,18f,Font.BOLD,BaseColor.BLACK));
+            obj2.add("List Of Parties  with number of seats won \n\n");
             Paragraph obj3 = new Paragraph();
             obj3.setFont(font2);
             for (int i = 0; i < parties.size(); i++) {
-                obj3.add(party[i]+"  :   "+seats[i]+"\n" );
+                obj3.add("        Party "+party[i]+"  has won "+seats[i]+"\n" );
             }
             obj3.add("\n\n\n\n");
-            obj3.add("State Voter Turn Out :\n");
-            obj3.add("   "+voterTurnOut+"% people has voted in this election !\n\n\n\n");
-            obj3.add("Male and Female Ratio \n");
-            obj3.add(" "+maleRatio+"%  has voted in Constituency\n");
-            obj3.add(" "+femaleRatio+"% voted in  Constituency\n");
-
-
+            obj3.add("        State Voter Turn Out is ");
+            obj3.add(voterTurnOut+"% \n\n\n\n");
             int width = 500,height=400;
             DefaultPieDataset dataSet = new DefaultPieDataset();
             for (int i = 0; i < party.length; i++) {
@@ -433,7 +403,7 @@ public class Result {
     public void showVoterDetail(String aadharNum){
         Voter voter= null;
         for (int i = 0; i < constituencies.size(); i++) {
-            voter = constituencies.get(i).getVoterManagementDesk().returnVoter(aadharNum);
+            voter = constituencies.get(i).getVoterManagementDesk().returnVoterWithAadharID(aadharNum);
             if (voter == null){
                 continue;
             }else {

@@ -108,11 +108,11 @@ public class Constituency implements Desk{
         return Name;
     }
 
-    public VoterManagementDesk getVoterManagementDesk() {
+    protected VoterManagementDesk getVoterManagementDesk() {
         return voterManagementDesk;
     }
 
-    public PollingManagementDesk getPollingManagementDesk() {
+    protected PollingManagementDesk getPollingManagementDesk() {
         return pollingManagementDesk;
     }
 }

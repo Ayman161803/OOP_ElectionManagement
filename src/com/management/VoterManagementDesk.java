@@ -50,7 +50,6 @@ public class VoterManagementDesk implements Desk{
         for(int i=8;i<=8+AadharID.length()-13;i++){
             numberConstituency+=AadharID.charAt(i);
         }
-        System.out.println(AadharID.length());
         String fileName= "./VoterData/Constituency"+numberConstituency+"Voters.txt";
         try {
             BufferedWriter out = new BufferedWriter(
@@ -63,7 +62,6 @@ public class VoterManagementDesk implements Desk{
         }
         return "Registration Successful";
     };
-
 
     public int memberOfGender(String gender){
         int count=0;
@@ -104,8 +102,6 @@ public class VoterManagementDesk implements Desk{
 
     protected boolean doesExist(String aadhar){
         for(int i=0;i<voterList.size();i++){
-            System.out.println(voterList.get(i).getAadharNumber());
-            System.out.println(aadhar+"\n");
             if(aadhar.trim().equals(voterList.get(i).getAadharNumber().trim())){
                 return true;
             }
@@ -129,7 +125,7 @@ public class VoterManagementDesk implements Desk{
         new AadharGenerator();
     }
 
-    public String genrateAadharCard(String AadharNumber){
+    protected String genrateAadharCard(String AadharNumber){
         if(isAadharNumberValid(AadharNumber)){
             return "Invalid Aadhar Number";
         }
@@ -254,7 +250,7 @@ public class VoterManagementDesk implements Desk{
         return 100*femaleCount/totcount;
     }
 
-    public Voter returnVoter(String AadharID){
+    public Voter returnVoterWithAadharID(String AadharID){
         for (int i = 0; i < voterList.size(); i++) {
             if(voterList.get(i).getAadharNumber().equals(AadharID)){
                 return voterList.get(i);

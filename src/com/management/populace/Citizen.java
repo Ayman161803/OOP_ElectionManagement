@@ -49,10 +49,10 @@ public class Citizen {
             }
         }
         if(checkSum!=10){
-            return DDMMYYYYC+ConstituencyNum+(checkSum) +address.charAt(0);
+            return DDMMYYYYC+(checkSum) +address.charAt(0);
         }
         else {
-            return DDMMYYYYC+(ConstituencyNum)+"X" +address.charAt(0);
+            return DDMMYYYYC+"X" +address.charAt(0);
         }
     }
 

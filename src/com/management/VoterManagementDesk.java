@@ -95,10 +95,6 @@ public class VoterManagementDesk implements Desk{
                     continue;
                 }
                 String[] citizenData=data.split("\\|");
-                System.out.println(citizenData.length);
-                for (int k = 0; k < 6; k++) {
-                    System.out.println(citizenData[k]);
-                }
                 voterList.add(new Voter(citizenData[0],citizenData[1],Integer.parseInt(citizenData[2]),(citizenData[3]),citizenData[4],Integer.parseInt(citizenData[5])));
             }
         } catch (FileNotFoundException e) {
@@ -108,7 +104,9 @@ public class VoterManagementDesk implements Desk{
 
     protected boolean doesExist(String aadhar){
         for(int i=0;i<voterList.size();i++){
-            if(aadhar.equals(voterList.get(i).getAadharNumber())){
+            System.out.println(voterList.get(i).getAadharNumber());
+            System.out.println(aadhar+"\n");
+            if(aadhar.trim().equals(voterList.get(i).getAadharNumber().trim())){
                 return true;
             }
         }

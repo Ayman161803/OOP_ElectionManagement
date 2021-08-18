@@ -12,6 +12,7 @@ public class Party {
 
     public Party( String name) {
         this.name = name;
+        partyMembers=new ArrayList<Candidate>();
     }
     public void chooseCM(){
         double max= 0;
@@ -33,6 +34,9 @@ public class Party {
     }
 
     public String getCMName(){
+        if(this.chiefMinisterFace==null){
+            this.chooseCM();
+        }
         return  chiefMinisterFace.getName();
     }
 

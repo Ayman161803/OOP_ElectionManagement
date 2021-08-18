@@ -65,7 +65,7 @@ public class Result {
         }
     }
 
-    public int winnerParty(){
+    private int winnerParty(){
         int max =0,index=0;
         for (int i = 0; i < this.parties.size(); i++) {
             if(max<parties.get(i).getSeatsWon()){
@@ -89,7 +89,7 @@ public class Result {
 
     }
 
-    public double stateMaleRatio(){
+    private double stateMaleRatio(){
         double num = constituencies.size();
         double sum=0,result =0;
         for (int i = 0; i < num; i++) {
@@ -99,7 +99,7 @@ public class Result {
         return  result;
     }
 
-    public double stateFemaleRatio(){
+    private double stateFemaleRatio(){
         double num = constituencies.size();
         double sum=0,result =0;
         for (int i = 0; i < num; i++) {

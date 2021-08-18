@@ -25,6 +25,7 @@ public class Constituency implements Desk{
 
     public Constituency(){}
 
+
     public String registerIndividual(String data){
         return this.addToList(data);
     }

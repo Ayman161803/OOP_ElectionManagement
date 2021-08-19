@@ -1,0 +1,9 @@
+
+Hira Ashtekar|12/01/1993|28|Male|1 Highcourt Colony|8|120119937910|A
+Vinay Srivastav|01/06/2002|19|Male|8 Chinch Bunder|8|010620027580|B
+Vaibhav Bandyopadhyay|10/30/1975|46|Male|2 Sahakari Bhandar|8|103019757120|C
+Yudhishthira Ayyangar|08/17/2001|20|Male|22 Highcourt Colony|8|081720017720|D
+Ashtavakra Viswan|07/20/1987|34|Male|11 Highcourt Colony|8|072019877110|E
+Satya Phadanis|08/25/1962|59|Female|17 Commercial Street|8|082519627211|F
+Padmini Ayyangar|10/29/2002|19|Female|6 Panchal Road|8|102920027061|G
+Durgautti Sinha|06/16/1960|61|Female|13 Highcourt Colony|8|061619607511|H

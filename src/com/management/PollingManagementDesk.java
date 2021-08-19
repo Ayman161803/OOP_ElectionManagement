@@ -154,7 +154,7 @@ public class PollingManagementDesk implements Desk{
         Document doc = new Document();
 
         try {
-            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("CandidatesList"+String.valueOf(constituencyNumber+1)+".pdf"));
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("CandidatesList"+String.valueOf(constituencyNumber)+".pdf"));
             System.out.println("PDF created.");
 
             doc.open();

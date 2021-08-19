@@ -193,7 +193,7 @@ public class Result {
             Document doc = new Document();
 
             try {
-                PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\Candidate"+aadharNum+"Result.pdf"));
+                PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("Candidate"+aadharNum+"Result.pdf"));
                 System.out.println("PDF created");
 
                 doc.open();
@@ -240,9 +240,9 @@ public class Result {
     }
 
     public void showConstituencyResult(int constituency){
-        double male,female;
-        male = constituencies.get(constituency).getVoterManagementDesk().maleRatio();
-        female = constituencies.get(constituency).getVoterManagementDesk().femaleRatio();
+        //double male,female;
+        //male = constituencies.get(constituency).getVoterManagementDesk().maleRatio();
+        //female = constituencies.get(constituency).getVoterManagementDesk().femaleRatio();
         Candidate winner = constituencies.get(constituency).getPollingManagementDesk().getWinner();
         String name,party,aadharNum;
         name = winner.getName();
@@ -253,7 +253,7 @@ public class Result {
         Document doc = new Document();
 
         try{
-            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\Constituency"+constituency+"Result.pdf"));
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("Constituency"+constituency+"Result.pdf"));
             System.out.println("PDF created");
 
             doc.open();
@@ -274,9 +274,9 @@ public class Result {
             obj1.add("Voter Turn Out \n");
             obj1.add(" "+voterTurnOut+"%  has  voted in Constituency "+constituency+"\n");
             obj1.add("\n\n\n");
-            obj1.add("Male and Female Ratio \n");
-            obj1.add(" "+male+"%  has voted in Constituency\n");
-            obj1.add(" "+female+"% voted in  Constituency\n");
+            //obj1.add("Male and Female Ratio \n");
+            //obj1.add(" "+male+"%  has voted in Constituency\n");
+            //obj1.add(" "+female+"% voted in  Constituency\n");
 
             String[] names = constituencies.get(constituency).getPollingManagementDesk().partiesName();
             double[] votes = constituencies.get(constituency).getPollingManagementDesk().partiesVotePercentage();
@@ -433,7 +433,7 @@ public class Result {
             Document doc = new Document();
 
             try {
-                PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\CitizenDetail"+aadharNum+".pdf"));
+                PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("CitizenDetail"+aadharNum+".pdf"));
                 System.out.println("PDF created");
 
                 doc.open();
@@ -442,7 +442,7 @@ public class Result {
                 obj.setAlignment(Element.ALIGN_CENTER);
                 Font font1 = new Font(Font.FontFamily.TIMES_ROMAN, 25f, Font.BOLDITALIC, BaseColor.BLACK);
                 obj.setFont(font1);
-                obj.add("Candidate Detail");
+                obj.add("Voter Detail");
                 Paragraph obj1 = new Paragraph();
                 obj1.setSpacingBefore(10f);
                 Font font2 = new Font(Font.FontFamily.TIMES_ROMAN, 14f, Font.NORMAL, BaseColor.BLACK);

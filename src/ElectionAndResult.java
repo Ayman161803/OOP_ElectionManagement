@@ -22,5 +22,8 @@ public class ElectionAndResult {
         Result result=new Result(pollingBooth);
         result.showStateResult();
         result.stateShortResult();
+        result.showCandidateResult("072819793621");
+        result.showVoterDetail("021919664820");
+        result.showConstituencyResult(1);
     }
 }

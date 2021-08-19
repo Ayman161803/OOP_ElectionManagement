@@ -9,6 +9,7 @@ import javax.swing.text.StyledDocument;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Locale;
 
 public class CitizenRegistrationForm implements Form{
     private JPanel panelAll;
@@ -59,11 +60,16 @@ public class CitizenRegistrationForm implements Form{
         });
     }
 
+    public static void main(String[] args) {
+        new CitizenRegistrationForm();
+    }
+
     @Override
     public boolean isDataInFormat(String data) {
         String[] dataArray=data.split("\\|");
         String DOB=dataArray[1].trim();
 
+        System.out.println(DOB);
         //DOB format check
         {
             if(DOB.length()!=10)
@@ -73,7 +79,7 @@ public class CitizenRegistrationForm implements Form{
             for(int i=0;i<DOB.length();i++){
                 if(i==2 || i==5)
                     continue;
-                if(!(DOB.charAt(i)>'0' && DOB.charAt(i)<='9'))
+                if(!(DOB.charAt(i)>='0' && DOB.charAt(i)<='9'))
                     return false;
             }
         }
@@ -88,10 +94,14 @@ public class CitizenRegistrationForm implements Form{
         String age=dataArray[2].trim();
         {
             for(int i=0;i<age.length();i++){
-                if(!(DOB.charAt(i)>'0' && DOB.charAt(i)<='9'))
+                if(!(age.charAt(i)>='0' && age.charAt(i)<='9'))
                     return false;
             }
         }
+
+        String gender=dataArray[3].trim().toLowerCase(Locale.ROOT);
+        if(!(gender.equals("male") || gender.equals("female")))
+            return false;
         return true;
     }
 }

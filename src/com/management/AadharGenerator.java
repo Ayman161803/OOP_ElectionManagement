@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class AadharGenerator implements Form{
+public class AadharGenerator extends FormWithAadharTextField{
     private JTextField AadharNumberTextField;
     private JPanel panel1;
     private JButton EnterButton;
@@ -45,17 +45,6 @@ public class AadharGenerator implements Form{
                 doc.setParagraphAttributes(0, doc.getLength(), center, false);
             }
         });
-    }
-    @Override
-    public boolean isDataInFormat(String aadhar) {
-        if(aadhar.length()<12){
-            return false;
-        }
-        for(int i = 0; i<aadhar.length(); i++){
-            if((!(aadhar.charAt(i)>='0'&&aadhar.charAt(i)<='9')) && aadhar.charAt(i)!='X')
-                return false;
-        }
-        return true;
     }
 
     public static void main(String[] args) {

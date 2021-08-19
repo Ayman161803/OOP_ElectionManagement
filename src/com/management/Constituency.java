@@ -19,40 +19,36 @@ public class Constituency implements Desk{
         citizens=new ArrayList<>();
         Name = name;
         voterManagementDesk=new VoterManagementDesk();
-        pollingManagementDesk=new PollingManagementDesk();
+        pollingManagementDesk=new PollingManagementDesk(String.valueOf(name));
         this.build("CitizenData/Constituency"+name+".txt");
     }
 
     public Constituency(){}
-
 
     public String registerIndividual(String data){
         return this.addToList(data);
     }
 
     public String addToList(String data){
-        String AadharID=(data.split("\\|")[data.split("\\|").length-1]);
+        String[] citizenData=data.split("\\|");
+        Citizen citizenConcerned=(new Citizen(citizenData[0],citizenData[1],Integer.parseInt(citizenData[2]),(citizenData[3]),citizenData[4],Integer.parseInt(citizenData[5])));
+        String AadharID=citizenConcerned.getAadharNumber();
         String numberConstituency="";
         for(int i=8;i<=8+AadharID.length()-12;i++){
             numberConstituency+=AadharID.charAt(i);
         }
-        String filename= "Constituency"+numberConstituency+".txt";
+        String filename= "CitizenData/Constituency"+numberConstituency+".txt";
         try {
             // Open given file in append mode.
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(filename, true));
-            out.write(data+"\n");
+            out.write("\n"+data+"|"+AadharID);
             out.close();
         }
         catch (IOException e) {
             System.out.println("exception occoured" + e);
         }
-        return "AadharID generated : "+data.split("\\|")[data.split("\\|").length-1];
-    }
-
-    @Override
-    public void openRegistrationPortal() {
-        new CitizenRegistrationForm();
+        return "AadharID generated : "+AadharID;
     }
 
     public double percentageRegistered(){

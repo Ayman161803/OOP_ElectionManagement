@@ -7,6 +7,7 @@ import com.management.populace.Citizen;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -14,10 +15,14 @@ public class PollingManagementDesk implements Desk{
     private ArrayList<Candidate> candidates;
     private int[] votesCounter = null;
     private long totalNoOfVotes = 0;
+    private String constituencyNumber;
 
-    public PollingManagementDesk() {
+    public PollingManagementDesk(String constituencyNumber) {
+        this.constituencyNumber=constituencyNumber;
         this.candidates = new ArrayList<>();
     }
+
+    public PollingManagementDesk(){}
 
     public String registerIndividual(String AadharNumberAndParty) {
         String AadharNumber=AadharNumberAndParty.split("\\|")[0];
@@ -68,6 +73,7 @@ public class PollingManagementDesk implements Desk{
             e.printStackTrace();
         }
         votesCounter=new int[candidates.size()];
+       candidates.sort(Comparator.comparingDouble(Candidate::getPopularityScore).reversed());
     }
 
     public int getCount() {
@@ -148,7 +154,7 @@ public class PollingManagementDesk implements Desk{
         Document doc = new Document();
 
         try {
-            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\CandidatesList.pdf"));
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("CandidatesList"+String.valueOf(constituencyNumber+1)+".pdf"));
             System.out.println("PDF created.");
 
             doc.open();
@@ -175,8 +181,6 @@ public class PollingManagementDesk implements Desk{
 
     }
 
-    public void openRegistrationPortal(){new CandidateAdditionPortal();}
-
     @Override
     public String addToList(String str) {
         //getting aadhar from data
@@ -192,11 +196,11 @@ public class PollingManagementDesk implements Desk{
         }
 
         //adding data into Candidates files
-        String fileName= "./CandidateData/Constituency"+numberConstituency+"Candidates.txt";
+        String fileName= "CandidateData/Constituency"+numberConstituency+"Candidates.txt";
         try {
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(fileName, true));
-            out.write("\n"+str);
+            out.write(str+"\n");
             out.close();
         }
         catch (IOException e) {
@@ -204,7 +208,7 @@ public class PollingManagementDesk implements Desk{
         }
 
         //checking if party already registered
-        File myObj = new File("Parties"+".txt");
+        File myObj = new File("PartyData/Parties"+".txt");
         boolean isPartyAlreadyRegistered=false;
         Scanner myReader;
         try {
@@ -228,7 +232,7 @@ public class PollingManagementDesk implements Desk{
         if(!isPartyAlreadyRegistered){
             try {
                 BufferedWriter out = new BufferedWriter(
-                        new FileWriter("Parties.txt", true));
+                        new FileWriter("PartyData/Parties.txt", true));
                 out.write("\n"+PartyOfCandidateGrttingAdded);
                 out.close();
             }

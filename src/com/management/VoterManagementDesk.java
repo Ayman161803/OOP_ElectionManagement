@@ -45,16 +45,13 @@ public class VoterManagementDesk implements Desk{
     }
 
     public String addToList(String str){
-        String AadharID=(str.split("\\|")[str.split("\\|").length-1]).trim();
-        String numberConstituency="";
-        for(int i=8;i<=8+AadharID.length()-13;i++){
-            numberConstituency+=AadharID.charAt(i);
-        }
-        String fileName= "./VoterData/Constituency"+numberConstituency+"Voters.txt";
+        String numberConstituency=(str.split("\\|")[str.split("\\|").length-2]).trim();
+        String fileName= "VoterData/Constituency"+(Integer.parseInt(numberConstituency)-1)+"Voters.txt";
+        System.out.println(fileName);
         try {
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(fileName, true));
-            out.write(str+"\n");
+            out.write("\n"+str);
             out.close();
         }
         catch (IOException e) {
@@ -119,10 +116,6 @@ public class VoterManagementDesk implements Desk{
                 voter.markVoted();
             }
         }
-    }
-
-    public void openAadharCardGenerationPortal (){
-        new AadharGenerator();
     }
 
     protected String genrateAadharCard(String AadharNumber){
@@ -212,10 +205,6 @@ public class VoterManagementDesk implements Desk{
         }
 
         return "AadharCard generation successful!";
-    }
-
-    public void openRegistrationPortal(){
-        new VoterRegistrationForm();
     }
 
     public double maleRatio(){

@@ -31,12 +31,13 @@ public class Citizen {
     }
 
     private static String generateAadharID(String data,String ConstituencyNum,String address){
+        System.out.println(ConstituencyNum);
         address=address.trim();
         String[] DOBdata=data.split("/");
         String DDMMYYYYC="";
         for(int i=0;i<3;i++)
             DDMMYYYYC+=DOBdata[i];
-        DDMMYYYYC+=ConstituencyNum.charAt(0);
+        DDMMYYYYC+=ConstituencyNum;
         char[] isbn= new String(DDMMYYYYC).toCharArray();
         int checkSum=0;
         for(int i=10;i>=2;i--){

@@ -114,7 +114,7 @@ public class PollingBooth{
 
     public static void main(String[] args) {
         PollingBooth pollingBooth=new PollingBooth();
-        pollingBooth.automate();
+        pollingBooth.automateVoting();
         for(int i=0;i<10;i++)
             System.out.println(pollingBooth.constituencies.get(i).getPollingManagementDesk().getTotalNoOfVotes());
         Result result= new Result(pollingBooth);

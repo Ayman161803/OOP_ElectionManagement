@@ -10,8 +10,6 @@ public interface Desk {
     int getCount();
     void build(String filename);
     String addToList(String data);
-    void openRegistrationPortal();
-
     String registerIndividual(String data);
     default boolean isAadharNumberValid(String AadharNumber){
         char[] numbers=AadharNumber.toCharArray();

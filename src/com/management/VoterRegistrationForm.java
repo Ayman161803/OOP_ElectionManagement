@@ -8,7 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VoterRegistrationForm extends JFrame implements Form{
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
+
+public class VoterRegistrationForm extends FormWithAadharTextField{
     private JTextField AadharNumberTextField;
     private JPanel panel1;
     private JButton EnterButton;
@@ -44,17 +46,7 @@ public class VoterRegistrationForm extends JFrame implements Form{
             }
         });
     }
-    @Override
-    public boolean isDataInFormat(String aadhar) {
-        if(aadhar.length()<12){
-            return false;
-        }
-        for(int i = 0; i<aadhar.length(); i++){
-            if((!(aadhar.charAt(i)>='0'&&aadhar.charAt(i)<='9')) && aadhar.charAt(i)!='X')
-               return false;
-        }
-        return true;
-    }
+
 
     public static void main(String[] args) {
         new VoterRegistrationForm();

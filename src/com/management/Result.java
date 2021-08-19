@@ -46,7 +46,7 @@ public class Result {
     }
 
     private void initiateParties(){
-        File myObj = new File("Parties"+".txt");
+        File myObj = new File("PartyData/Parties"+".txt");
         Scanner myReader;
         try {
             myReader = new Scanner(myObj);

@@ -1,0 +1,133 @@
+
+Ranjan Gandhi|12/19/1994|27|Male|21 Opera House|10|121919949420
+Chander Choraghad|09/28/2006|15|Male|3 Opera House|10|092820069830
+Dyal Ashtikar|02/17/1987|34|Male|25 A C Market|10|021719879120
+Sharad Vyas|05/22/1984|37|Male|4 A C Market|10|052219849X40
+Venkata Marwah|11/07/2016|5|Male|16 Pahar Ganj|10|110720169110
+Aman Barvadekar|10/26/1952|69|Male|8 Opera House|10|102619529280
+Yad Ranganekary|05/14/1975|46|Male|23 Pahar Ganj|10|051419759520
+Sharya Patvardhan|08/05/1999|22|Male|23 Pahar Ganj|10|080519999320
+Abhinav Chattarak|01/01/1985|36|Male|14 Pahar Ganj|10|010119859010
+Govind Mandalik|01/05/2001|20|Male|14 A C Market|10|010520019010
+Chand Punja|01/31/1962|59|Male|9 A C Market|10|013119629490
+Chand Dhibar|11/18/1952|69|Male|15 Pahar Ganj|10|111819529910
+Nakula Vad|10/09/1982|39|Male|14 A C Market|10|100919829710
+Viswamitra Viswan|08/08/2010|11|Male|10 Pahar Ganj|10|080820109310
+Peeyush Ashtikar|12/16/1985|36|Male|17 Opera House|10|121619859410
+Katyayana Bajpeyi|08/31/2007|14|Male|3 Pahar Ganj|10|083120079030
+Chhotu Havaldar|03/02/1954|67|Male|6 Opera House|10|030219549160
+Megh Ranganekary|03/16/1966|55|Male|20 Opera House|10|031619669X20
+Dhule Gandhi|08/06/1959|62|Male|16 A C Market|10|080619599110
+Abhi Dhebar|11/28/1997|24|Male|3 A C Market|10|112819979330
+Raghu Mirchandani|10/30/1953|68|Male|13 A C Market|10|103019539010
+Ramaeshwara Kayal|05/03/1969|52|Male|17 A C Market|10|050319699110
+Shanti Randhawa|03/27/1973|48|Male|11 Pahar Ganj|10|032719739010
+Shudraka Barvadekar|02/10/1969|52|Male|3 Opera House|10|021019699830
+Krishna Thacker|04/09/1962|59|Male|9 A C Market|10|040919629090
+Chakravarti Mandalik|10/24/1989|32|Male|24 Opera House|10|102419899520
+Har Upasani|08/12/1963|58|Male|17 Opera House|10|081219639210
+Manas Satavelekar|10/21/1978|43|Male|18 Opera House|10|102119789010
+Gagan Gharapure|08/07/1962|59|Male|22 Pahar Ganj|10|080719629020
+Venkata Jagatap|03/02/1965|56|Male|14 Pahar Ganj|10|030219659510
+Aditya Divakar|04/04/1971|50|Male|9 Pahar Ganj|10|040419719190
+Aakash Chakarvarti|09/01/2005|16|Male|19 A C Market|10|090120059X10
+Har Choraghad|01/01/1992|29|Male|3 A C Market|10|010119929530
+Nasatya Barvadekar|12/12/1986|35|Male|10 Pahar Ganj|10|121219869710
+Megh Chitanis|04/26/1969|52|Male|25 Pahar Ganj|10|042619699620
+Jatayu Panja|10/26/2013|8|Male|1 A C Market|10|102620139X10
+Mishri Parachure|02/06/1954|67|Male|22 Opera House|10|020619549420
+Sharad Ayyar|05/06/2011|10|Male|3 A C Market|10|050620119830
+Govind Kapil|09/10/1971|50|Male|19 A C Market|10|091019719910
+Vasishtha Kapil|07/24/2019|2|Male|18 Opera House|10|072420199810
+Vakpati Heravdakar|01/03/2018|3|Male|16 A C Market|10|010320189010
+Rajendra Bakshi|02/19/2020|1|Male|8 Pahar Ganj|10|021920209580
+Pramod Karamchand|08/02/1996|25|Male|25 A C Market|10|080219969020
+Chand Randhawa|12/07/1953|68|Male|19 A C Market|10|120719539110
+Viswarupa Dongerkerry|01/06/1977|44|Male|9 Opera House|10|010619779790
+Narayana Haradas|05/12/1957|64|Male|19 Opera House|10|051219579X10
+Sumit Phadanis|01/26/1985|36|Male|10 A C Market|10|012619859410
+Chhotu Satavelekar|07/01/2000|21|Male|2 A C Market|10|070120009X20
+Aryabhata Gurnani|01/08/1971|50|Male|22 Opera House|10|010819719020
+Waazir Chopade|03/02/2005|16|Male|9 Pahar Ganj|10|030220059290
+Sharya Bhatavadekar|05/26/1954|67|Male|24 A C Market|10|052619549520
+Vakpati Navathe|11/14/2002|19|Male|5 Pahar Ganj|10|111420029850
+Din Ahuja|12/13/1975|46|Male|23 Pahar Ganj|10|121319759720
+Prashant Sabanis|04/03/1987|34|Male|23 Opera House|10|040319879820
+Chhotu Vyas|01/23/1965|56|Male|13 A C Market|10|012319659010
+Vikas Shevade|01/17/1978|43|Male|24 Pahar Ganj|10|011719789020
+Amitabh Gupta|10/24/1973|48|Male|23 Pahar Ganj|10|102419739520
+Mahava Bhagat|05/20/1957|64|Male|20 A C Market|10|052019579520
+Patanjali Parekh|06/09/1987|34|Male|19 Opera House|10|060919879310
+Madhavacharta Jadhav|12/19/1961|60|Male|17 A C Market|10|121919619310
+Bhrigu Parikh|05/13/1971|50|Male|19 Opera House|10|051319719210
+Anuraag Tamhanakar|08/16/1985|36|Male|17 Pahar Ganj|10|081619859410
+Prashant Bhatta|08/17/1962|59|Male|10 Pahar Ganj|10|081719629310
+Zohana Mehrotra|02/01/2010|11|Female|11 Opera House|10|020120109711
+Karuna Gaur|09/15/2018|3|Female|7 Opera House|10|091520189571
+Indu Parekh|07/01/2020|1|Female|18 A C Market|10|070120209211
+Sonamoni Munshif|07/31/2011|10|Female|18 A C Market|10|073120119111
+Kanwal Pande|07/07/1983|38|Female|13 Opera House|10|070719839911
+Lasya Singh|07/30/1971|50|Female|15 Opera House|10|073019719011
+Lavanya Bakshi|03/13/2021|0|Female|14 A C Market|10|031320219211
+Shakti Padhi|03/03/1975|46|Female|12 Pahar Ganj|10|030319759511
+Aahana Shiravadakar|03/26/1993|28|Female|12 A C Market|10|032619939X11
+Aishwarya Prabhu|05/08/2016|5|Female|21 Opera House|10|050820169121
+Chandi Kamal|03/31/1953|68|Female|11 A C Market|10|033119539911
+Phoolan Dvivedi|08/25/2009|12|Female|19 A C Market|10|082520099711
+Jaya Patel|07/23/1987|34|Female|11 Opera House|10|072319879911
+Anya Nan|09/08/2018|3|Female|8 Pahar Ganj|10|090820189381
+Kamala Kanungo|08/11/1980|41|Female|5 A C Market|10|081119809X51
+Karuna Gupta|07/11/2021|0|Female|23 A C Market|10|071120219221
+Lavanya Adwani|09/12/1952|69|Female|25 A C Market|10|091219529021
+Sena Poddar|01/14/1994|27|Female|10 Opera House|10|011419949311
+Durgautti Mahanti|02/06/1968|53|Female|10 Opera House|10|020619689X11
+Alia Panja|08/20/1967|54|Female|23 Opera House|10|082019679721
+Samarj Devadhikar|03/09/1978|43|Female|4 Pahar Ganj|10|030919789941
+Paraminta Rajavade|06/18/1980|41|Female|24 Opera House|10|061819809121
+Anu Nandi|03/06/1973|48|Female|23 Opera House|10|030619739121
+Kanak Kapudia|08/31/2020|1|Female|23 Opera House|10|083120209221
+Jyoti Jadhav|08/14/1961|60|Female|3 A C Market|10|081419619531
+Siddhi Ayyangar|07/28/2004|17|Female|20 Opera House|10|072820049X21
+Muskaanb Chitanis|10/10/1983|38|Female|2 A C Market|10|101019839421
+Rani Sarkar|01/29/1991|30|Female|8 A C Market|10|012919919281
+Shambhavi Singh|12/04/1991|30|Female|15 Pahar Ganj|10|120419919111
+Shreya Badakar|02/20/1970|51|Female|4 Opera House|10|022019709141
+Archita Sarkar|03/17/1981|40|Female|16 Pahar Ganj|10|031719819X11
+Lakshmi Vaknis|08/10/1998|23|Female|15 Opera House|10|081019989011
+Shambhavi Upandhye|10/06/1961|60|Female|14 Opera House|10|100619619611
+Manasa Havaldar|01/22/2003|18|Female|4 Pahar Ganj|10|012220039X41
+Indu Mahanta|12/11/1975|46|Female|9 Pahar Ganj|10|121119759X91
+Sulini Parikh|05/13/2000|21|Female|4 A C Market|10|051320009641
+Kunti Hegadi|11/19/2009|12|Female|9 A C Market|10|111920099791
+Sita Sardar|06/22/1989|32|Female|20 Pahar Ganj|10|062219899821
+Maya Gandhi|03/02/2009|12|Female|12 Opera House|10|030220099111
+Kavuri Randhawa|05/20/1979|42|Female|2 Opera House|10|052019799221
+Maya Bajpai|09/14/1956|65|Female|23 Opera House|10|091419569721
+Priya Sinha|03/08/1970|51|Female|6 Pahar Ganj|10|030819709761
+Neha Banahatti|02/27/2013|8|Female|24 Pahar Ganj|10|022720139621
+Mahi Vaikar|08/14/1956|65|Female|6 Opera House|10|081419569561
+Lakshmi Karamchand|06/21/2020|1|Female|11 Opera House|10|062120209611
+Sumati Rajavade|09/25/1972|49|Female|19 Pahar Ganj|10|092519729711
+Krishna Patil|02/03/1964|57|Female|12 Opera House|10|020319649X11
+Bumati Upasani|04/30/1952|69|Female|22 Opera House|10|043019529X21
+Minu Devarukhkar|04/05/1957|64|Female|15 Pahar Ganj|10|040519579611
+Pari Jayavant|03/13/1977|44|Female|25 Pahar Ganj|10|031319779221
+Anu Anagal|04/01/2001|20|Female|7 Pahar Ganj|10|040120019171
+Satya Talavalakar|09/11/1976|45|Female|18 A C Market|10|091119769911
+Kavuri Dhibar|10/27/1967|54|Female|16 A C Market|10|102719679911
+Lakshmi Bajpeyi|08/06/2003|18|Female|4 Pahar Ganj|10|080620039141
+Mamta Sardar|12/28/1999|22|Female|7 Pahar Ganj|10|122819999X71
+Maya Panikkar|07/20/2002|19|Female|23 Opera House|10|072020029621
+Karnavati Kanungo|02/21/1984|37|Female|4 A C Market|10|022119849041
+Divya Marwah|01/23/1985|36|Female|15 Pahar Ganj|10|012319859311
+Neha Srivastav|03/14/1952|69|Female|11 Opera House|10|031419529711
+Durgautti Munshi|12/23/1966|55|Female|8 A C Market|10|122319669081
+Kusum Sanyal|08/31/1954|67|Female|25 A C Market|10|083119549521
+Raktavati Bandyopadhyay|12/04/1954|67|Female|1 Opera House|10|120419549811
+Raktavati Shrivastava|08/03/2016|5|Female|23 Pahar Ganj|10|080320169921
+Satya Naidu|11/10/1993|28|Female|1 Opera House|10|111019939211
+Anya Bakshi|04/18/1992|29|Female|14 A C Market|10|041819929911
+Nagini Dayal|07/13/1992|29|Female|24 A C Market|10|071319929621
+Anushka Shrivastava|08/29/2020|1|Female|10 Opera House|10|082920209911
+Uma Barigai|05/21/2007|14|Female|14 Pahar Ganj|10|052120079211
+Lia Panja|08/02/1992|29|Female|1 Opera House|10|080219929111

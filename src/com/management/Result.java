@@ -128,17 +128,22 @@ public class Result {
             Font font1 = new Font(Font.FontFamily.TIMES_ROMAN,25f,Font.BOLD,BaseColor.BLACK);
             obj.setFont(font1);
             obj.add("Short Result !!");
+            obj.add("\n\n\n");
             Paragraph obj1 = new Paragraph();
-            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
+            obj1.setSpacingBefore(8f);
+            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.NORMAL,BaseColor.BLACK);
             obj1.setFont(font2);
             obj1.add("Winning Party is Party " +partyName+"\n");
             obj1.add("Upcoming Chief Minister is  " + CM+"\n");
             Paragraph obj2 = new Paragraph();
             obj2.setAlignment(Element.ALIGN_CENTER);
+            obj2.setSpacingBefore(14f);
+            obj2.setSpacingAfter(12f);
             obj2.setFont(new Font(Font.FontFamily.TIMES_ROMAN,18f,Font.BOLD,BaseColor.BLACK));
-            obj2.add("List Of Parties  with number of seats won \n");
+            obj2.add("List Of Parties  with number of seats won \n\n\n\n");
             Paragraph obj3 = new Paragraph();
             obj3.setFont(font2);
+            obj3.add("\n\n");
             for (int i = 0; i < parties.size(); i++) {
                 obj3.add(party[i]+"  :   "+seats[i]+"\n" );
             }
@@ -200,7 +205,7 @@ public class Result {
                 obj.add("Candidate Detail");
                 Paragraph obj1 = new Paragraph();
                 obj1.setSpacingBefore(10f);
-                Font font2 = new Font(Font.FontFamily.TIMES_ROMAN, 14f, Font.BOLD, BaseColor.BLACK);
+                Font font2 = new Font(Font.FontFamily.TIMES_ROMAN, 14f, Font.NORMAL, BaseColor.BLACK);
                 obj1.setFont(font2);
                 obj1.add("Name       : " + name + "\n");
                 obj1.add("Age        : " + age + "\n");
@@ -260,7 +265,7 @@ public class Result {
             obj.add("Constituency "+constituency+ "  Result !!");
             Paragraph obj1 = new Paragraph();
             obj1.setSpacingBefore(8f);
-            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
+            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.NORMAL,BaseColor.BLACK);
             obj1.setFont(font2);
             obj1.add("Winner Name    :  "+name+"\n");
             obj1.add("Party Name       :   "+party+"\n");
@@ -344,7 +349,7 @@ public class Result {
             obj.add("RESULT !!\n\n\n\n");
             Paragraph obj1 = new Paragraph();
             obj1.setSpacingBefore(8f);
-            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
+            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.NORMAL,BaseColor.BLACK);
             obj1.setFont(font2);
             obj1.add("        Winning Party         :      " +partyName+"\n");
             obj1.add("        Upcoming Chief Minister     :      " + CM+"\n\n\n\n");
@@ -440,7 +445,7 @@ public class Result {
                 obj.add("Candidate Detail");
                 Paragraph obj1 = new Paragraph();
                 obj1.setSpacingBefore(10f);
-                Font font2 = new Font(Font.FontFamily.TIMES_ROMAN, 14f, Font.BOLD, BaseColor.BLACK);
+                Font font2 = new Font(Font.FontFamily.TIMES_ROMAN, 14f, Font.NORMAL, BaseColor.BLACK);
                 obj1.setFont(font2);
                 obj1.add("Name       : " + name + "\n");
                 obj1.add("Age        : " + age + "\n");

@@ -1,0 +1,4 @@
+
+Ranjan Dayal|04/29/1985|36|Male|4 J B Nagar|9|042919858240|A
+Neha Gulati|05/01/1990|31|Female|24 S P Road|9|050119908X21|B
+Mamta Harish|11/24/1976|45|Female|14 Troop Bazar|9|112419768011|C

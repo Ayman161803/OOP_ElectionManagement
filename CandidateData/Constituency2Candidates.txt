@@ -1,0 +1,11 @@
+
+Rishu Kusari|07/15/1954|67|Male|12 Samuel Street|3|071519542510|A
+Chatur Prabhu|09/13/1979|42|Male|11 Konkan Nagar|3|091319792010|B
+Mishri Rajavade|12/09/1979|42|Male|17 Konkan Nagar|3|120919792810|C
+Ishwar Kanungo|03/12/1996|25|Male|7 Modi Street|3|031219962770|D
+Korravai Gayakvad|05/25/1998|23|Female|21 Vishal Industrial Estate|3|052519982921|E
+Minu Chopade|11/10/1979|42|Female|12 Modi Street|3|111019792611|F
+Ananya Bhagat|01/29/1994|27|Female|25 Samuel Street|3|012919942721|G
+Priyanshi Devadhikar|12/06/1998|23|Female|9 Konkan Nagar|3|120619982291|H
+Durga Pande|08/15/1952|69|Female|4 Modi Street|3|081519522241|I
+Sukanya Khamavant|09/13/1980|41|Female|3 Vishal Industrial Estate|3|091319802131|J

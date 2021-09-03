@@ -1,0 +1,48 @@
+
+Govinda Banahatti|06/26/1950|71|Male|13 Jay Sukh Sagar|4|062619503910
+Chakravarti Satavelekar|02/03/1991|30|Male|16 Dhanraj Bhuvan|4|020319913810
+Chunder Kusari|04/18/1986|35|Male|17 Jalaramdham Society|4|041819863210
+Vijya Seth|06/25/1993|28|Male|3 Jalaramdham Society|4|062519933230
+Amrit Vaknis|06/01/1986|35|Male|22 D P Wadi|4|060119863820
+Mahava Gayakvad|10/06/1988|33|Male|17 Charu Chandra Palace|4|100619883010
+Venkata Munshif|08/16/1964|57|Male|17 Jay Sukh Sagar|4|081619643510
+Vikramaditya Mayadev|07/05/1967|54|Male|12 Charu Chandra Palace|4|070519673910
+Dasra Roychaudhuri|04/20/1962|59|Male|1 Jay Sukh Sagar|4|042019623410
+Sumit Kumar|11/27/1997|24|Male|6 Jay Sukh Sagar|4|112719973060
+Ranjan Bhardvaj|06/08/1993|28|Male|8 Dhanraj Bhuvan|4|060819933880
+Hira Phadanis|12/21/1964|57|Male|20 Charu Chandra Palace|4|122119643X20
+Shankaracharya Bhavalakar|10/08/1992|29|Male|18 Dhanraj Bhuvan|4|100819923010
+Pandu Shree|03/07/1983|38|Male|15 D P Wadi|4|030719833210
+Varuni Anagal|12/07/1999|22|Male|21 Dhanraj Bhuvan|4|120719993120
+Dhuleep Nandi|03/04/1952|69|Male|12 Jay Sukh Sagar|4|030419523510
+Pandu Ashtekar|09/05/1955|66|Male|23 Dhanraj Bhuvan|4|090519553120
+Anuraag Devdhar|12/21/1982|39|Male|2 Dhanraj Bhuvan|4|122119823820
+Ananda Gazdar|07/16/1957|64|Male|10 Dhanraj Bhuvan|4|071619573910
+Chander Jayavant|12/28/1974|47|Male|25 Charu Chandra Palace|4|122819743120
+Acarya Kamath|08/04/1979|42|Male|9 Charu Chandra Palace|4|080419793890
+Aman Prabhu|10/04/1969|52|Male|4 Charu Chandra Palace|4|100419693840
+Sahadeva Mudaliyar|06/15/1978|43|Male|12 Jalaramdham Society|4|061519783310
+Anu Achaval|04/28/1955|66|Female|22 D P Wadi|4|042819553921
+Kavuri Kayal|11/15/1983|38|Female|14 Dhanraj Bhuvan|4|111519833511
+Shalini Ashtekar|06/23/1974|47|Female|6 Charu Chandra Palace|4|062319743X61
+Bhairavi Ganapuli|05/03/1967|54|Female|4 Dhanraj Bhuvan|4|050319673841
+Aaliya Shevade|05/31/1971|50|Female|1 Jalaramdham Society|4|053119713111
+Sarasvati Nancy|07/22/1993|28|Female|25 Jay Sukh Sagar|4|072219933321
+Rati Chipalunakar|04/18/2001|20|Female|20 D P Wadi|4|041820013021
+Kunti Ganapuli|08/06/2001|20|Female|7 Dhanraj Bhuvan|4|080620013871
+Archita Badakar|08/22/1958|63|Female|13 Jalaramdham Society|4|082219583611
+Manasa Ranganekary|05/22/1980|41|Female|3 Jay Sukh Sagar|4|052219803131
+Aasmi Thakore|04/13/1972|49|Female|15 D P Wadi|4|041319723911
+Tarabai Nambiyar|08/27/1998|23|Female|8 Jay Sukh Sagar|4|082719983X81
+Arpita Sarkar|03/10/1979|42|Female|19 Dhanraj Bhuvan|4|031019793711
+Kalyani Chopade|09/02/1961|60|Female|19 Jay Sukh Sagar|4|090219613811
+Uma Gayakvad|10/26/1997|24|Female|13 Charu Chandra Palace|4|102619973511
+Bumati Malviya|06/18/1987|34|Female|6 Dhanraj Bhuvan|4|061819873361
+Rekha Banahatti|06/27/1999|22|Female|24 D P Wadi|4|062719993321
+Sarama Vyas|08/05/1960|61|Female|18 Jalaramdham Society|4|080519603X11
+Kamala Panja|07/09/1980|41|Female|19 Charu Chandra Palace|4|070919803511
+Snigdha Shevade|07/24/1963|58|Female|22 Charu Chandra Palace|4|072419633121
+Arya Sirasikar|03/28/2002|19|Female|5 Jalaramdham Society|4|032820023951
+Surya Havaldar|02/17/1963|58|Female|13 Jalaramdham Society|4|021719633011
+Bhadrakali Sardar|05/18/1983|38|Female|19 Charu Chandra Palace|4|051819833211
+Durgautti Sardar|10/24/1986|35|Female|12 Jalaramdham Society|4|102419863411

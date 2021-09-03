@@ -1,0 +1,46 @@
+
+Shudraka Devdhar|10/09/1975|46|Male|22 Qutub Road Chowk|2|100919751720
+Dharya Havaldar|17/03/1951|70|Male|23 Chawri Bazar|2|170319511620
+Yogarasa Thakore|04/11/2001|20|Male|20 Susheela Road|2|041120011920
+Kanada Adwani|27/05/2003|18|Male|9 Waterloo Street|2|270520031290
+Megaduta Ashtekar|16/05/1962|59|Male|10 Qutub Road Chowk|2|160519621510
+Gagan Ajagavakar|29/10/1991|30|Male|16 Susheela Road|2|291019911810
+Amish Chaudhari|29/04/1973|48|Male|1 Waterloo Street|2|290419731110
+Amish Chaudhari|12/08/1976|45|Male|4 Waterloo Street|2|120819761440
+Sumit Nan|01/21/1994|27|Male|9 Juhu Lane|2|012119941X90
+Patanjali Joshi|08/23/1952|69|Male|15 Chawri Bazar|2|082319521X10
+Cyavana Phadanis|11/13/1984|37|Male|10 Susheela Road|2|111319841910
+Aman Chattarak|05/28/1986|35|Male|10 Juhu Lane|2|052819861010
+Ruldu Muzumdar|06/05/1956|65|Male|15 Chawri Bazar|2|060519561710
+Sunder Pandey|10/05/1954|67|Male|11 Chawri Bazar|2|100519541210
+Arjuna Bhatta|08/26/2002|19|Male|2 Qutub Road Chowk|2|082620021420
+Rajendra Munshif|04/23/1988|33|Male|24 Susheela Road|2|042319881520
+Waazir Divakar|04/13/1979|42|Male|7 Qutub Road Chowk|2|041319791370
+Keshav Shree|08/12/1990|31|Male|22 Susheela Road|2|081219901420
+Pramod Acharekar|09/18/1960|61|Male|21 Chawri Bazar|2|091819601920
+Vrikodara Ganapuli|01/31/1957|64|Male|16 Qutub Road Chowk|2|013119571910
+Prakash Thakre|02/03/1975|46|Male|20 Juhu Lane|2|020319751820
+Chandi Parikh|12/06/1981|40|Female|3 Juhu Lane|2|120619811731
+Vayu Khamavant|07/14/1979|42|Female|15 Susheela Road|2|071419791211
+Sulini Thakre|03/01/1977|44|Female|1 Chawri Bazar|2|030119771711
+Priyanshi Devdhar|12/06/2000|21|Female|17 Qutub Road Chowk|2|120620001411
+Priya Ahuja|12/24/1997|24|Female|13 Chawri Bazar|2|122419971511
+Paraminta Heravdakar|07/09/1961|60|Female|24 Juhu Lane|2|070919611321
+Mamta Satavelekar|01/15/1958|63|Female|14 Chawri Bazar|2|011519581511
+Shakuntala Sabanis|08/17/1957|64|Female|16 Susheela Road|2|081719571811
+Arya Mukhtar|06/03/1966|55|Female|1 Chawri Bazar|2|060319661611
+Arya Padagavakar|01/22/1973|48|Female|4 Juhu Lane|2|012219731341
+Satya Marwah|08/06/1982|39|Female|13 Juhu Lane|2|080619821411
+Sambridhi Bakshi|02/06/2002|19|Female|25 Susheela Road|2|020620021821
+Phoolan Sabanis|04/21/1991|30|Female|18 Susheela Road|2|042119911311
+Draupati Ranganekary|04/20/1982|39|Female|13 Juhu Lane|2|042019821011
+Ananya Kapadia|08/15/1972|49|Female|5 Juhu Lane|2|081519721751
+Jayanti Upandhye|11/27/1955|66|Female|20 Susheela Road|2|112719551421
+Alia Badakar|01/26/1951|70|Female|19 Juhu Lane|2|012619511011
+Gauri Vaikar|08/18/1971|50|Female|7 Qutub Road Chowk|2|081819711071
+Surya Divakar|02/14/1994|27|Female|4 Juhu Lane|2|021419941X41
+Kavuri Gurnani|06/19/1991|30|Female|8 Chawri Bazar|2|061919911381
+Jyoti Prabhu|12/09/1988|33|Female|6 Chawri Bazar|2|120919881961
+Anushka Randhawa|02/05/1951|70|Female|1 Susheela Road|2|020519511311
+Kusum Nan|08/02/1980|41|Female|17 Chawri Bazar|2|080219801511
+Draupati Bhatavadekar|12/29/1985|36|Female|9 Susheela Road|2|122919851291

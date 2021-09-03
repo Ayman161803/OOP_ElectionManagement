@@ -1,0 +1,10 @@
+
+Viswarupa Padagavakar|28/03/1988|33|Male|4 B B D Bag East|1|280319880040|A
+Varuni Vaknis|13/06/2003|18|Male|2 Hanuman Nagar|1|130620030X20|B
+Acarya Padagavakar|19/10/1951|70|Male|18 Connaught Place|1|191019510310|C
+Jaya Shrivastava|17/11/1989|32|Female|1 Kirti Nagar|1|171119890011|D
+Salani Panda|25/05/1994|27|Female|12 Kirti Nagar|1|250519940X11|E
+Mahadaji Dhibar|02/06/1971|50|Male|6 Hanuman Nagar|1|020619710160|POS
+Mahadaji Dhibar|02/06/1971|50|Male|6 Hanuman Nagar|1|020619710160|H
+Prem Srivastav|07/08/1956|65|Male|22 Connaught Place|1|070819560120|A
+Prem Srivastav|07/08/1956|65|Male|22 Connaught Place|1|070819560120|R

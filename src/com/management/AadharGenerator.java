@@ -18,7 +18,7 @@ public class AadharGenerator extends FormWithAadharTextField{
     private JTextPane textPane1;
     private JFrame frame;
     public AadharGenerator(){
-        frame=new JFrame("VoterRegistrationPage");
+        frame=new JFrame("AadharGeneratorPage");
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(290,380));
         frame.setResizable(true);

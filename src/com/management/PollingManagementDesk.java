@@ -28,11 +28,6 @@ public class PollingManagementDesk implements Desk{
         String AadharNumber=AadharNumberAndParty.split("\\|")[0];
         String Party=AadharNumberAndParty.split("\\|")[1];
 
-        //check if aadharNumber is valid
-        if(this.isAadharNumberValid(AadharNumber)){
-            return "Invalid Aadhar Number";
-        }
-
         //get citizen from aadharID
         Citizen citizen=returnIndividualWithAadharID( AadharNumber);
 
@@ -60,10 +55,9 @@ public class PollingManagementDesk implements Desk{
         Scanner myReader;
         try {
             myReader = new Scanner(myObj);
-            myReader.nextLine();
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                if (data == null) {
+            while (myReader.hasNextLine() ) {
+               String data = myReader.nextLine();
+                if (data == null || data=="") {
                     continue;
                 }
                 String[] candidateData = data.split("\\|");
@@ -78,16 +72,6 @@ public class PollingManagementDesk implements Desk{
 
     public int getCount() {
         return candidates.size();
-    }
-
-    public void registerVote(Voter voter) {
-        if (votesCounter == null)
-            votesCounter = new int[candidates.size()];
-        if (!voter.hasVoted()) {
-            voter.markVoted();
-            votesCounter[(int) (Math.random() * candidates.size())]++;
-            totalNoOfVotes++;
-        }
     }
 
     public void showAllCandidates() {
@@ -114,7 +98,7 @@ public class PollingManagementDesk implements Desk{
         return candidates.get(maxIndex);
     }
 
-    public void setWinner(){
+    protected void setWinner(){
         int maxIndex = 0;
         for (int i = 1; i < votesCounter.length; i++) {
             if (votesCounter[i] > votesCounter[maxIndex])
@@ -123,7 +107,7 @@ public class PollingManagementDesk implements Desk{
         candidates.get(maxIndex).setHasWon(true);
     }
 
-    public long getTotalNoOfVotes() {
+    protected long getTotalNoOfVotes() {
         return totalNoOfVotes;
     }
 
@@ -132,7 +116,7 @@ public class PollingManagementDesk implements Desk{
         totalNoOfVotes++;
     }
 
-    public double getPopularityScore(int j) {
+    protected double getPopularityScore(int j) {
         return candidates.get(j).getPopularityScore();
     }
 

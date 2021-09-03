@@ -129,7 +129,7 @@ public class Result {
             obj.setFont(font1);
             obj.add("Short Result !!");
             Paragraph obj1 = new Paragraph();
-            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
+            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.NORMAL,BaseColor.BLACK);
             obj1.setFont(font2);
             obj1.add("Winning Party is Party " +partyName+"\n");
             obj1.add("Upcoming Chief Minister is  " + CM+"\n");
@@ -188,7 +188,7 @@ public class Result {
             Document doc = new Document();
 
             try {
-                PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\Candidate"+aadharNum+"Result.pdf"));
+                PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("Candidate"+aadharNum+"Result.pdf"));
                 System.out.println("PDF created");
 
                 doc.open();
@@ -248,7 +248,7 @@ public class Result {
         Document doc = new Document();
 
         try{
-            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\Constituency"+constituency+"Result.pdf"));
+            PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("Constituency"+constituency+"Result.pdf"));
             System.out.println("PDF created");
 
             doc.open();
@@ -322,9 +322,11 @@ public class Result {
         String CM = parties.get(n).getCMName();
         int seats[] = new int[parties.size()];
         String party[] = new String[parties.size()];
+        double[] seatPercentage=new double[parties.size()];
         for (int i = 0; i < parties.size(); i++) {
             party[i]= parties.get(i).getName();
             seats[i] = parties.get(i).getSeatsWon();
+            seatPercentage[i]=parties.get(i).percentageOfSeatsWon();
         }
         double voterTurnOut = stateVoterTurnout();
         double seat[] = partiesSeatPercentage();
@@ -344,7 +346,7 @@ public class Result {
             obj.add("RESULT !!\n\n\n\n");
             Paragraph obj1 = new Paragraph();
             obj1.setSpacingBefore(8f);
-            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.BOLD,BaseColor.BLACK);
+            Font font2 = new Font(Font.FontFamily.TIMES_ROMAN,14f,Font.NORMAL,BaseColor.BLACK);
             obj1.setFont(font2);
             obj1.add("        Winning Party         :      " +partyName+"\n");
             obj1.add("        Upcoming Chief Minister     :      " + CM+"\n\n\n\n");
@@ -355,7 +357,7 @@ public class Result {
             Paragraph obj3 = new Paragraph();
             obj3.setFont(font2);
             for (int i = 0; i < parties.size(); i++) {
-                obj3.add("        Party "+party[i]+"  has won "+seats[i]+"\n" );
+                obj3.add("        Party "+party[i]+"  has won "+seats[i]+" with a win Percentage of "+seatPercentage[i]+"\n" );
             }
             obj3.add("\n\n\n\n");
             obj3.add("        State Voter Turn Out is ");
@@ -428,7 +430,7 @@ public class Result {
             Document doc = new Document();
 
             try {
-                PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("D:\\CitizenDetail"+aadharNum+".pdf"));
+                PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("CitizenDetail"+aadharNum+".pdf"));
                 System.out.println("PDF created");
 
                 doc.open();

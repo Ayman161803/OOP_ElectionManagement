@@ -82,9 +82,9 @@ public class Constituency implements Desk{
             Scanner myReader;
             try {
                 myReader = new Scanner(myObj);
-                myReader.nextLine();
-                while (myReader.hasNextLine()) {
-                    String data = myReader.nextLine();
+                String data=myReader.nextLine();
+                while (data!=null && data!="") {
+                    data = myReader.nextLine();
                     if(data==null){
                         continue;
                     }
@@ -96,7 +96,7 @@ public class Constituency implements Desk{
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            voterManagementDesk.build("VoterData/Constituency"+this.Name+"Voters.txt");
+           voterManagementDesk.build("VoterData/Constituency"+this.Name+"Voters.txt");
             pollingManagementDesk.build("CandidateData/Constituency"+this.Name+"Candidates.txt");
     }
 

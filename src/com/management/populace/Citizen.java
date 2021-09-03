@@ -23,7 +23,6 @@ public class Citizen {
         this.name = name;
         this.address = address;
         this.aadharNumber = generateAadharID(DOB, String.valueOf((constituencyNum-1)),address)+genderCode;
-        System.out.println(aadharNumber);
         this.gender = gender;
         this.age = age;
         this.DOB = DOB;
@@ -31,7 +30,6 @@ public class Citizen {
     }
 
     private static String generateAadharID(String data,String ConstituencyNum,String address){
-        System.out.println(ConstituencyNum);
         address=address.trim();
         String[] DOBdata=data.split("/");
         String DDMMYYYYC="";
@@ -89,7 +87,5 @@ public class Citizen {
     public String toString() {
         return  name+"|"+DOB+"|"+age+"|"+gender+"|"+address+"|"+constituency+"|"+aadharNumber;
     }
-
-    public void generateAadharCard(){}
 
 }

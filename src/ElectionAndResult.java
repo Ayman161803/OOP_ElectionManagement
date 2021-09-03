@@ -6,11 +6,11 @@ import java.util.Scanner;
 public class ElectionAndResult {
     public static void main(String[] args) {
         PollingBooth pollingBooth = new PollingBooth();
-        int i = 0;
-        while(i!=1){
+        int i = 1;
+        while(i!=144){
             pollingBooth.registerVote();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("To Cast Terminate Voting, enter key. Enter another key to continue.\n");
+        System.out.println("To Terminate Vote casting, enter termination key. Enter any other key to continue.\n");
         scanner.reset();
         i = scanner.nextInt();
 
@@ -19,8 +19,8 @@ public class ElectionAndResult {
             System.out.flush();
 
         }
+        pollingBooth.automateVoting();
         Result result=new Result(pollingBooth);
         result.showStateResult();
-        result.stateShortResult();
     }
 }

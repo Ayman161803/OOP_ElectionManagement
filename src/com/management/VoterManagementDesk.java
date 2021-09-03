@@ -27,11 +27,7 @@ public class VoterManagementDesk implements Desk{
     }
 
     public String registerIndividual(String AadharNumber){
-        if(this.isAadharNumberValid(AadharNumber)){
-            return "Invalid Aadhar Number";
-        }
         Citizen citizen=returnIndividualWithAadharID( AadharNumber);
-        String fileName="Constituency"+AadharNumber.charAt(8)+"Voters.txt";
         if(citizen==null){
             return "Error : AadharID not found.";
         }
@@ -44,10 +40,13 @@ public class VoterManagementDesk implements Desk{
         }
     }
 
+    protected void markVoterFromIndex(int i){
+        voterList.get(i).markVoted();
+    }
+
     public String addToList(String str){
         String numberConstituency=(str.split("\\|")[str.split("\\|").length-2]).trim();
         String fileName= "VoterData/Constituency"+(Integer.parseInt(numberConstituency)-1)+"Voters.txt";
-        System.out.println(fileName);
         try {
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(fileName, true));
@@ -97,31 +96,11 @@ public class VoterManagementDesk implements Desk{
         }
     }
 
-    protected boolean doesExist(String aadhar){
-        for(int i=0;i<voterList.size();i++){
-            if(aadhar.trim().equals(voterList.get(i).getAadharNumber().trim())){
-                return true;
-            }
-        }
-        return false;
-    }
-
     protected String getAadharFromIndex(int n){
         return voterList.get(n).getAadharNumber();
     }
 
-    protected void markVoted(String aadhar){
-        for (Voter voter : voterList) {
-            if (aadhar.equals(voter.getAadharNumber())) {
-                voter.markVoted();
-            }
-        }
-    }
-
     protected String genrateAadharCard(String AadharNumber){
-        if(isAadharNumberValid(AadharNumber)){
-            return "Invalid Aadhar Number";
-        }
         Citizen citizen=returnIndividualWithAadharID(AadharNumber);
         if(citizen==null){
             return "Error : Aadhar ID not found";
@@ -247,4 +226,6 @@ public class VoterManagementDesk implements Desk{
         }
         return  null;
     }
+
+
 }

@@ -1,0 +1,7 @@
+
+Shackcham Singh|07/04/1968|53|Male|20 Ganesh Chowk|6|070419685920|A
+Pandu Kanungo|01/01/1973|48|Male|22 Jesal Park|6|010119735720|B
+Phoolan Heravdakar|07/30/1983|38|Female|23 New Tharagupet|6|073019835921|C
+Shitala Patil|05/04/1970|51|Female|18 Gali Madarsa Wali|6|050419705311|D
+Madri Valimbe|05/02/1985|36|Female|24 Jesal Park|6|050219855921|E
+Akshara Bhagat|11/09/1971|50|Female|18 New Tharagupet|6|110919715211|F

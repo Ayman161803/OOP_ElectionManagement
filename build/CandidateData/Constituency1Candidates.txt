@@ -1,0 +1,7 @@
+
+Vijya Divakar|25/09/1974|47|Male|4 Juhu Lane|2|250919741X40|A
+Kanada Adwani|27/05/2003|18|Male|9 Waterloo Street|2|270520031290|B
+Jaswant Kamal|09/26/1972|49|Male|14 Susheela Road|2|092619721510|C
+Pramod Acharekar|09/18/1960|61|Male|21 Chawri Bazar|2|091819601920|D
+Shakuntala Sabanis|08/17/1957|64|Female|16 Susheela Road|2|081719571811|E
+Megaduta Ashtekar|16/05/1962|59|Male|10 Qutub Road Chowk|2|160519621510|PPP
